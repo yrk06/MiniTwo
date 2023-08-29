@@ -12,23 +12,20 @@ struct Pop: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .scaleEffect(1.2)
+            .scaleEffect(resize ? 0 : 1)
             .onAppear {
-                stop()
-        }
-    }
-    
-    private func stop() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            withAnimation(.easeInOut(duration: 1)) {
-                resize = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25)
+                {
+                    withAnimation(.spring()) {
+                        resize = false
+                    }
+                }
             }
-        }
     }
 }
 
 extension View {
-    func changeSize() -> some View {
+    func PopU() -> some View {
         modifier(Pop())
     }
 }
