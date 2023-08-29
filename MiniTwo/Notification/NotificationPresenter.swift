@@ -50,8 +50,16 @@ extension View {
 }
 
 struct NotificationPresenter_Previews: PreviewProvider {
+    
     static var previews: some View {
-        Text("Hello World")
-            .notificationPresenter(notificationQueue: NotificationQueue())
+        let notificationQueue = NotificationQueue()
+        VStack {
+            Text("Hello World")
+            Button("Call me maybe")
+            {
+                notificationQueue.push(CallNotification(caller: "MIM DE AUUUUUUUUUU"))
+            }
+        }
+        .notificationPresenter(notificationQueue: notificationQueue)
     }
 }
