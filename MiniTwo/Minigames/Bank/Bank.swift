@@ -19,11 +19,11 @@ struct Bank : View {
             
             switch type {
             case 1:
-                PopUp(headline: "Você merece!", op_1: $h, op_2: $w)
+                BPopUp(headline: "Você merece!", op_1: $h, op_2: $w)
             case 2:
-                PopUp(headline: "Chega de pepinos!", op_1: $h, op_2: $w)
+                BPopUp(headline: "Chega de pepinos!", op_1: $h, op_2: $w)
             case 3:
-                PopUp(headline: "Realize seu sonho agora mesmo!", op_1: $h, op_2: $w)
+                BPopUp(headline: "Realize seu sonho agora mesmo!", op_1: $h, op_2: $w)
             default:
                 Text("No pop up :(")
             }

@@ -11,7 +11,7 @@ import SwiftUI
 struct MiniTwoApp: App {
     var body: some Scene {
         WindowGroup {
-            Bank()
+            iFood()
         }
     }
 }
