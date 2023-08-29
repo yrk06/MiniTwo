@@ -121,8 +121,6 @@
 				78B9E0622A98F5A700C93302 /* Assets.xcassets */,
 				78B9E0642A98F5A700C93302 /* Preview Content */,
 				5210C9C92A9E271000E9B5D6 /* Minigames */,
-				5210C9BF2A9CD22A00E9B5D6 /* Bank.swift */,
-				5210C9C32A9CD57900E9B5D6 /* PopUpSystem.swift */,
 				78788A992A9EA354003ED923 /* HapticsManager.swift */,
 			);
 			path = MiniTwo;
