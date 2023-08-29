@@ -227,7 +227,7 @@ struct CallNotificationView: View {
                 do {
                     let pattern = try CHHapticPattern(events: events, parameters: [])
                     player = try HapticsManager.shared.engine?.makeAdvancedPlayer(with: pattern)
-                    player!.loopEnabled = true
+                    player?.loopEnabled = true
                     try player?.start(atTime: CHHapticTimeImmediate)
                     
                 } catch {
