@@ -13,7 +13,7 @@ var phrases : [String: String] = [
     "Realize seu sonho agora mesmo!" : "Quer viajar o mundo, ter uma mansão ou apenas ir para aquele show imperdível?\n\nQuem precisa de paciência quando se tem crédito ilimitado? Faça um empréstimo e abrace a alegria da dívida instantânea - afinal, o amanhã é superestimado em relação ao hoje maravilhoso!"
 ]
 
-struct PopUp : View {
+struct BPopUp : View {
     
     var headline : String!
     

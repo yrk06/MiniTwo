@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9BF2A9CD22A00E9B5D6 /* Bank.swift */; };
-		5210C9C42A9CD57900E9B5D6 /* PopUpSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9C32A9CD57900E9B5D6 /* PopUpSystem.swift */; };
+		5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9C32A9CD57900E9B5D6 /* BankPopUp.swift */; };
 		5210C9C72A9CD59500E9B5D6 /* Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9C62A9CD59500E9B5D6 /* Pop.swift */; };
+		5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9CB2A9E275E00E9B5D6 /* iFood.swift */; };
+		5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9CD2A9E277300E9B5D6 /* iFoodPopUp.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
 		7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */; };
@@ -21,8 +23,10 @@
 
 /* Begin PBXFileReference section */
 		5210C9BF2A9CD22A00E9B5D6 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
-		5210C9C32A9CD57900E9B5D6 /* PopUpSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpSystem.swift; sourceTree = "<group>"; };
+		5210C9C32A9CD57900E9B5D6 /* BankPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPopUp.swift; sourceTree = "<group>"; };
 		5210C9C62A9CD59500E9B5D6 /* Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop.swift; sourceTree = "<group>"; };
+		5210C9CB2A9E275E00E9B5D6 /* iFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFood.swift; sourceTree = "<group>"; };
+		5210C9CD2A9E277300E9B5D6 /* iFoodPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFoodPopUp.swift; sourceTree = "<group>"; };
 		7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationQueue.swift; sourceTree = "<group>"; };
 		7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
@@ -50,6 +54,33 @@
 				5210C9C62A9CD59500E9B5D6 /* Pop.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		5210C9C82A9E268C00E9B5D6 /* Bank */ = {
+			isa = PBXGroup;
+			children = (
+				5210C9BF2A9CD22A00E9B5D6 /* Bank.swift */,
+				5210C9C32A9CD57900E9B5D6 /* BankPopUp.swift */,
+			);
+			path = Bank;
+			sourceTree = "<group>";
+		};
+		5210C9C92A9E271000E9B5D6 /* Minigames */ = {
+			isa = PBXGroup;
+			children = (
+				5210C9CA2A9E274A00E9B5D6 /* iFood */,
+				5210C9C82A9E268C00E9B5D6 /* Bank */,
+			);
+			path = Minigames;
+			sourceTree = "<group>";
+		};
+		5210C9CA2A9E274A00E9B5D6 /* iFood */ = {
+			isa = PBXGroup;
+			children = (
+				5210C9CB2A9E275E00E9B5D6 /* iFood.swift */,
+				5210C9CD2A9E277300E9B5D6 /* iFoodPopUp.swift */,
+			);
+			path = iFood;
 			sourceTree = "<group>";
 		};
 		7856E1F62A9BCF2D00F7639C /* Notification */ = {
@@ -87,8 +118,7 @@
 				78B9E0602A98F5A700C93302 /* ContentView.swift */,
 				78B9E0622A98F5A700C93302 /* Assets.xcassets */,
 				78B9E0642A98F5A700C93302 /* Preview Content */,
-				5210C9BF2A9CD22A00E9B5D6 /* Bank.swift */,
-				5210C9C32A9CD57900E9B5D6 /* PopUpSystem.swift */,
+				5210C9C92A9E271000E9B5D6 /* Minigames */,
 			);
 			path = MiniTwo;
 			sourceTree = "<group>";
@@ -173,11 +203,13 @@
 			files = (
 				5210C9C72A9CD59500E9B5D6 /* Pop.swift in Sources */,
 				5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */,
-				5210C9C42A9CD57900E9B5D6 /* PopUpSystem.swift in Sources */,
+				5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */,
 				78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */,
+				5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */,
 				7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */,
 				7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */,
 				7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */,
+				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,
 				78B9E05F2A98F5A700C93302 /* MiniTwoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
