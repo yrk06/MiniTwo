@@ -14,7 +14,7 @@ struct MiniTwoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            iFood()
+            Home()
                 .environmentObject(objMan)
         }
     }
