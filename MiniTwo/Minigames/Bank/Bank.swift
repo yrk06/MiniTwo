@@ -82,10 +82,11 @@ struct Bank : View {
                 }
                 
                 HStack {
-                    Text("Você tem **4 boletos** a vencer até o dia 24 de agosto!")
+                    Text("Você tem **\(objMan.allObjectives.filter({$0.objective == .boleto && $0.done == false}).count) boletos** a vencer até o dia 24 de agosto!")
                     Spacer()
                     Button {
                         objMan.complete_mission(type: .boleto)
+                        
                     } label: {
                         Text("Pagar")
                             .bold()
@@ -134,18 +135,18 @@ struct Bank : View {
                 
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             
-//          if !h && !w {
-//            switch type {
-//            case 1:
-//                BPopUp(headline: "Você merece!", op_1: $h, op_2: $w)
-//            case 2:
-//                BPopUp(headline: "Chega de pepinos!", op_1: $h, op_2: $w)
-//            case 3:
-//                BPopUp(headline: "Realize seu sonho agora mesmo!", op_1: $h, op_2: $w)
-//            default:
-//                Text("No pop up :(")
-//            }
-//        }
+          if !h && !w {
+            switch type {
+            case 1:
+                BPopUp(headline: "Você merece!", op_1: $h, op_2: $w)
+            case 2:
+                BPopUp(headline: "Chega de pepinos!", op_1: $h, op_2: $w)
+            case 3:
+                BPopUp(headline: "Realize seu sonho agora mesmo!", op_1: $h, op_2: $w)
+            default:
+                Text("No pop up :(")
+            }
+        }
             
         }
     }
@@ -154,6 +155,11 @@ struct Bank : View {
 
 struct Bank_Previews: PreviewProvider {
     static var previews: some View {
+        let objMan = ObjectiveManager()
         Bank()
+            .environmentObject(objMan)
+            .task {
+                objMan.fill_objectives(n: 15)
+            }
     }
 }

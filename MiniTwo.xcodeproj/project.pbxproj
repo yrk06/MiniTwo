@@ -22,6 +22,7 @@
 		78788A9A2A9EA354003ED923 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78788A992A9EA354003ED923 /* HapticsManager.swift */; };
 		78788A9D2A9F6BD1003ED923 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78788A9C2A9F6BD1003ED923 /* MotionManager.swift */; };
 		78788A9F2A9F6F16003ED923 /* ToiletMinigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78788A9E2A9F6F16003ED923 /* ToiletMinigame.swift */; };
+		78788AA12A9FF1DE003ED923 /* BankPaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78788AA02A9FF1DE003ED923 /* BankPaymentOption.swift */; };
 		78B9E05F2A98F5A700C93302 /* MiniTwoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9E05E2A98F5A700C93302 /* MiniTwoApp.swift */; };
 		78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9E0602A98F5A700C93302 /* ContentView.swift */; };
 		78B9E0632A98F5A700C93302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B9E0622A98F5A700C93302 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		78788A992A9EA354003ED923 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		78788A9C2A9F6BD1003ED923 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		78788A9E2A9F6F16003ED923 /* ToiletMinigame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletMinigame.swift; sourceTree = "<group>"; };
+		78788AA02A9FF1DE003ED923 /* BankPaymentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPaymentOption.swift; sourceTree = "<group>"; };
 		78B9E05B2A98F5A700C93302 /* MiniTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B9E05E2A98F5A700C93302 /* MiniTwoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTwoApp.swift; sourceTree = "<group>"; };
 		78B9E0602A98F5A700C93302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				5210C9BF2A9CD22A00E9B5D6 /* Bank.swift */,
 				5210C9C32A9CD57900E9B5D6 /* BankPopUp.swift */,
+				78788AA02A9FF1DE003ED923 /* BankPaymentOption.swift */,
 			);
 			path = Bank;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				5210C9C72A9CD59500E9B5D6 /* Pop.swift in Sources */,
 				5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */,
 				5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */,
+				78788AA12A9FF1DE003ED923 /* BankPaymentOption.swift in Sources */,
 				78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */,
 				5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */,
 				5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */,
