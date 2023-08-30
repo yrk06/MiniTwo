@@ -12,7 +12,9 @@
 		5210C9C72A9CD59500E9B5D6 /* Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9C62A9CD59500E9B5D6 /* Pop.swift */; };
 		5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9CB2A9E275E00E9B5D6 /* iFood.swift */; };
 		5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9CD2A9E277300E9B5D6 /* iFoodPopUp.swift */; };
-		5210C9D02A9F684100E9B5D6 /* ObjectivesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9CF2A9F684100E9B5D6 /* ObjectivesManager.swift */; };
+		5210C9D02A9F684100E9B5D6 /* ObjectiveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9CF2A9F684100E9B5D6 /* ObjectiveManager.swift */; };
+		5210C9D32A9F7B1200E9B5D6 /* ObjectiveStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D22A9F7B1200E9B5D6 /* ObjectiveStruct.swift */; };
+		5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
 		7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */; };
@@ -29,7 +31,9 @@
 		5210C9C62A9CD59500E9B5D6 /* Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop.swift; sourceTree = "<group>"; };
 		5210C9CB2A9E275E00E9B5D6 /* iFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFood.swift; sourceTree = "<group>"; };
 		5210C9CD2A9E277300E9B5D6 /* iFoodPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFoodPopUp.swift; sourceTree = "<group>"; };
-		5210C9CF2A9F684100E9B5D6 /* ObjectivesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesManager.swift; sourceTree = "<group>"; };
+		5210C9CF2A9F684100E9B5D6 /* ObjectiveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveManager.swift; sourceTree = "<group>"; };
+		5210C9D22A9F7B1200E9B5D6 /* ObjectiveStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveStruct.swift; sourceTree = "<group>"; };
+		5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveView.swift; sourceTree = "<group>"; };
 		7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationQueue.swift; sourceTree = "<group>"; };
 		7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
@@ -87,6 +91,16 @@
 			path = iFood;
 			sourceTree = "<group>";
 		};
+		5210C9D12A9F7AF400E9B5D6 /* ObjectiveManagement */ = {
+			isa = PBXGroup;
+			children = (
+				5210C9CF2A9F684100E9B5D6 /* ObjectiveManager.swift */,
+				5210C9D22A9F7B1200E9B5D6 /* ObjectiveStruct.swift */,
+				5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */,
+			);
+			path = ObjectiveManagement;
+			sourceTree = "<group>";
+		};
 		7856E1F62A9BCF2D00F7639C /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +138,7 @@
 				78B9E0642A98F5A700C93302 /* Preview Content */,
 				5210C9C92A9E271000E9B5D6 /* Minigames */,
 				78788A992A9EA354003ED923 /* HapticsManager.swift */,
-				5210C9CF2A9F684100E9B5D6 /* ObjectivesManager.swift */,
+				5210C9D12A9F7AF400E9B5D6 /* ObjectiveManagement */,
 			);
 			path = MiniTwo;
 			sourceTree = "<group>";
@@ -211,10 +225,12 @@
 				5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */,
 				5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */,
 				78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */,
+				5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */,
 				5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */,
 				78788A9A2A9EA354003ED923 /* HapticsManager.swift in Sources */,
 				7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */,
-				5210C9D02A9F684100E9B5D6 /* ObjectivesManager.swift in Sources */,
+				5210C9D32A9F7B1200E9B5D6 /* ObjectiveStruct.swift in Sources */,
+				5210C9D02A9F684100E9B5D6 /* ObjectiveManager.swift in Sources */,
 				7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */,
 				7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */,
 				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,
