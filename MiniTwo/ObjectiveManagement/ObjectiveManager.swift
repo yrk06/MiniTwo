@@ -26,6 +26,19 @@ class ObjectiveManager : ObservableObject {
         }
     }
     
+    public func complete_mission(type: Objective) {
+        var n: Int = 0
+        
+        for i in allObjectives {
+            if i.objective == type && !i.done {
+                allObjectives[n].done = true
+                break
+            }
+            
+            n += 1
+        }
+    }
+    
     public func level_1() {
         add_objective(.boleto)
     }
