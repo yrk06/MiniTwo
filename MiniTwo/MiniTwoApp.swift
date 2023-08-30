@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MiniTwoApp: App {
+    
+    var objMan : ObjectiveManager = ObjectiveManager()
+    
     var body: some Scene {
         WindowGroup {
             iFood()
+                .environmentObject(objMan)
         }
     }
 }
