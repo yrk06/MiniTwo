@@ -15,7 +15,9 @@ struct BankPaymentOption: View {
                 .bold()
             
             HStack {
-                NavigationLink {} label: {
+                NavigationLink {
+                    ARView()
+                } label: {
                     VStack {
                         Image(systemName: "doc.viewfinder.fill")
                             .resizable()

@@ -84,8 +84,9 @@ struct Bank : View {
                 HStack {
                     Text("Você tem **\(objMan.allObjectives.filter({$0.objective == .boleto && $0.done == false}).count) boletos** a vencer até o dia 24 de agosto!")
                     Spacer()
-                    Button {
-                        objMan.complete_mission(type: .boleto)
+                    NavigationLink {
+                        BankPaymentOption()
+                        //objMan.complete_mission(type: .boleto)
                         
                     } label: {
                         Text("Pagar")

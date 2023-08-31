@@ -12,7 +12,21 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     // The 3 main views used for the game
     var arView = ARSCNView(frame: .zero)
-
+    
+    var boletos = 0
+    
+    var dismiss: (() -> Void)?
+    
+    init(dismiss: (() -> Void)?) {
+        
+        self.dismiss = dismiss
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     // Create the main ARView for the board
     func createArView () {
@@ -110,14 +124,20 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         }
         let resultNode = result.node
         
-        if distanceBetweenPoints(resultNode.position, devicePosition) > 0.5 {
+        if distanceBetweenPoints(resultNode.position, devicePosition) > 0.3 {
             return
         }
         
+        
         let redMaterial = SCNMaterial()
         redMaterial.diffuse.contents = UIColor.red
-        
         resultNode.geometry?.materials = [redMaterial]
+        resultNode.removeFromParentNode()
+        boletos += 1
+        
+        if boletos == 1 {
+            dismiss?()
+        }
     }
     
     func startAR() {
@@ -138,7 +158,7 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         scene.rootNode.addChildNode(centerNode)
         
         // Define the radius of the circle and the number of planes
-        let circleRadius: Float = 1.0
+        let circleRadius: Float = 0.3
         let numPlanes = 8
         
         for i in 0..<numPlanes {
@@ -169,9 +189,15 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 struct ARView: UIViewControllerRepresentable {
     typealias UIViewControllerType = ARController
     
+    @EnvironmentObject var objMan: ObjectiveManager
+    @Environment(\.dismiss) var dismiss
+    
     func makeUIViewController(context: Context) -> ARController {
         // Return MyViewController instance
-        return ARController()
+        return ARController(dismiss: {
+            objMan.complete_mission(type: .boleto)
+            dismiss()
+        })
     }
     
     func updateUIViewController(_ uiViewController: ARController, context: Context) {
