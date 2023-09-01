@@ -10,6 +10,10 @@ import SwiftUI
 struct ToiletMinigame: View {
     @State var toiletState: Int = 0
     @State var motionManager: MotionManager?
+    
+    @EnvironmentObject var objectiveManager: ObjectiveManager
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
             Text("\(toiletState)")
@@ -33,6 +37,28 @@ struct ToiletMinigame: View {
             .transition(.slide)
             .animation(.easeInOut(duration: 0.5), value: toiletState)
         }
+        .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .local)
+                            .onEnded({ value in
+                                if value.translation.height < 0 {
+                                    // up
+                                    if toiletState % 2 == 0 {
+                                        toiletState += 1
+                                    }
+                                }
+
+                                if value.translation.height > 0 {
+                                    if toiletState % 2 == 1 {
+                                        toiletState += 1
+                                    }
+                                }
+                            }))
+        .onChange(of: toiletState, perform: {
+            value in
+            if value >= 20 {
+                objectiveManager.complete_mission(type: .privada)
+                dismiss()
+            }
+        })
         
     }
 }
