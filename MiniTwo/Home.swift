@@ -21,6 +21,9 @@ struct Home: View {
             NavigationLink("Bank") {
                 Bank()
             }
+            NavigationLink("Home") {
+                House()
+            }
         }
         .onAppear {
             objMan.fill_objectives(n: 5)
