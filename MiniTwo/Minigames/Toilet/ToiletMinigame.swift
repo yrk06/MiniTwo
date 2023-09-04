@@ -35,7 +35,7 @@ struct ToiletMinigame: View {
             }
             .offset(x:0, y: toiletState % 2 == 0 ? 0 : -60)
             .transition(.slide)
-            .animation(.easeInOut(duration: 0.5), value: toiletState)
+            .animation(.easeInOut(duration: 0.1), value: toiletState)
         }
         .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .local)
                             .onEnded({ value in
