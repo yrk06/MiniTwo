@@ -16,6 +16,7 @@
 		5210C9D32A9F7B1200E9B5D6 /* ObjectiveStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D22A9F7B1200E9B5D6 /* ObjectiveStruct.swift */; };
 		5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */; };
 		5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D62A9F7D5400E9B5D6 /* Home.swift */; };
+		5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9DA2AA20A2400E9B5D6 /* iFoodOrderScreen.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
 		7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */; };
@@ -43,6 +44,7 @@
 		5210C9D22A9F7B1200E9B5D6 /* ObjectiveStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveStruct.swift; sourceTree = "<group>"; };
 		5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveView.swift; sourceTree = "<group>"; };
 		5210C9D62A9F7D5400E9B5D6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5210C9DA2AA20A2400E9B5D6 /* iFoodOrderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFoodOrderScreen.swift; sourceTree = "<group>"; };
 		7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationQueue.swift; sourceTree = "<group>"; };
 		7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				5210C9CB2A9E275E00E9B5D6 /* iFood.swift */,
 				5210C9CD2A9E277300E9B5D6 /* iFoodPopUp.swift */,
+				5210C9DA2AA20A2400E9B5D6 /* iFoodOrderScreen.swift */,
 			);
 			path = iFood;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */,
 				78788A9F2A9F6F16003ED923 /* ToiletMinigame.swift in Sources */,
 				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,
+				5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */,
 				78B9E05F2A98F5A700C93302 /* MiniTwoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
