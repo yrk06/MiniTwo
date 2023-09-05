@@ -9,24 +9,38 @@ import SwiftUI
 
 struct Home: View {
     
-    @EnvironmentObject var objMan : ObjectiveManager
-    @State var place : Int8 = 0
+    @EnvironmentObject var game : GameManager
     
     var body: some View {
-        NavigationStack {
-            ObjectiveView()
-            NavigationLink("iFood") {
-                iFood()
+        NavigationStack() {
+            VStack {
+                if game.dayTransition {
+                    Text("Você está dormindo")
+                }
+                Text("\(game.dayTick)")
+                Text("Day: \(game.day)")
+                ObjectiveView()
+                
+                if !game.dayTransition {
+                    NavigationLink("iFood") {
+                        iFood()
+                    }
+                    NavigationLink("Bank") {
+                        Bank()
+                    }
+                    NavigationLink("Home") {
+                        House()
+                    }
+                }
+                
             }
-            NavigationLink("Bank") {
-                Bank()
-            }
-            NavigationLink("Home") {
-                House()
-            }
+            
         }
-        .onAppear {
-            objMan.fill_objectives(n: 5)
-        }
+        .onChange(of: game.dayTransition, perform: {
+            v in
+            if v {
+                NavigationUtil.popToRootView()
+            }
+        })
     }
 }

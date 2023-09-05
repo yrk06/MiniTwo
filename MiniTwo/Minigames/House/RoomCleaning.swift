@@ -11,7 +11,7 @@ import SpriteKit
 class RoomCleaning: SKScene {
     
     var crop: SKCropNode!
-    let cellSize: Int = 120
+    let cellSize: Int = 60
     
     let completeTask: (()->Void)
     
@@ -64,7 +64,7 @@ class RoomCleaning: SKScene {
     
     func touchMoved(toPoint pos : CGPoint) {
 
-        let circle: SKShapeNode = SKShapeNode(circleOfRadius: CGFloat(cellSize)/2)
+        let circle: SKShapeNode = SKShapeNode(circleOfRadius: CGFloat(cellSize)/1.5)
         circle.fillColor = UIColor(white: 1, alpha: 0.8)
         circle.position = pos
         crop.maskNode!.addChild(circle)
