@@ -20,6 +20,12 @@ struct House: View {
         } label: {
             Text("Desentupir a privada")
         }
+        
+        NavigationLink {
+            Panela()
+        } label: {
+            Text("Cozinhar pepinada")
+        }
     }
 }
 
