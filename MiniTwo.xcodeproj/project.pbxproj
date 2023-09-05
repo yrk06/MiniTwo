@@ -17,6 +17,8 @@
 		5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */; };
 		5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D62A9F7D5400E9B5D6 /* Home.swift */; };
 		5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9DA2AA20A2400E9B5D6 /* iFoodOrderScreen.swift */; };
+		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
+		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
 		7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */; };
@@ -45,6 +47,8 @@
 		5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveView.swift; sourceTree = "<group>"; };
 		5210C9D62A9F7D5400E9B5D6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5210C9DA2AA20A2400E9B5D6 /* iFoodOrderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFoodOrderScreen.swift; sourceTree = "<group>"; };
+		78009B5B2AA74651006BA51D /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		783A4BEC2AA602A30049F054 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationQueue.swift; sourceTree = "<group>"; };
 		7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				5210C9CF2A9F684100E9B5D6 /* ObjectiveManager.swift */,
 				5210C9D22A9F7B1200E9B5D6 /* ObjectiveStruct.swift */,
 				5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */,
+				783A4BEC2AA602A30049F054 /* GameManager.swift */,
 			);
 			path = ObjectiveManagement;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				78788A992A9EA354003ED923 /* HapticsManager.swift */,
 				5210C9D12A9F7AF400E9B5D6 /* ObjectiveManagement */,
 				5210C9D62A9F7D5400E9B5D6 /* Home.swift */,
+				78009B5B2AA74651006BA51D /* NavigationUtil.swift */,
 			);
 			path = MiniTwo;
 			sourceTree = "<group>";
@@ -284,12 +290,14 @@
 				5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */,
 				78788A982A9E17AF003ED923 /* ARController.swift in Sources */,
 				7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */,
+				783A4BED2AA602A30049F054 /* GameManager.swift in Sources */,
 				78ECC5F92AA0BD4E0091F875 /* RoomCleaning.swift in Sources */,
 				5210C9D32A9F7B1200E9B5D6 /* ObjectiveStruct.swift in Sources */,
 				5210C9D02A9F684100E9B5D6 /* ObjectiveManager.swift in Sources */,
 				78ECC5FB2AA0C0FF0091F875 /* RoomCleaningMinigame.swift in Sources */,
 				78788A9D2A9F6BD1003ED923 /* MotionManager.swift in Sources */,
 				7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */,
+				78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */,
 				7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */,
 				78788A9F2A9F6F16003ED923 /* ToiletMinigame.swift in Sources */,
 				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,

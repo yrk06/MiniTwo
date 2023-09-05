@@ -136,6 +136,7 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         boletos += 1
         
         if boletos == 1 {
+            arView.session.pause()
             dismiss?()
         }
     }

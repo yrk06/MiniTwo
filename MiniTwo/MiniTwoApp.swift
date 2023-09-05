@@ -10,15 +10,19 @@ import SwiftUI
 @main
 struct MiniTwoApp: App {
     
-    var objMan : ObjectiveManager = ObjectiveManager()
+    var gameManager : GameManager = GameManager()
     var notificationQueue: NotificationQueue = NotificationQueue()
     
     var body: some Scene {
         WindowGroup {
             Home()
-                .environmentObject(objMan)
+                .environmentObject(gameManager)
+                .environmentObject(gameManager.objectiveManager)
                 .environmentObject(notificationQueue)
                 .notificationPresenter(notificationQueue: notificationQueue)
+                .onAppear {
+                    gameManager.startDay()
+                }
         }
     }
 }

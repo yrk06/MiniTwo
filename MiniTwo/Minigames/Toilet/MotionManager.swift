@@ -19,6 +19,12 @@ class MotionManager {
     init(state: Binding<Int>) {
         self.state = state
         motionManager.startDeviceMotionUpdates(to: .main, withHandler: self.handleAccelerometerUpdates)
+        print("init")
+    }
+    
+    deinit {
+        motionManager.stopDeviceMotionUpdates()
+        print("deinit")
     }
     
     func handleAccelerometerUpdates(_ motion: CMDeviceMotion?, _ error: Error?) {

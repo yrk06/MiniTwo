@@ -56,6 +56,7 @@ struct ToiletMinigame: View {
             value in
             if value >= 20 {
                 objectiveManager.complete_mission(type: .privada)
+                motionManager = nil
                 dismiss()
             }
         })

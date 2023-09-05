@@ -14,7 +14,7 @@ struct Bank : View {
     @State var h = false
     @State var w = false
     
-    var type = Int8.random(in: 1...3)
+    @State var type = Int8.random(in: 1...3)
     
     var body: some View {
         ZStack {

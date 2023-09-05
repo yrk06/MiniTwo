@@ -56,7 +56,9 @@ struct TextNotification: Notification {
                 .cornerRadius(8)
             Text(text)
         }
-        .frame(maxHeight: 72)
+        .frame(maxWidth: .infinity, maxHeight: 72)
+        .padding(.horizontal,8)
+        .background(.ultraThinMaterial)
         
     }
     

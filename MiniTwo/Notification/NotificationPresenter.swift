@@ -21,6 +21,7 @@ struct NotificationPresenter: ViewModifier {
             
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .zIndex(0)
             
             
                 
@@ -30,6 +31,7 @@ struct NotificationPresenter: ViewModifier {
                 Group {
                     if !current.dismissed {
                         AnyView(current.getScreenView())
+                            .zIndex(1)
                             .transition(AnyTransition.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .top)))
                         
                     }

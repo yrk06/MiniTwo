@@ -21,7 +21,7 @@ class ObjectiveManager : ObservableObject {
     }
     
     public func fill_objectives(n : Int8) {
-        for _ in 0...n {
+        for _ in 0..<n {
             add_objective(random_objective())
         }
     }
