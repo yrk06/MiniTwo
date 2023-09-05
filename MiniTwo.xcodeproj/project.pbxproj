@@ -17,13 +17,10 @@
 		5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D42A9F7B3D00E9B5D6 /* ObjectiveView.swift */; };
 		5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9D62A9F7D5400E9B5D6 /* Home.swift */; };
 		5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210C9DA2AA20A2400E9B5D6 /* iFoodOrderScreen.swift */; };
-<<<<<<< HEAD
 		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
 		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
-=======
 		528F97352AA74E7D000469D1 /* Panela.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F97342AA74E7D000469D1 /* Panela.swift */; };
 		528F97372AA74F27000469D1 /* Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F97362AA74F27000469D1 /* Rotate.swift */; };
->>>>>>> 4af750e (add: panela minigame)
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
 		7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */; };
