@@ -201,3 +201,23 @@ struct iFood : View {
         }
     }
 }
+
+
+struct iFood_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        let gameManager : GameManager = GameManager()
+        let notificationQueue: NotificationQueue = NotificationQueue()
+        
+        iFood()
+            .environmentObject(gameManager)
+            .environmentObject(gameManager.objectiveManager)
+            .environmentObject(notificationQueue)
+            .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
+            .onAppear {
+                gameManager.startDay()
+            }
+            .statusBar(hidden: true)
+    }
+}
