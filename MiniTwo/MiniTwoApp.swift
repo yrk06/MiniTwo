@@ -18,6 +18,7 @@ struct MiniTwoApp: App {
             Home()
                 .environmentObject(gameManager)
                 .environmentObject(gameManager.objectiveManager)
+                .environmentObject(gameManager.statusManager)
                 .environmentObject(notificationQueue)
                 .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
                 .onAppear {

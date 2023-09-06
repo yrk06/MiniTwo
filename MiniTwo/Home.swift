@@ -10,46 +10,53 @@ import SwiftUI
 struct Home: View {
     
     @EnvironmentObject var game : GameManager
+    @EnvironmentObject var stsMan : StatusManager
     
     var body: some View {
-        NavigationStack() {
-            if game.dayTransition {
-                BetweenDays(day: game.day, cont: {
-                    game.startDay()
-                })
-                .transition(.opacity)
-            } else {
-                VStack {
+        ZStack {
+            NavigationStack() {
                     if game.dayTransition {
-                        Text("Você está dormindo")
-                    }
-                    Text("\(game.dayTick)")
-                    Text("Day: \(game.day)")
-                    ObjectiveView()
+                    BetweenDays(day: game.day, cont: {
+                        game.startDay()
+                    })
+                    .transition(.opacity)
+                } else {
+                    VStack {
+                        if game.dayTransition {
+                            Text("Você está dormindo")
+                        }
+                        Text("\(game.dayTick)")
+                        Text("Day: \(game.day)")
+                        ObjectiveView()
+                        
+                        if !game.dayTransition {
+                            NavigationLink("iFood") {
+                                iFood()
+                            }
+                            NavigationLink("Bank") {
+                                Bank()
+                            }
+                            NavigationLink("Home") {
+                                House()
+                            }
+                        }
                     
-                    if !game.dayTransition {
-                        NavigationLink("iFood") {
-                            iFood()
-                        }
-                        NavigationLink("Bank") {
-                            Bank()
-                        }
-                        NavigationLink("Home") {
-                            House()
-                        }
                     }
-                    
                 }
             }
-            
-        }
-        .animation(.easeInOut, value: game.dayTransition)
-        .onChange(of: game.dayTransition, perform: {
-            v in
-            if v {
-                NavigationUtil.popToRootView()
+            .animation(.easeInOut, value: game.dayTransition)
+            .onChange(of: game.dayTransition, perform: {
+                v in
+                if v {
+                    NavigationUtil.popToRootView()
+                }
+            })
+            VStack {
+                Spacer()
+                StatusBar()
+                    .font(.largeTitle)
             }
-        })
+        }
     }
 }
 

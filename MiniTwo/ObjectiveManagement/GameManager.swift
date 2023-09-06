@@ -14,12 +14,13 @@ enum stat {
 class GameManager: ObservableObject {
     
     @Published var day: Int = 0
-    @Published var dayTick = 18
+    @Published var dayTick = 90
     @Published var dayTransition = false
     var dayTimer: Timer?
     
     var objectiveManager: ObjectiveManager = ObjectiveManager()
 
+    var statusManager: StatusManager = StatusManager()
     
     func getTaskCount() -> Int {
         switch day {
@@ -48,9 +49,10 @@ class GameManager: ObservableObject {
         
         objectiveManager.fill_objectives(n: count)
         
-        dayTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: {
+        dayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {
                 _ in
             self.dayTick -= 1
+            self.statusManager.changeHunger(by: -0.5)
             if self.dayTick == 0 {
                 self.dayTimer?.invalidate()
                 self.endDay()
@@ -66,7 +68,7 @@ class GameManager: ObservableObject {
     
     func endDay() {
         dayTransition = true
-        dayTick = 18
+        dayTick = 90
         day += 1
 //        dayTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: {
 //                _ in

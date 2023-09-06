@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct House: View {
+    
     var body: some View {
         NavigationLink {
             RoomCleaningMinigame()
