@@ -9,22 +9,27 @@ import Foundation
 import CoreMotion
 import SwiftUI
 
-class MotionManager {
+class MotionManager: ObservableObject {
     
     let motionManager = CMMotionManager()
     
     var state: Binding<Int>
     var stateLock: Bool = false
     
-    init(state: Binding<Int>) {
+    func configure(state: Binding<Int>) {
         self.state = state
         motionManager.startDeviceMotionUpdates(to: .main, withHandler: self.handleAccelerometerUpdates)
+        print("config")
+    }
+    
+    init() {
+        state = Binding(get: { return 0 }, set: { _ in })
         print("init")
     }
     
-    deinit {
+    func finish() {
         motionManager.stopDeviceMotionUpdates()
-        print("deinit")
+        print("finish")
     }
     
     func handleAccelerometerUpdates(_ motion: CMDeviceMotion?, _ error: Error?) {

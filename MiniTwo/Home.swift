@@ -44,3 +44,23 @@ struct Home: View {
         })
     }
 }
+
+
+struct Home_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        let gameManager : GameManager = GameManager()
+        let notificationQueue: NotificationQueue = NotificationQueue()
+        
+        Home()
+            .environmentObject(gameManager)
+            .environmentObject(gameManager.objectiveManager)
+            .environmentObject(notificationQueue)
+            .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
+            .onAppear {
+                gameManager.startDay()
+            }
+            .statusBar(hidden: true)
+    }
+}

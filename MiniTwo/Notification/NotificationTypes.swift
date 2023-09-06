@@ -286,6 +286,7 @@ struct NotificationCall_Previews: PreviewProvider {
     
     static var previews: some View {
         let notificationQueue = NotificationQueue()
+        let game = GameManager()
         VStack {
             Text("Hello World")
             Button("Call me maybe")
@@ -293,6 +294,6 @@ struct NotificationCall_Previews: PreviewProvider {
                 notificationQueue.push(CallNotification(caller: "MIM DE AUUUUUUUUUU"))
             }
         }
-        .notificationPresenter(notificationQueue: notificationQueue)
+        .notificationPresenter(notificationQueue: notificationQueue, gameManager: game)
     }
 }
