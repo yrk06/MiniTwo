@@ -19,10 +19,12 @@ struct MiniTwoApp: App {
                 .environmentObject(gameManager)
                 .environmentObject(gameManager.objectiveManager)
                 .environmentObject(notificationQueue)
-                .notificationPresenter(notificationQueue: notificationQueue)
+                .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
                 .onAppear {
                     gameManager.startDay()
                 }
+                .statusBar(hidden: true)
         }
+        
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToiletMinigame: View {
     @State var toiletState: Int = 0
-    @State var motionManager: MotionManager?
+    @StateObject var motionManager: MotionManager = .init()
     
     @EnvironmentObject var objectiveManager: ObjectiveManager
     @Environment(\.dismiss) var dismiss
@@ -18,9 +18,7 @@ struct ToiletMinigame: View {
         VStack {
             Text("\(toiletState)")
                 .onAppear {
-                    if motionManager == nil {
-                        motionManager = MotionManager(state: $toiletState)
-                    }
+                   motionManager.configure(state: $toiletState)
                 }
             Group {
                 Rectangle()
@@ -56,10 +54,13 @@ struct ToiletMinigame: View {
             value in
             if value >= 20 {
                 objectiveManager.complete_mission(type: .privada)
-                motionManager = nil
+                motionManager.finish()
                 dismiss()
             }
         })
+        .onDisappear {
+            motionManager.finish()
+        }
         
     }
 }
