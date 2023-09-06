@@ -13,29 +13,37 @@ struct Home: View {
     
     var body: some View {
         NavigationStack() {
-            VStack {
-                if game.dayTransition {
-                    Text("Você está dormindo")
+            if game.dayTransition {
+                BetweenDays(day: game.day, cont: {
+                    game.startDay()
+                })
+                .transition(.opacity)
+            } else {
+                VStack {
+                    if game.dayTransition {
+                        Text("Você está dormindo")
+                    }
+                    Text("\(game.dayTick)")
+                    Text("Day: \(game.day)")
+                    ObjectiveView()
+                    
+                    if !game.dayTransition {
+                        NavigationLink("iFood") {
+                            iFood()
+                        }
+                        NavigationLink("Bank") {
+                            Bank()
+                        }
+                        NavigationLink("Home") {
+                            House()
+                        }
+                    }
+                    
                 }
-                Text("\(game.dayTick)")
-                Text("Day: \(game.day)")
-                ObjectiveView()
-                
-                if !game.dayTransition {
-                    NavigationLink("iFood") {
-                        iFood()
-                    }
-                    NavigationLink("Bank") {
-                        Bank()
-                    }
-                    NavigationLink("Home") {
-                        House()
-                    }
-                }
-                
             }
             
         }
+        .animation(.easeInOut, value: game.dayTransition)
         .onChange(of: game.dayTransition, perform: {
             v in
             if v {

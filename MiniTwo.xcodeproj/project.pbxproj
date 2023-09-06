@@ -36,6 +36,7 @@
 		78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9E0602A98F5A700C93302 /* ContentView.swift */; };
 		78B9E0632A98F5A700C93302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B9E0622A98F5A700C93302 /* Assets.xcassets */; };
 		78B9E0662A98F5A700C93302 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B9E0652A98F5A700C93302 /* Preview Assets.xcassets */; };
+		78D75D652AA8B9510074B125 /* TextBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D75D642AA8B9510074B125 /* TextBackground.swift */; };
 		78ECC5F92AA0BD4E0091F875 /* RoomCleaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5F82AA0BD4E0091F875 /* RoomCleaning.swift */; };
 		78ECC5FB2AA0C0FF0091F875 /* RoomCleaningMinigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5FA2AA0C0FF0091F875 /* RoomCleaningMinigame.swift */; };
 		78ECC5FD2AA0D16A0091F875 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5FC2AA0D16A0091F875 /* House.swift */; };
@@ -73,6 +74,7 @@
 		78B9E0602A98F5A700C93302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78B9E0622A98F5A700C93302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78B9E0652A98F5A700C93302 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78D75D642AA8B9510074B125 /* TextBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBackground.swift; sourceTree = "<group>"; };
 		78ECC5F82AA0BD4E0091F875 /* RoomCleaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCleaning.swift; sourceTree = "<group>"; };
 		78ECC5FA2AA0C0FF0091F875 /* RoomCleaningMinigame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCleaningMinigame.swift; sourceTree = "<group>"; };
 		78ECC5FC2AA0D16A0091F875 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				5210C9C62A9CD59500E9B5D6 /* Pop.swift */,
 				528F97362AA74F27000469D1 /* Rotate.swift */,
 				783BC91F2AA8AE820028A6B3 /* Font.swift */,
+				78D75D642AA8B9510074B125 /* TextBackground.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */,
 				78ECC5FD2AA0D16A0091F875 /* House.swift in Sources */,
 				5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */,
+				78D75D652AA8B9510074B125 /* TextBackground.swift in Sources */,
 				78788AA12A9FF1DE003ED923 /* BankPaymentOption.swift in Sources */,
 				78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */,
 				5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */,
