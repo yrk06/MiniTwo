@@ -10,6 +10,7 @@ import SwiftUI
 struct Panela: View {
     
     @EnvironmentObject var objMan : ObjectiveManager
+    @EnvironmentObject var stsMan : StatusManager
     @Environment(\.dismiss) var dismiss
     
     @State var angle : Double = 1
@@ -33,8 +34,12 @@ struct Panela: View {
                     points += 1
                     if (points >= 3) {
                         objMan.complete_mission(type: .comer)
+                        stsMan.changeHunger(by: 10)
+                        stsMan.changeHealth(by: -10)
                         dismiss()
                     }
+                } else {
+                    stsMan.changeHealth(by: -5)
                 }
 
             } label: {

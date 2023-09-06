@@ -191,12 +191,15 @@ struct ARView: UIViewControllerRepresentable {
     typealias UIViewControllerType = ARController
     
     @EnvironmentObject var objMan: ObjectiveManager
+    @EnvironmentObject var stsMan: StatusManager
     @Environment(\.dismiss) var dismiss
     
     func makeUIViewController(context: Context) -> ARController {
         // Return MyViewController instance
         return ARController(dismiss: {
             objMan.complete_mission(type: .boleto)
+            stsMan.changeMoney(by: -25)
+            stsMan.changeHealth(by: -10)
             dismiss()
         })
     }

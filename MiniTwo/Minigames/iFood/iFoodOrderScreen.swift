@@ -10,6 +10,7 @@ import SwiftUI
 struct iFoodOrderScreen: View {
     
     @EnvironmentObject var objMan : ObjectiveManager
+    @EnvironmentObject var stsMan : StatusManager
     @Environment(\.dismiss) var dismiss
     
     var food : FoodCard!
@@ -74,6 +75,8 @@ struct iFoodOrderScreen: View {
             
             Button {
                 objMan.complete_mission(type: .comer)
+                stsMan.changeHunger(by: 10)
+                stsMan.changeMoney(by: -Double(food.price.nextUp))
                 last_ordered.insert(food, at: 0)
                 last_ordered.remove(at: 3)
                 dismiss()

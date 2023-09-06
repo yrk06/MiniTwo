@@ -10,6 +10,7 @@ import SwiftUI
 struct Bank : View {
     
     @EnvironmentObject var objMan : ObjectiveManager
+    @EnvironmentObject var stsMan : StatusManager
     
     @State var h = false
     @State var w = false
@@ -19,31 +20,36 @@ struct Bank : View {
     var body: some View {
         ZStack {
             VStack {
-                VStack {
-                    HStack {
-                        Circle()
-                            .fill(Color(uiColor: .systemGray4))
-                            .frame(maxWidth: 50)
-                        Spacer()
-                        Image(systemName: "eye.slash")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 17)
-                            .foregroundColor(.white)
-                        Image(systemName: "questionmark.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 17)
-                            .foregroundColor(.white)
-                        
-                    }
-                    .padding(.horizontal, 20)
-                    Text("Olá, [nome do adulto]")
-                        .foregroundColor(.white)
-                        .font(.title2)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.vertical)
+                ZStack {
+                    Image("BankImage")
+                        .opacity(0.5)
+                        .ignoresSafeArea()
+                    VStack {
+                        HStack {
+                            Circle()
+                                .fill(Color(uiColor: .systemGray4))
+                                .frame(maxWidth: 50)
+                            Spacer()
+                            Image(systemName: "eye.slash")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 17)
+                                .foregroundColor(.white)
+                            Image(systemName: "questionmark.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 17)
+                                .foregroundColor(.white)
+                            
+                        }
                         .padding(.horizontal, 20)
+                        Text("Olá, [nome do adulto]")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.vertical)
+                            .padding(.horizontal, 20)
+                    }
                 }
                 .background(Color("BankAccent"))
                 VStack (alignment: .leading) {
