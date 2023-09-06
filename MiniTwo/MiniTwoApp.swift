@@ -24,6 +24,7 @@ struct MiniTwoApp: App {
                     gameManager.startDay()
                 }
                 .statusBar(hidden: true)
+                .preferredColorScheme(.light)
         }
         
     }
