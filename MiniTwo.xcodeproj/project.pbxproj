@@ -21,6 +21,9 @@
 		528F97372AA74F27000469D1 /* Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F97362AA74F27000469D1 /* Rotate.swift */; };
 		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
 		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
+		783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */; };
+		783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */; };
+		783BC9202AA8AE820028A6B3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BC91F2AA8AE820028A6B3 /* Font.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
 		7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */; };
@@ -53,6 +56,10 @@
 		528F97362AA74F27000469D1 /* Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotate.swift; sourceTree = "<group>"; };
 		78009B5B2AA74651006BA51D /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		783A4BEC2AA602A30049F054 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoB_comAcento2.otf; sourceTree = "<group>"; };
+		783BC91C2AA8A66D0028A6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenDays.swift; sourceTree = "<group>"; };
+		783BC91F2AA8AE820028A6B3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationQueue.swift; sourceTree = "<group>"; };
 		7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		7856E1FB2A9CD09600F7639C /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 			children = (
 				5210C9C62A9CD59500E9B5D6 /* Pop.swift */,
 				528F97362AA74F27000469D1 /* Rotate.swift */,
+				783BC91F2AA8AE820028A6B3 /* Font.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -142,6 +150,14 @@
 			path = Panela;
 			sourceTree = "<group>";
 		};
+		783BC91B2AA8A61D0028A6B3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7856E1F62A9BCF2D00F7639C /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +204,8 @@
 		78B9E05D2A98F5A700C93302 /* MiniTwo */ = {
 			isa = PBXGroup;
 			children = (
+				783BC91C2AA8A66D0028A6B3 /* Info.plist */,
+				783BC91B2AA8A61D0028A6B3 /* Fonts */,
 				78788A962A9E17A0003ED923 /* AR */,
 				5210C9C52A9CD58100E9B5D6 /* Modifiers */,
 				7856E1F62A9BCF2D00F7639C /* Notification */,
@@ -200,6 +218,7 @@
 				5210C9D12A9F7AF400E9B5D6 /* ObjectiveManagement */,
 				5210C9D62A9F7D5400E9B5D6 /* Home.swift */,
 				78009B5B2AA74651006BA51D /* NavigationUtil.swift */,
+				783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */,
 			);
 			path = MiniTwo;
 			sourceTree = "<group>";
@@ -281,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B9E0662A98F5A700C93302 /* Preview Assets.xcassets in Resources */,
+				783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */,
 				78B9E0632A98F5A700C93302 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,9 +320,11 @@
 				78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */,
 				5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */,
 				5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */,
+				783BC9202AA8AE820028A6B3 /* Font.swift in Sources */,
 				528F97352AA74E7D000469D1 /* Panela.swift in Sources */,
 				78788A9A2A9EA354003ED923 /* HapticsManager.swift in Sources */,
 				5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */,
+				783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */,
 				78788A982A9E17AF003ED923 /* ARController.swift in Sources */,
 				7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */,
 				783A4BED2AA602A30049F054 /* GameManager.swift in Sources */,
@@ -450,6 +472,7 @@
 				DEVELOPMENT_TEAM = SA5RM672D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiniTwo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Pepino;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for an ingame minigame";
@@ -485,6 +508,7 @@
 				DEVELOPMENT_TEAM = SA5RM672D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiniTwo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Pepino;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for an ingame minigame";
