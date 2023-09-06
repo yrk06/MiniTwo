@@ -14,8 +14,6 @@ struct NotificationPresenter: ViewModifier {
     @ObservedObject var gameManager: GameManager
     
     
-    var content: some View = EmptyView()
-    
     func body(content: Content) -> some View {
         GeometryReader {
             proxy in

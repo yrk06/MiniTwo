@@ -19,10 +19,7 @@ class GameManager: ObservableObject {
     var dayTimer: Timer?
     
     var objectiveManager: ObjectiveManager = ObjectiveManager()
-    
-    var stats = [
-     1,1,1
-    ]
+
     
     func getTaskCount() -> Int {
         switch day {
@@ -71,9 +68,9 @@ class GameManager: ObservableObject {
         dayTransition = true
         dayTick = 18
         day += 1
-        dayTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: {
-                _ in
-            self.startDay()
-        })
+//        dayTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: {
+//                _ in
+//            self.startDay()
+//        })
     }
 }
