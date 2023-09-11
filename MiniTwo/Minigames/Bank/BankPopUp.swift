@@ -17,6 +17,8 @@ struct BPopUp : View {
     
     var headline : String!
     
+    var images : String!
+    
     @Binding var op_1 : Bool
     @Binding var op_2 : Bool
     
@@ -28,9 +30,19 @@ struct BPopUp : View {
         if (!pop_up_done)
         {
             VStack {
+            
+                    Image(images)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 300, height: 138)
+                        .cornerRadius(8)
+                
+                
                 Text(headline)
                     .padding()
+                    .foregroundColor(.white)
                 Text(phrases[headline]!)
+                    .foregroundColor(.white)
                 
                 HStack {
                     
@@ -45,9 +57,9 @@ struct BPopUp : View {
                         }
                     } label: {
                         if (reversed == 1) {
-                            Text("No")
+                            Text("Não")
                         } else {
-                            Text("Quero ;)")
+                            Text("Quero")
                         }
                     }
                     .foregroundColor(.white)
@@ -69,9 +81,9 @@ struct BPopUp : View {
                         }
                     } label: {
                         if (reversed == 1) {
-                            Text("Quero ;)")
+                            Text("Quero")
                         } else {
-                            Text("No")
+                            Text("Não")
                         }
                     }
                     .foregroundColor(.white)
@@ -88,9 +100,9 @@ struct BPopUp : View {
             .padding()
             .background
             {
-                Color.white
+                Color.black
             }
-            .cornerRadius(5)
+            .cornerRadius(16)
             .PopU()
             .shadow(radius: 10, x: 5, y: 5)
             .padding()

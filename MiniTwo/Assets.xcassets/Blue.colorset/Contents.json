@@ -1,0 +1,26 @@
+{
+  "colors" : [
+    {
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+<<<<<<<< HEAD:MiniTwo/Assets.xcassets/WinView/WinBlue.colorset/Contents.json
+          "blue" : "0.682",
+          "green" : "0.471",
+          "red" : "0.129"
+========
+          "blue" : "0xAE",
+          "green" : "0x78",
+          "red" : "0x21"
+>>>>>>>> d977917 (Atualizar front da tela principal do banco, criar telas adjacentes do banco):MiniTwo/Assets.xcassets/Blue.colorset/Contents.json
+        }
+      },
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

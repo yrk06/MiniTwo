@@ -26,7 +26,6 @@
 		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
 		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
 		783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */; };
-		783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */; };
 		783BC9202AA8AE820028A6B3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BC91F2AA8AE820028A6B3 /* Font.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
@@ -45,6 +44,9 @@
 		78ECC5F92AA0BD4E0091F875 /* RoomCleaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5F82AA0BD4E0091F875 /* RoomCleaning.swift */; };
 		78ECC5FB2AA0C0FF0091F875 /* RoomCleaningMinigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5FA2AA0C0FF0091F875 /* RoomCleaningMinigame.swift */; };
 		78ECC5FD2AA0D16A0091F875 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5FC2AA0D16A0091F875 /* House.swift */; };
+		CDCE5F152AAE7821006E448D /* BankTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F142AAE7821006E448D /* BankTutorial.swift */; };
+		CDCE5F172AAE803D006E448D /* BankTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F162AAE803D006E448D /* BankTerms.swift */; };
+		CDCE5F192AAEA05D006E448D /* BankCongratsLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +70,6 @@
 		783A4BEC2AA602A30049F054 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoB_comAcento2.otf; sourceTree = "<group>"; };
 		783BC91C2AA8A66D0028A6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenDays.swift; sourceTree = "<group>"; };
 		783BC91F2AA8AE820028A6B3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationQueue.swift; sourceTree = "<group>"; };
 		7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
@@ -88,6 +89,9 @@
 		78ECC5F82AA0BD4E0091F875 /* RoomCleaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCleaning.swift; sourceTree = "<group>"; };
 		78ECC5FA2AA0C0FF0091F875 /* RoomCleaningMinigame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCleaningMinigame.swift; sourceTree = "<group>"; };
 		78ECC5FC2AA0D16A0091F875 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		CDCE5F142AAE7821006E448D /* BankTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTutorial.swift; sourceTree = "<group>"; };
+		CDCE5F162AAE803D006E448D /* BankTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTerms.swift; sourceTree = "<group>"; };
+		CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCongratsLoan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,9 @@
 				5210C9C32A9CD57900E9B5D6 /* BankPopUp.swift */,
 				78788AA02A9FF1DE003ED923 /* BankPaymentOption.swift */,
 				78D75D662AAF55910074B125 /* BankTyping.swift */,
+				CDCE5F142AAE7821006E448D /* BankTutorial.swift */,
+				CDCE5F162AAE803D006E448D /* BankTerms.swift */,
+				CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */,
 			);
 			path = Bank;
 			sourceTree = "<group>";
@@ -348,6 +355,7 @@
 			files = (
 				5210C9C72A9CD59500E9B5D6 /* Pop.swift in Sources */,
 				5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */,
+				CDCE5F152AAE7821006E448D /* BankTutorial.swift in Sources */,
 				78ECC5FD2AA0D16A0091F875 /* House.swift in Sources */,
 				5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */,
 				78D75D652AA8B9510074B125 /* TextBackground.swift in Sources */,
@@ -359,8 +367,8 @@
 				783BC9202AA8AE820028A6B3 /* Font.swift in Sources */,
 				528F97352AA74E7D000469D1 /* Panela.swift in Sources */,
 				78788A9A2A9EA354003ED923 /* HapticsManager.swift in Sources */,
+				CDCE5F192AAEA05D006E448D /* BankCongratsLoan.swift in Sources */,
 				5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */,
-				783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */,
 				78788A982A9E17AF003ED923 /* ARController.swift in Sources */,
 				7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */,
 				528F973A2AA76CEA000469D1 /* StatusManager.swift in Sources */,
@@ -377,6 +385,7 @@
 				78788A9F2A9F6F16003ED923 /* ToiletMinigame.swift in Sources */,
 				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,
 				5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */,
+				CDCE5F172AAE803D006E448D /* BankTerms.swift in Sources */,
 				528F97372AA74F27000469D1 /* Rotate.swift in Sources */,
 				5221EF892AB087300022C59C /* FinalBom.swift in Sources */,
 				78B9E05F2A98F5A700C93302 /* MiniTwoApp.swift in Sources */,
