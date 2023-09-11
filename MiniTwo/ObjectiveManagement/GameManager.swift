@@ -52,7 +52,9 @@ class GameManager: ObservableObject {
         dayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {
                 _ in
             self.dayTick -= 1
-            self.statusManager.changeHunger(by: -0.5)
+            if !self.dayTransition {
+                self.statusManager.changeHunger(by: -0.5)
+            }
             if self.dayTick == 0 {
                 self.dayTimer?.invalidate()
                 self.endDay()

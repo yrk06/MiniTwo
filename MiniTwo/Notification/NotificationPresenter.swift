@@ -25,7 +25,7 @@ struct NotificationPresenter: ViewModifier {
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: 16)
-                    Text("\(Int(floor(Double(gameManager.dayTick / 6)))):" + String(format: "%02d",gameManager.dayTick % 6 * 10))
+                    Text("\(Int(floor(Double(gameManager.dayTick / 60)))):" + String(format: "%02d",gameManager.dayTick % 60))
                         .font(.callout)
                         .bold()
                     Spacer()
