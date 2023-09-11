@@ -24,6 +24,22 @@ struct BankPaymentOption: View {
                     .padding(.bottom, -130)
                     .padding(.top, -130)
                 VStack {
+                    
+                    VStack (alignment: .leading) {
+                        Button {
+                            //colocar código do botão de voltar aqui
+                        }
+                        
+                    label: {
+                        Image(systemName: "arrow.left")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding(.trailing, 320)
+                            .padding(.top, -50)
+                            
+                    }
+                        
+                    }
         
                     Text("Pagar boleto")
                         .foregroundColor(.white)
@@ -33,7 +49,6 @@ struct BankPaymentOption: View {
                         .padding(.vertical)
                         .padding(.horizontal, 20)
                     
-//                    Spacer()
                     
                     HStack {
                         NavigationLink {
@@ -131,7 +146,7 @@ struct BankPaymentOption: View {
                     }
                     .padding(.vertical, 20)
                     
-                    
+                    //Cada chevron é um botão. Cada um faz abrir um tipo de pop up sobre empréstimo.
                     Image(systemName: "chevron.right")
                         .foregroundColor(Color("Blue"))
                         .padding()

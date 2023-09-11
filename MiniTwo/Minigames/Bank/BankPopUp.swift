@@ -30,19 +30,40 @@ struct BPopUp : View {
         if (!pop_up_done)
         {
             VStack {
-            
+                ZStack {
+                    
                     Image(images)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 300, height: 138)
-                        .cornerRadius(8)
-                
-                
-                Text(headline)
-                    .padding()
+                        .frame(width: 350, height: 145)
+                        .cornerRadius(16)
+                    
+                    Button(action: {
+                        withAnimation(.spring()) {
+                            pop_up_done = true
+                        }
+                    }) {
+                            Image(systemName: "x.circle.fill")
+                            .font(.title3)
+                    }
                     .foregroundColor(.white)
-                Text(phrases[headline]!)
-                    .foregroundColor(.white)
+                    .padding(.leading, 310)
+                    .padding(.bottom, 110)
+    
+                }
+            
+                VStack (alignment: .leading) {
+                    Text(headline)
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                    Text(phrases[headline]!)
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                        .padding(.bottom)
+                    
+                }
                 
                 HStack {
                     
@@ -57,18 +78,28 @@ struct BPopUp : View {
                         }
                     } label: {
                         if (reversed == 1) {
-                            Text("Não")
+                            Text("Ler termos e condições")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                                .padding()
+                            
                         } else {
-                            Text("Quero")
+                            Text("Eu mereço")
+                                .font(.callout)
+                                .foregroundColor(.white)
+                                .padding(16)
+                                .bold()
+                                .frame(width: 121)
+                                .background {
+                                    Color("OrangeFood")
+                                }
+                                .cornerRadius(14)
+ 
                         }
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 100)
-                    .background {
-                        Color.blue
-                    }
-                    .cornerRadius(14)
+                    
+                    Spacer()
+                    
                     
                     Button {
                         withAnimation(.spring()) {
@@ -81,19 +112,30 @@ struct BPopUp : View {
                         }
                     } label: {
                         if (reversed == 1) {
-                            Text("Quero")
+                            Text("Eu mereço")
+                                .foregroundColor(.white)
+                                .font(.callout)
+                                .padding(16)
+                                .bold()
+                                .frame(width: 121)
+                                .background {
+                                    Color("OrangeFood")
+                                }
+                                .cornerRadius(14)
+
+                                    
                         } else {
-                            Text("Não")
+                            Text("Ler termos e condições")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                                .padding()
+                            
+                            
                         }
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 100)
-                    .background {
-                        Color.blue
-                    }
-                    .cornerRadius(14)
+                    
                 }
+                
                 .padding(.vertical)
                 
             }
