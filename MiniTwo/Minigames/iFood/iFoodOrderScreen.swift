@@ -58,7 +58,6 @@ struct iFoodOrderScreen: View {
                 HStack {
                     Text("30-40min •")
                     Text("Grátis")
-                        .foregroundColor(.red)
                 }
                 .font(.caption2)
             }
@@ -95,3 +94,7 @@ struct iFoodOrderScreen: View {
         }
     }
 }
+
+
+
+
