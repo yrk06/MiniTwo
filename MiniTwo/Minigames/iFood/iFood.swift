@@ -379,10 +379,10 @@ struct iFood : View {
                 }
             }
             
-//            ForEach(Range(1...5), id: \.self) { i in
-//                let off : CGFloat = CGFloat(i)/10
-//                FPopUp(text: phrases["Você merece!"]!, time_to_appear: .now() + off)
-//            }
+            ForEach(Range(1...5), id: \.self) { i in
+                let off : CGFloat = CGFloat(i)/10
+                FPopUp(text: phrases["Você merece!"]!, time_to_appear: .now() + off)
+            }
         }
     }
 }

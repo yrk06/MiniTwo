@@ -34,7 +34,9 @@ struct BankPaymentOption: View {
                     }
                 }
                 
-                NavigationLink {} label: {
+                NavigationLink {
+                    BankTyping()
+                } label: {
                     VStack {
                         Image(systemName: "barcode")
                             .resizable()
