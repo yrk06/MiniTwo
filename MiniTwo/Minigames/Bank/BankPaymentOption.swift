@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BankPaymentOption: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         
         VStack {
@@ -27,7 +30,7 @@ struct BankPaymentOption: View {
                     
                     VStack (alignment: .leading) {
                         Button {
-                            //colocar código do botão de voltar aqui
+                            dismiss()
                         }
                         
                     label: {
@@ -71,7 +74,9 @@ struct BankPaymentOption: View {
                         }
                         Spacer()
                         
-                        NavigationLink {} label: {
+                        NavigationLink {
+                            BankTyping()
+                        } label: {
                             VStack {
                                 Image("barcodeDoodle")
                                     .frame(width: 100, height: 100)
@@ -90,25 +95,6 @@ struct BankPaymentOption: View {
                     }
                     .padding(.horizontal,36)
                     .padding(.bottom, 16)
-                }
-                
-                NavigationLink {
-                    BankTyping()
-                } label: {
-                    VStack {
-                        Image(systemName: "barcode")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 27)
-                            .foregroundColor(.black)
-                            .padding(20)
-                            .background(Color(uiColor: .systemGray4))
-                            .cornerRadius(40)
-                            .frame(maxWidth: 80)
-                        Text("Manual")
-                            .foregroundColor(.black)
-                            .font(.callout)
-                    }
                 }
             }
             .frame(width: .infinity, height: 370)

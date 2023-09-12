@@ -14,6 +14,7 @@ struct Bank : View {
     
     @State var h = false
     @State var w = false
+    @State var popup_dismissed = false
     
     @State var type = Int8.random(in: 1...3)
     
@@ -189,7 +190,105 @@ struct Bank : View {
                 
                 
             }
-            if !h && !w {
+            .sheet(isPresented: $w) {
+                ScrollView {
+                    VStack {
+                        Image("parabensPop")
+                            .resizable()
+                            .scaledToFit()
+                        VStack {
+                            Text("Parabéns")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .font(.title2)
+                                .bold()
+                            
+                            Text("Bem-vindo à realidade entusiasmante do endividamento! Parabéns por atravessar o portal dos empréstimos e mergulhar de cabeça nesse maravilhoso mundo de taxas, parcelas e surpresas financeiras! Como um verdadeiro aventureiro monetário, você está prestes a descobrir que nada é tão emocionante quanto comprometer seu futuro por um presente efêmero.\n\nEntão, prepare-se para abraçar as maravilhas da dívida, onde cada pagamento é como um pequeno troféu que lembra você do quão longe está disposto a ir para alcançar seus desejos imediatos!")
+                        }
+                        .padding(32)
+                    }
+                }
+                //.padding(.top, 32)
+                .presentationDragIndicator(.visible)
+                    .onAppear {
+                        popup_dismissed = true
+                    }
+            }
+            .sheet(isPresented: $h) {
+                ScrollView {
+                    VStack (alignment: .leading, spacing: 16) {
+                        Text("Termos e condições")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.title2)
+                            .bold()
+                        
+                        Group {
+                            
+                            
+                            Text("1. Empréstimos Empolgantes")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Ao solicitar um empréstimo conosco, você está prestes a receber uma quantia de crédito que fará você se sentir como um milionário instantâneo. No entanto, a alegria de gastar logo será substituída pelo peso da dívida que se acumula.")
+                            
+                            Text("2. Taxas Amigáveis")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Nossas taxas de juros são tão amigáveis quanto um abraço, mas, ao contrário do abraço, elas não vão embora. Você mal notará o dinheiro saindo da sua conta enquanto gasta, mas quando perceber, já será tarde demais.")
+                            
+                            Text("3. Prazos Flexíveis (não para você)")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Oferecemos prazos de pagamento que parecem se estender por toda uma vida. Você pode pensar que isso é ótimo, mas, na verdade, estará pagando por anos e anos (ou até mais).")
+                            
+                            Text("4. Perdão")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Se você achar que não consegue mais pagar, não se preocupe! Oferecemos um serviço de perdão de dívidas. Mas, como em todo bom jogo, há um preço a ser pago, e ele geralmente é mais alto do que você pode imaginar.")
+                            
+                            Text("5. Garantia de Frustração")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Nossos empréstimos são projetados para mantê-lo em um ciclo vicioso de pagamento. Você continuará trabalhando para pagar a dívida, mas é improvável que a quite. A satisfação de ser derrotado pela dívida é quase inevitável.")
+                        }
+                        
+                        Group {
+                            
+                            
+                            Text("6. Penalidades Surpresa")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("De tempos em tempos, surpreenderemos você com penalidades inesperadas, como acontece em um jogo com reviravoltas. É uma sensação tão emocionante descobrir que precisa pagar mais do que esperava!")
+                            
+                            Text("7. Rescisão Complicada")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Se você decidir que não quer mais participar desse jogo de dívidas, não se preocupe. A rescisão pode ser uma jornada complicada, repleta de obstáculos e desafios inesperados.")
+                            
+                            Text("8. Assinatura Vitalícia")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text("Ao assinar este empréstimo, você está basicamente se comprometendo a um contrato de longo prazo, que pode parecer uma sentença de vida. Lembre-se, a vida é curta, mas a dívida é persistente!")
+                            
+                            Text("Lembre-se, caro usuário, estamos aqui para tornar sua experiência financeira verdadeiramente memorável - não apenas pela diversão, mas também pela jornada eterna de pagar essa dívida real. Boa sorte, e que a sorte (ou a falta dela) esteja sempre do seu lado!")
+                        }
+                            
+                    }
+                    
+                }
+                .padding(32)
+                .presentationDragIndicator(.visible)
+                
+                
+            }
+            
+            if !h && !w && !popup_dismissed {
                 switch type {
                 case 1:
                     BPopUp(headline: "Você merece!", images: "voceMerece", op_1: $h, op_2: $w)
@@ -202,7 +301,9 @@ struct Bank : View {
                 }
             }
             
+            
         }
+        
     }
 }
 
