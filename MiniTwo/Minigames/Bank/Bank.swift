@@ -22,60 +22,60 @@ struct Bank : View {
     
     var body: some View {
         ZStack {
-                VStack {
-                    ZStack {
-                        Text("pepinobankpepinobank")
-                            .fontBob(size: 94)
-                            .tracking(-20)
-                            .foregroundColor(.white)
-                            .opacity(0.1)
-                            .ignoresSafeArea()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, -10)
-                            .padding(.trailing, -50)
-                            .padding(.bottom, -130)
-                            .padding(.top, -130)
-                        VStack {
-                            HStack {
+            VStack {
+                ZStack {
+                    Text("pepinobankpepinobank")
+                        .fontBob(size: 94)
+                        .tracking(-20)
+                        .foregroundColor(.white)
+                        .opacity(0.1)
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, -10)
+                        .padding(.trailing, -50)
+                        .padding(.bottom, -130)
+                        .padding(.top, -130)
+                    VStack {
+                        HStack {
+                            
+                            ZStack {
                                 
-                                ZStack {
-                                    
-                                    Circle()
-                                        .fill(Color("OrangeFood"))
-                                        .frame(maxWidth: 50)
-                                    
-                                    Image("perfilDoodle")
-                                    
-                                }
+                                Circle()
+                                    .fill(Color("OrangeFood"))
+                                    .frame(maxWidth: 50)
                                 
-                                Spacer()
-                                Image(systemName: "eye.slash")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxHeight: 17)
-                                    .foregroundColor(.white)
-                                Image(systemName: "questionmark.circle")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxHeight: 17)
-                                    .foregroundColor(.white)
+                                Image("perfilDoodle")
                                 
                             }
-                            .padding(.horizontal, 20)
                             
-                            Text("Olá, [nome do adulto]")
+                            Spacer()
+                            Image(systemName: "eye.slash")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 17)
                                 .foregroundColor(.white)
-                                .font(.title2)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.vertical)
-                                .padding(.horizontal, 20)
+                            Image(systemName: "questionmark.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 17)
+                                .foregroundColor(.white)
+                            
                         }
+                        .padding(.horizontal, 20)
                         
+                        Text("Olá, [nome do adulto]")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.vertical)
+                            .padding(.horizontal, 20)
                     }
-                    .background(Color("Blue"))
                     
-                    ScrollView {
-                        
+                }
+                .background(Color("Blue"))
+                
+                ScrollView {
+                    
                     VStack (alignment: .leading) {
                         Text("Conta")
                             .font(.headline)
@@ -110,42 +110,42 @@ struct Bank : View {
                             }
                         }
                     }
-                        ZStack {
-                            
-                            Text("Pepinobankpepino")
-                                .fontBob(size: 94)
-                                .tracking(-20)
+                    ZStack {
+                        
+                        Text("Pepinobankpepino")
+                            .fontBob(size: 94)
+                            .tracking(-20)
+                            .foregroundColor(.white)
+                            .opacity(0.1)
+                            .ignoresSafeArea()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, -10)
+                            .padding(.trailing, -50)
+                            .padding(.vertical, -130)
+                        
+                        HStack {
+                            Text("Você tem **\(objMan.allObjectives.filter({$0.objective == .boleto && $0.done == false}).count) boletos** a vencer até o fim da semana")
                                 .foregroundColor(.white)
-                                .opacity(0.1)
-                                .ignoresSafeArea()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.leading, -10)
-                                .padding(.trailing, -50)
-                                .padding(.vertical, -130)
+                                .font(.subheadline)
                             
-                            HStack {
-                                Text("Você tem **\(objMan.allObjectives.filter({$0.objective == .boleto && $0.done == false}).count) boletos** a vencer até o fim da semana")
+                            Spacer()
+                            NavigationLink {
+                                BankPaymentOption()
+                                //                                    objMan.complete_mission(type: .boleto)
+                                
+                            } label: {
+                                Text("Pagar")
+                                    .bold()
                                     .foregroundColor(.white)
-                                    .font(.subheadline)
-                                
-                                Spacer()
-                                NavigationLink {
-                                    BankPaymentOption()
-//                                    objMan.complete_mission(type: .boleto)
-                                    
-                                } label: {
-                                    Text("Pagar")
-                                        .bold()
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .padding(.horizontal)
-                                        .background(Color("OrangeFood"))
-                                        .cornerRadius(40)
-                                }
-                                
+                                    .padding()
+                                    .padding(.horizontal)
+                                    .background(Color("OrangeFood"))
+                                    .cornerRadius(40)
                             }
                             
                         }
+                        
+                    }
                     .padding()
                     .background(Color("Blue"))
                     .cornerRadius(16)
@@ -179,42 +179,27 @@ struct Bank : View {
                         
                     }
                     .padding(.horizontal, 20)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     
                     
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                    
-                    Spacer()
-                    NavigationLink {
-                        BankPaymentOption()
-                        //objMan.complete_mission(type: .boleto)
-                        
-                    } label: {
-                        Text("Pagar")
-                            .bold()
-                            .foregroundColor(.white)
-                            .padding()
-                            .padding(.horizontal)
-                            .background(Color("Blue"))
-                            .cornerRadius(40)
-                }
                 
-            ZStack {
-                if !h && !w {
-                    switch type {
-                    case 1:
-                        BPopUp(headline: "Você merece!", images: "voceMerece", op_1: $h, op_2: $w)
-                    case 2:
-                        BPopUp(headline: "Chega de pepinos!", images: "chegaPepinos", op_1: $h, op_2: $w)
-                    case 3:
-                        BPopUp(headline: "Realize seu sonho agora mesmo!", images: "realizeSonho", op_1: $h, op_2: $w)
-                    default:
-                        Text("No pop up :(")
-                    }
-                }
+                Spacer()
+                
+                
                 
             }
-                
+            if !h && !w {
+                switch type {
+                case 1:
+                    BPopUp(headline: "Você merece!", images: "voceMerece", op_1: $h, op_2: $w)
+                case 2:
+                    BPopUp(headline: "Chega de pepinos!", images: "chegaPepinos", op_1: $h, op_2: $w)
+                case 3:
+                    BPopUp(headline: "Realize seu sonho agora mesmo!", images: "realizeSonho", op_1: $h, op_2: $w)
+                default:
+                    Text("No pop up :(")
+                }
             }
             
         }
@@ -225,10 +210,13 @@ struct Bank : View {
 struct Bank_Previews: PreviewProvider {
     static var previews: some View {
         let objMan = ObjectiveManager()
-        Bank()
-            .environmentObject(objMan)
-            .task {
-                objMan.fill_objectives(n: 15)
-            }
+        NavigationStack {
+            Bank()
+                .environmentObject(objMan)
+                .task {
+                    objMan.fill_objectives(n: 15)
+                }
+        }
+        
     }
 }

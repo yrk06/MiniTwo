@@ -26,6 +26,7 @@
 		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
 		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
 		783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */; };
+		783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */; };
 		783BC9202AA8AE820028A6B3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BC91F2AA8AE820028A6B3 /* Font.swift */; };
 		7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F72A9BCF4E00F7639C /* NotificationQueue.swift */; };
 		7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7856E1F92A9BCF7100F7639C /* NotificationTypes.swift */; };
@@ -67,6 +68,7 @@
 		528F97342AA74E7D000469D1 /* Panela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panela.swift; sourceTree = "<group>"; };
 		528F97362AA74F27000469D1 /* Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotate.swift; sourceTree = "<group>"; };
 		528F97392AA76CEA000469D1 /* StatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusManager.swift; sourceTree = "<group>"; };
+		783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenDays.swift; sourceTree = "<group>"; };
 		528F973B2AA8ADF9000469D1 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		528F977F2AAFF561000469D1 /* FinalRuim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRuim.swift; sourceTree = "<group>"; };
 		78009B5B2AA74651006BA51D /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				78788A9A2A9EA354003ED923 /* HapticsManager.swift in Sources */,
 				CDCE5F192AAEA05D006E448D /* BankCongratsLoan.swift in Sources */,
 				5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */,
+				783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */,
 				78788A982A9E17AF003ED923 /* ARController.swift in Sources */,
 				7856E1F82A9BCF4E00F7639C /* NotificationQueue.swift in Sources */,
 				528F973A2AA76CEA000469D1 /* StatusManager.swift in Sources */,
