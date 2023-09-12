@@ -52,6 +52,7 @@ struct CardV : View {
                 .font(.headline)
         }
         .foregroundColor(.white)
+        .frame(width: 160, height: 100)
     }
 }
 
@@ -121,12 +122,13 @@ struct CardsVantagens: View {
     }
     
     var body: some View {
+        
         Button(action: {
             showAlert = true
         }, label: {
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(.gray, lineWidth: 1)
+                    .stroke(.gray.opacity(0.4), lineWidth: 1)
                     .frame(width: 125, height: 125)
                 VStack(spacing: 8){
                     Image(card.imagem)
@@ -156,19 +158,30 @@ struct CardsVantagens: View {
     }
 }
 
+
 struct FoodCard {
     var nome : String
     var nome_restaurante : String
     var tipo_cozinha : String
     var verbatim : String
     var price : Float
+    var descricao : String
+    var color : Color
+    var colorButton : Color
+    var colorDescricao : Color
+    var imagem : String
+    var incrementoUm: String
+    var incrementoDois: String
+    var incrementoTres: String
+    var incrementoQuatro: String
+    var incrementoCinco: String
 }
 
 var food_cards = [
-    FoodCard(nome: "Pepinada", nome_restaurante: "Casa do Pepino", tipo_cozinha: "Brasileira", verbatim: "Prato tipicamente brasileiro, delicioso com um toque refrescante.", price: 65.99),
-    FoodCard(nome: "Pizza de pepino", nome_restaurante: "Pepino's Pizza", tipo_cozinha: "Italiana", verbatim: "Individual", price: 54.99),
-    FoodCard(nome: "Salada de pepino", nome_restaurante: "PepinoWay", tipo_cozinha: "Saudável", verbatim: "Individual", price: 15.99),
-    FoodCard(nome: "Hamburger de pepino", nome_restaurante: "Pepino Donald's", tipo_cozinha: "Americana", verbatim: "Também do Siri Cascudo", price: 23.89)
+    FoodCard(nome: "Pepinada", nome_restaurante: "Casa do Pepino", tipo_cozinha: "Brasileira", verbatim: "Delicioso prato tipicamente brasileiro com um toque refrescante", price: 65.99, descricao: "A mais gostosa da cidade. Para os loucos por pepino. \n\nA pepinada é uma especiaria brasileira feita com pepinos reconhecida internacionalmente. \n\nAcompanha picles e farofa.", color: Color("OrangeFood"), colorButton: Color("DarkGreen"), colorDescricao: .white, imagem: "orderBrasileira", incrementoUm: "incrementoPepinadaUm", incrementoDois: "incrementoPepinadaDois", incrementoTres: "incrementoPepinadaTres", incrementoQuatro: "incrementoPepinadaQuatro", incrementoCinco: "incrementoPepinadaCinco"),
+    FoodCard(nome: "Pizza de pepino", nome_restaurante: "Pepino's Pizza", tipo_cozinha: "Italiana", verbatim: "Individual", price: 54.99, descricao: "O verdadeiro suculento. Para os loucos por pepino. \n\nPizza de pepino com mussarela de búfala regada por molho de tomates caseiro e coberto queijo mussarela. \n\nAcompanha picles.", color: Color("Blue"), colorButton: Color("DarkGreen"), colorDescricao: .white, imagem: "orderItaliana", incrementoUm: "incrementoPizzaUm", incrementoDois: "incrementoPizzaDois", incrementoTres: "incrementoPizzaTres", incrementoQuatro: "incrementoPizzaQuatro", incrementoCinco: "incrementoPizzaCinco"),
+    FoodCard(nome: "Salada de pepino", nome_restaurante: "PepinoWay", tipo_cozinha: "Saudável", verbatim: "Individual", price: 15.99, descricao: "A mais gostoso da cidade. Para os loucos por pepino. \n\nA salada de pepino é feita com pepinos frescos e verdinhos. Você pode montar sua salada como quiser. \n\nPode acompanhar picles e queijo branco.", color: Color("DarkGreen"), colorButton: Color("OrangeFood"), colorDescricao: .white, imagem: "orderSaudavel", incrementoUm: "incrementoSaladaUm", incrementoDois: "incrementoSaladaDois", incrementoTres: "incrementoSaladaTres", incrementoQuatro: "incrementoSaladaQuatro", incrementoCinco: "incrementoSaladaCinco"),
+    FoodCard(nome: "Burger de pepino", nome_restaurante: "Pepino Donald's", tipo_cozinha: "Americana", verbatim: "Individual", price: 23.89, descricao: "A mais gostoso da cidade. Para os loucos por pepino. \n\nA salada de pepino é feita com pepinos frescos e verdinhos. Você pode montar sua salada como quiser. \n\nPode acompanhar picles e queijo branco.", color: .white,  colorButton: Color("DarkGreen"), colorDescricao: Color("Blue"), imagem: "orderAmericana", incrementoUm: "incrementoBurgerUm", incrementoDois: "incrementoBurgerDois", incrementoTres: "incrementoBurgerTres", incrementoQuatro: "incrementoBurgerQuatro", incrementoCinco: "incrementoBurgerCinco")
 ]
 
 struct VantagensPepino {
@@ -196,6 +209,18 @@ struct iFood : View {
         ZStack {
             ScrollView {
                 VStack (alignment: .leading) {
+                    
+                    HStack(alignment: .center){
+                        HStack{
+                            Text("Pepino Home, 20")
+                                .bold()
+                            Image(systemName: "chevron.down")
+                                .foregroundColor(Color("OrangeFood"))
+                        }
+                    }
+                    .padding([.top])
+                    .font(.footnote)
+                    .frame(maxWidth: .infinity)
                     VStack (alignment: .leading) {
                         HStack {
                             Text("30 dias grátis de cupons")
@@ -219,10 +244,11 @@ struct iFood : View {
                     .padding()
                     .background {
                         Color("OrangeFood")
+                        Image("bannerTexture")
                     }
                     .cornerRadius(12)
                     .padding()
-                    .frame(height: 225)
+                    .frame(height: 185)
                     
                     Text("Tipos de cozinha")
                         .font(.body)
@@ -232,22 +258,22 @@ struct iFood : View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             NavigationLink {
-                                iFoodOrderScreen(food: food_cards[1], last_ordered: $last_ordered)
+                                iFoodOrderScreen(food: food_cards[1])
                             } label: {
                                 CardH("Italiana", imagem: "cozinhaItaliana")
                             }
                             NavigationLink {
-                                iFoodOrderScreen(food: food_cards[0], last_ordered: $last_ordered)
+                                iFoodOrderScreen(food: food_cards[0])
                             } label: {
                                 CardH("Brasileira", imagem: "cozinhaBrasileira")
                             }
                             NavigationLink {
-                                iFoodOrderScreen(food: food_cards[2], last_ordered: $last_ordered)
+                                iFoodOrderScreen(food: food_cards[2])
                             } label: {
                                 CardH("Saudável", imagem: "cozinhaSaudavel")
                             }
                             NavigationLink {
-                                iFoodOrderScreen(food: food_cards[3], last_ordered: $last_ordered)
+                                iFoodOrderScreen(food: food_cards[3])
                             } label: {
                                 CardH("Americana", imagem: "cozinhaAmericana")
                             }
@@ -262,14 +288,14 @@ struct iFood : View {
                     
                     HStack {
                         NavigationLink {
-                            iFoodOrderScreen(food: last_ordered[0], last_ordered: $last_ordered)
+                            iFoodOrderScreen(food: last_ordered[0])
                         } label: {
                             VStack {
-                                CardV(food: last_ordered[0])
-                                    .padding([.leading], -8)
+                                CardV(food: food_cards[0])
+                                    .padding([.leading], 8)
+                                    .padding([.top], 10)
                                 Spacer()
                             }
-                            .padding()
                             .background {
                                 Image("pepinada")
                             }
@@ -279,10 +305,10 @@ struct iFood : View {
                         Spacer()
                         VStack(spacing: 12) {
                             NavigationLink {
-                                iFoodOrderScreen(food: last_ordered[1], last_ordered: $last_ordered)
+                                iFoodOrderScreen(food: last_ordered[1])
                             } label: {
-                                CardV(food: last_ordered[1])
-                                    .padding([.leading], -36)
+                                CardV(food: food_cards[1])
+                                    .padding([.leading], -26)
                                     .background {
                                         Image("pizzaPepino")
                                     }
@@ -290,10 +316,10 @@ struct iFood : View {
                                     .cornerRadius(8)
                             }
                             NavigationLink {
-                                iFoodOrderScreen(food: last_ordered[2], last_ordered: $last_ordered)
+                                iFoodOrderScreen(food: last_ordered[2])
                             } label: {
-                                CardV(food: last_ordered[2])
-                                    .padding([.leading], -28)
+                                CardV(food: food_cards[2])
+                                    .padding([.leading], -20)
                                     .background {
                                         Image("saladaPepino")
       
@@ -312,22 +338,22 @@ struct iFood : View {
                     
                     VStack(alignment: .leading, spacing: 16) {
                         NavigationLink {
-                            iFoodOrderScreen(food: food_cards[3], last_ordered: $last_ordered)
+                            iFoodOrderScreen(food: food_cards[3])
                         } label: {
                             CardLojas(food: food_cards[3], imagem: "lojaAmericana")
                         }
                         NavigationLink {
-                            iFoodOrderScreen(food: food_cards[1], last_ordered: $last_ordered)
+                            iFoodOrderScreen(food: food_cards[1])
                         } label: {
                             CardLojas(food: food_cards[1], imagem: "lojaItaliana")
                         }
                         NavigationLink {
-                            iFoodOrderScreen(food: food_cards[0], last_ordered: $last_ordered)
+                            iFoodOrderScreen(food: food_cards[0])
                         } label: {
                             CardLojas(food: food_cards[0], imagem: "lojaBrasileira")
                         }
                         NavigationLink {
-                            iFoodOrderScreen(food: food_cards[2], last_ordered: $last_ordered)
+                            iFoodOrderScreen(food: food_cards[2])
                         } label: {
                             CardLojas(food: food_cards[2], imagem: "lojaSaudavel")
                         }
