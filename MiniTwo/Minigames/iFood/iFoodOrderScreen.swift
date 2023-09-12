@@ -31,7 +31,9 @@ struct iFoodOrderScreen: View {
         ScrollView {
             VStack (alignment: .leading) {
                 Image(food.imagem)
-
+                    .resizable()
+                    .scaledToFit()
+                
                 HStack {
                     Text(food.nome_restaurante)
                         .font(.title)
@@ -68,7 +70,7 @@ struct iFoodOrderScreen: View {
                         Text("5,0")
                     }
                     .foregroundColor(food.colorDescricao)
-
+                    
                     Divider()
                         .background(Color.white.opacity(0.6))
                     HStack {
@@ -151,27 +153,27 @@ struct iFoodOrderScreen: View {
                 
                 
                 Button {
-                objMan.complete_mission(type: .comer)
-                stsMan.changeHunger(by: 10)
-                stsMan.changeMoney(by: -Double(food.price.nextUp))
-                last_ordered.insert(food, at: 0)
-                last_ordered.remove(at: 3)
-                dismiss()
-            } label: {
-                Text("Comprar \(food.nome)")
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background {
-                        Color("OrangeFood")
+                    objMan.complete_mission(type: .comer)
+                    stsMan.changeHunger(by: 10)
+                    stsMan.changeMoney(by: -Double(food.price.nextUp))
+                    dismiss()
+                } label: {
+                    Text("Comprar")
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(food.colorButton)
+                        .cornerRadius(12)
+                        .padding()
+                    
                 }
-                
+                //        .edgesIgnoringSafeArea(.bottom)
             }
-            //        .edgesIgnoringSafeArea(.bottom)
         }
-        .background(food.color)
+            .background(food.color)
+        
+        
     }
-    
 }
 
 struct iFoodOrder_Preview: PreviewProvider {
