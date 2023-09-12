@@ -51,7 +51,7 @@ struct Bank : View {
                             .padding(.horizontal, 20)
                     }
                 }
-                .background(Color("BankAccent"))
+                .background(Color("Blue"))
                 VStack (alignment: .leading) {
                     Text("Conta")
                         .font(.headline)
@@ -100,7 +100,7 @@ struct Bank : View {
                             .foregroundColor(.white)
                             .padding()
                             .padding(.horizontal)
-                            .background(Color("BankAccent"))
+                            .background(Color("Blue"))
                             .cornerRadius(40)
                     }
                     
