@@ -47,6 +47,9 @@
 		CDCE5F152AAE7821006E448D /* BankTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F142AAE7821006E448D /* BankTutorial.swift */; };
 		CDCE5F172AAE803D006E448D /* BankTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F162AAE803D006E448D /* BankTerms.swift */; };
 		CDCE5F192AAEA05D006E448D /* BankCongratsLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */; };
+		CDCE5F1C2AAFE153006E448D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F1B2AAFE153006E448D /* SplashScreen.swift */; };
+		CDCE5F1E2AAFE272006E448D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F1D2AAFE272006E448D /* Onboarding.swift */; };
+		CDCE5F202AAFF829006E448D /* OnboardingFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F1F2AAFF829006E448D /* OnboardingFinal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		CDCE5F142AAE7821006E448D /* BankTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTutorial.swift; sourceTree = "<group>"; };
 		CDCE5F162AAE803D006E448D /* BankTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTerms.swift; sourceTree = "<group>"; };
 		CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCongratsLoan.swift; sourceTree = "<group>"; };
+		CDCE5F1B2AAFE153006E448D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		CDCE5F1D2AAFE272006E448D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		CDCE5F1F2AAFF829006E448D /* OnboardingFinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,9 @@
 		78B9E0522A98F5A700C93302 = {
 			isa = PBXGroup;
 			children = (
+				CDCE5F1B2AAFE153006E448D /* SplashScreen.swift */,
+				CDCE5F1D2AAFE272006E448D /* Onboarding.swift */,
+				CDCE5F1F2AAFF829006E448D /* OnboardingFinal.swift */,
 				78B9E05D2A98F5A700C93302 /* MiniTwo */,
 				78B9E05C2A98F5A700C93302 /* Products */,
 			);
@@ -377,12 +386,15 @@
 				5210C9D32A9F7B1200E9B5D6 /* ObjectiveStruct.swift in Sources */,
 				5210C9D02A9F684100E9B5D6 /* ObjectiveManager.swift in Sources */,
 				78ECC5FB2AA0C0FF0091F875 /* RoomCleaningMinigame.swift in Sources */,
+				CDCE5F202AAFF829006E448D /* OnboardingFinal.swift in Sources */,
 				78788A9D2A9F6BD1003ED923 /* MotionManager.swift in Sources */,
 				7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */,
 				78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */,
 				528F973C2AA8ADF9000469D1 /* StatusBar.swift in Sources */,
+				CDCE5F1C2AAFE153006E448D /* SplashScreen.swift in Sources */,
 				7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */,
 				78788A9F2A9F6F16003ED923 /* ToiletMinigame.swift in Sources */,
+				CDCE5F1E2AAFE272006E448D /* Onboarding.swift in Sources */,
 				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,
 				5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */,
 				CDCE5F172AAE803D006E448D /* BankTerms.swift in Sources */,
