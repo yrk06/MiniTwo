@@ -9,6 +9,9 @@ import SwiftUI
 
 struct FinalRuim: View {
     
+    @EnvironmentObject var game : GameManager
+    @EnvironmentObject var notification : NotificationQueue
+    
     var imageName : String = "EndingHunger"
     var text : String = "Você deixou de comer por tempo demais.\n\nFatos desconhecidos: você é um ser humano que precisa se alimentar!"
     
@@ -24,7 +27,8 @@ struct FinalRuim: View {
                     .frame(width: 200, alignment: .center)
             }
             Button {
-                
+                game.restartGame()
+                notification.canPush = true
             } label: {
                 Text("Jogar de novo")
                     .foregroundColor(.white)
@@ -45,5 +49,9 @@ struct FinalRuim: View {
             }
         }
         .ignoresSafeArea()
+        .transition(.scale)
+        .onAppear {
+            notification.stopNotificationTimer()
+        }
     }
 }

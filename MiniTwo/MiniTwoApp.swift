@@ -15,19 +15,18 @@ struct MiniTwoApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            Home()
-//                .environmentObject(gameManager)
-//                .environmentObject(gameManager.objectiveManager)
-//                .environmentObject(gameManager.statusManager)
-//                .environmentObject(notificationQueue)
-//                .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
-//                .onAppear {
-//                    gameManager.startDay()
-//                }
-//                .statusBar(hidden: true)
-//                .preferredColorScheme(.light)
-            FinalBom()
+            Home()
+                .environmentObject(gameManager)
+                .environmentObject(gameManager.objectiveManager)
+                .environmentObject(gameManager.statusManager)
+                .environmentObject(notificationQueue)
+                .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
+                .onAppear {
+                    gameManager.startDay()
+                    notificationQueue.startNotificationTimer()
+                }
+                .statusBar(hidden: true)
+                .preferredColorScheme(.light)
         }
-        
     }
 }

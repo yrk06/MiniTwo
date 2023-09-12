@@ -9,6 +9,9 @@ import SwiftUI
 
 struct FinalBom: View {
     
+    @EnvironmentObject var game : GameManager
+    @EnvironmentObject var notification : NotificationQueue
+    
     var body: some View {
         VStack (spacing: 50) {
             Image("Win")
@@ -21,7 +24,8 @@ struct FinalBom: View {
                     .frame(width: 200, alignment: .center)
             }
             Button {
-                
+                game.restartGame()
+                notification.canPush = true
             } label: {
                 Text("Jogar de novo")
                     .foregroundColor(.white)
@@ -42,5 +46,9 @@ struct FinalBom: View {
             }
         }
         .ignoresSafeArea()
+        .transition(.scale)
+        .onAppear {
+            notification.stopNotificationTimer()
+        }
     }
 }
