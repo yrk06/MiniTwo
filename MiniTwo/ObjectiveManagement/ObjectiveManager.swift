@@ -43,6 +43,10 @@ class ObjectiveManager : ObservableObject {
         add_objective(.boleto)
     }
     
+    public func eraseAllObjectives() {
+        allObjectives.removeAll()
+    }
+    
     private func random_objective() -> Objective
     {
         let n : Int8 = Int8.random(in: 1...4)

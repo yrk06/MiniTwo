@@ -13,11 +13,14 @@ class NotificationQueue: ObservableObject {
     @Published var current: any Notification = EmptyNotification()
     
     var timer: Timer!
+    var canPush: Bool = false
     
     init() {
-        timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
             _ in
-            self.generateRandomNotification()
+            if self.canPush {
+                self.generateRandomNotification()
+            }
         }
     }
     
@@ -57,7 +60,6 @@ class NotificationQueue: ObservableObject {
         } else {
             current.dismiss = self.dismissCurrent
         }
-        
     }
     
     func dismissCurrent() {
@@ -67,8 +69,6 @@ class NotificationQueue: ObservableObject {
                 self.addCurrent(self.queue.removeFirst())
             }
         }
-        
-        
     }
     
     func push(_ notification: any Notification) {
@@ -77,7 +77,15 @@ class NotificationQueue: ObservableObject {
         } else {
             queue.append(notification)
         }
-        
+    }
+    
+    func startNotificationTimer() {
+        canPush = true
+    }
+    
+    func stopNotificationTimer() {
+        canPush = false
+        dismissCurrent()
     }
     
 }

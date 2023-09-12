@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum stat {
     case health, money, energy
@@ -16,6 +17,8 @@ class GameManager: ObservableObject {
     @Published var day: Int = 0
     @Published var dayTick = 90
     @Published var dayTransition = false
+    @Published var gameEnded : Bool = false
+    @Published var gameWon : Bool = false
     var dayTimer: Timer?
     
     var objectiveManager: ObjectiveManager = ObjectiveManager()
@@ -52,19 +55,26 @@ class GameManager: ObservableObject {
         dayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {
                 _ in
             self.dayTick -= 1
-            if !self.dayTransition {
+            if !self.dayTransition && !self.gameEnded {
                 self.statusManager.changeHunger(by: -0.5)
             }
             if self.dayTick == 0 {
                 self.dayTimer?.invalidate()
                 self.endDay()
             }
-            if self.objectiveManager.allObjectives.filter({$0.done}).count == self.getTaskCount() {
+            if self.objectiveManager.allObjectives.filter({$0.done}).count == self.getTaskCount()
+            {
                 self.dayTimer?.invalidate()
-                self.objectiveManager.allObjectives = []
+                self.objectiveManager.eraseAllObjectives()
                 self.endDay()
             }
-            
+            if self.statusManager.getHealth() <= 0 {
+                self.loseGame()
+            } else if self.statusManager.getMoney() <= 0 {
+                self.loseGame()
+            } else if self.statusManager.getHealth() <= 0 {
+                self.loseGame()
+            }
         })
     }
     
@@ -72,9 +82,37 @@ class GameManager: ObservableObject {
         dayTransition = true
         dayTick = 90
         day += 1
-//        dayTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: {
-//                _ in
-//            self.startDay()
-//        })
+        
+        if self.day == 3 {
+            winGame()
+        }
+    }
+    
+    func winGame() {
+        withAnimation(.spring()) {
+            gameEnded = true
+            gameWon = true
+        }
+    }
+    
+    func loseGame() {
+        withAnimation(.spring()) {
+            gameEnded = true
+            gameWon = false
+        }
+    }
+    
+    func restartGame() {
+        dayTransition = false
+        dayTick = 90
+        day = 0
+        
+        withAnimation(.spring()) {
+            gameEnded = false
+        }
+        
+        objectiveManager.eraseAllObjectives()
+        objectiveManager.level_1()
+        statusManager.resetAll()
     }
 }

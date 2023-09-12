@@ -48,23 +48,23 @@ struct NotificationPresenter: ViewModifier {
                 
                 
                 
-                
-                let current = notificationQueue.current
-                Group {
-                    if !current.dismissed {
-                        AnyView(current.getScreenView())
-                            .zIndex(2)
-                            .transition(AnyTransition.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .top)))
-                            .padding(.top,1)
-                            .cornerRadius(10)
-                            .padding(8)
-                        
+                if notificationQueue.canPush {
+                    let current = notificationQueue.current
+                    Group {
+                        if !current.dismissed {
+                            AnyView(current.getScreenView())
+                                .zIndex(2)
+                                .transition(AnyTransition.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .top)))
+                                .padding(.top,1)
+                                .cornerRadius(10)
+                                .padding(8)
+                            
+                        }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .animation(.default, value: current.dismissed)
+                    .animation(.default, value: current.id)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .animation(.default, value: current.dismissed)
-                .animation(.default, value: current.id)
-                
                 
             }.frame(maxHeight: .infinity)
         }

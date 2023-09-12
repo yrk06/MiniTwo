@@ -23,10 +23,10 @@ struct MiniTwoApp: App {
                 .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
                 .onAppear {
                     gameManager.startDay()
+                    notificationQueue.startNotificationTimer()
                 }
                 .statusBar(hidden: true)
                 .preferredColorScheme(.light)
         }
-        
     }
 }

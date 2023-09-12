@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BetweenDays: View {
     
+    @EnvironmentObject var notification : NotificationQueue
+    
     let day: Int
     
     let cont: (()->Void)?
@@ -25,6 +27,7 @@ struct BetweenDays: View {
                 .multilineTextAlignment(.center)
             Button("Continuar") {
                 cont?()
+                notification.startNotificationTimer()
             }
             .frame(maxWidth: .infinity)
             .padding()
@@ -36,6 +39,9 @@ struct BetweenDays: View {
         .foregroundColor(.white)
         .TextBackground(palavra: "Parabens")
         .background(Color("Green"))
+        .onAppear {
+            notification.stopNotificationTimer()
+        }
         
     }
 }

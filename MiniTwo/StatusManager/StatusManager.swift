@@ -39,4 +39,10 @@ class StatusManager : ObservableObject {
             setMoney(100)
         }
     }
+    
+    public func resetAll() {
+        self.health = 100
+        self.money = 100
+        self.hunger = 100
+    }
 }
