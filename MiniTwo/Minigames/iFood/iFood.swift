@@ -205,6 +205,8 @@ struct iFood : View {
     
     @State var last_ordered : [FoodCard] = [food_cards[0], food_cards[1], food_cards[2]]
     
+    @State var cupom_alert = false
+    
     var body: some View {
         ZStack {
             ScrollView {
@@ -233,6 +235,12 @@ struct iFood : View {
                                 }
                                 .cornerRadius(31)
                             Spacer()
+                        }
+                        .onTapGesture {
+                         cupom_alert = true
+                        }
+                        .alert(isPresented: $cupom_alert) {
+                            Alert(title: Text("Que Pena :("), message: Text("Esse cupom expirou 1 minuto atrás"))
                         }
                         Spacer()
                         Text("Você ganhou até $50 em cupons grátis")
@@ -377,6 +385,7 @@ struct iFood : View {
                     }
 
                 }
+                .padding(.bottom, 96)
             }
             
             ForEach(Range(1...5), id: \.self) { i in
@@ -395,14 +404,17 @@ struct iFood_Previews: PreviewProvider {
         let gameManager : GameManager = GameManager()
         let notificationQueue: NotificationQueue = NotificationQueue()
         
-        iFood()
-            .environmentObject(gameManager)
-            .environmentObject(gameManager.objectiveManager)
-            .environmentObject(notificationQueue)
-            .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
-            .onAppear {
-                gameManager.startDay()
-            }
-            .statusBar(hidden: true)
+        NavigationStack {
+            iFood()
+                .environmentObject(gameManager)
+                .environmentObject(gameManager.objectiveManager)
+                .environmentObject(notificationQueue)
+                .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
+                .onAppear {
+                    gameManager.startDay()
+                }
+                .statusBar(hidden: true)
+        }
+        
     }
 }

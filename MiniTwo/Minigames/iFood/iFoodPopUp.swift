@@ -12,7 +12,7 @@ struct FPopUp: View {
     var text : String = "Placeholder"
     
     @State var x : CGFloat = CGFloat.random(in: -150...150)
-    @State var y : CGFloat = CGFloat.random(in: -90...200)
+    @State var y : CGFloat = CGFloat.random(in: -200...100)
     
     @State var active = false
     var time_to_appear : DispatchTime = .now() + 0

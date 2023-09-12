@@ -40,6 +40,7 @@ struct NotificationPresenter: ViewModifier {
                 .padding(.horizontal,36)
                 .ignoresSafeArea()
                 .zIndex(1)
+                //.background(.ultraThinMaterial)
                     
                 content
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
