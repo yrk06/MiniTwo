@@ -210,14 +210,14 @@ struct iFood : View {
     var body: some View {
         ZStack {
             ScrollView {
-                VStack (alignment: .leading) {
+                VStack(alignment: .leading) {
                     
                     HStack(alignment: .center){
                         HStack{
+                            Image(systemName: "house")
+                                .foregroundColor(Color("OrangeFood"))
                             Text("Pepino Home, 20")
                                 .bold()
-                            Image(systemName: "chevron.down")
-                                .foregroundColor(Color("OrangeFood"))
                         }
                     }
                     .padding([.top])
@@ -388,10 +388,9 @@ struct iFood : View {
                 .padding(.bottom, 96)
             }
             
-            ForEach(Range(1...5), id: \.self) { i in
+            ForEach(Range(1...4), id: \.self) { i in
                 let off : CGFloat = CGFloat(i)/10
-                let key = phrasesFood.keys.randomElement()!
-                FPopUp(textTitle: key,text: phrasesFood[key]!, time_to_appear: .now() + off)
+                FPopUp(image: "pop-up-\(i)", time_to_appear: .now() + off)
             }
         }
     }
