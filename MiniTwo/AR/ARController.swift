@@ -160,7 +160,7 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         
         // Define the radius of the circle and the number of planes
         let circleRadius: Float = 0.3
-        let numPlanes = 8
+        let numPlanes = 6
         
         for i in 0..<numPlanes {
             // Calculate the angle for each plane
@@ -172,6 +172,10 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             
             // Create a plane geometry
             let plane = SCNPlane(width: 0.2, height: 0.2)
+            
+            let material = SCNMaterial()
+            material.diffuse.contents = UIImage(named: "barcodeModel")
+            plane.materials = [material]
             let planeNode = SCNNode(geometry: plane)
             
             // Position the plane in the circle and face the center
@@ -179,6 +183,8 @@ class ARController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             
             
             planeNode.eulerAngles = SCNVector3(0, (2 * SCNFloat.pi) - SCNFloat.pi / 2 - angle, 0)
+            
+            
             
             // Add the plane node to the scene
             centerNode.addChildNode(planeNode)
