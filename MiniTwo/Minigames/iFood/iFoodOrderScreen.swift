@@ -156,7 +156,8 @@ struct iFoodOrderScreen: View {
                     objMan.complete_mission(type: .comer)
                     stsMan.changeHunger(by: 10)
                     stsMan.changeMoney(by: -Double(food.price.nextUp))
-                    dismiss()
+//                    dismiss()
+                    NavigationUtil.popToRootView()
                 } label: {
                     Text("Comprar")
                         .frame(maxWidth: .infinity)

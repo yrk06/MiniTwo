@@ -31,7 +31,17 @@ class ObjectiveManager : ObservableObject {
         
         for i in allObjectives {
             if i.objective == type && !i.done {
-                allObjectives[n].done = true
+                withAnimation {
+                    allObjectives[n].done = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        withAnimation {
+                            self.allObjectives[n].done2 = true
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            self.allObjectives.remove(at: n)
+                        }
+                    }
+                }
                 break
             }
             

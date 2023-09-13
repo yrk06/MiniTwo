@@ -36,7 +36,8 @@ struct Panela: View {
                         objMan.complete_mission(type: .comer)
                         stsMan.changeHunger(by: 10)
                         stsMan.changeHealth(by: -10)
-                        dismiss()
+//                        dismiss()
+                        NavigationUtil.popToRootView()
                     }
                 } else {
                     stsMan.changeHealth(by: -5)

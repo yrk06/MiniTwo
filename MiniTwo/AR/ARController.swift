@@ -206,7 +206,8 @@ struct ARView: UIViewControllerRepresentable {
             objMan.complete_mission(type: .boleto)
             stsMan.changeMoney(by: -25)
             stsMan.changeHealth(by: -10)
-            dismiss()
+//            dismiss()
+            NavigationUtil.popToRootView()
         })
     }
     

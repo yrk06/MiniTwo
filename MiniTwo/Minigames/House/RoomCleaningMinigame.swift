@@ -18,7 +18,8 @@ struct RoomCleaningMinigame: View {
         SpriteView(scene: RoomCleaning(completeHandler: {
             objMan.complete_mission(type: .limpar)
             stsMan.changeHealth(by: 10)
-            dismiss()
+//            dismiss()
+            NavigationUtil.popToRootView()
         }))
             .scaledToFit()
     }

@@ -132,7 +132,8 @@ struct BankTyping: View {
             nv in
             if nv == target {
                 objMan.complete_mission(type: .boleto)
-                dismiss()
+//                dismiss()
+                NavigationUtil.popToRootView()
             }
         }
         

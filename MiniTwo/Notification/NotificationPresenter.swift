@@ -57,7 +57,7 @@ struct NotificationPresenter: ViewModifier {
                                 .zIndex(2)
                                 .transition(AnyTransition.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .top)))
                                 .padding(.top,1)
-                                .cornerRadius(10)
+                                .cornerRadius(16)
                                 .padding(8)
                             
                         }

@@ -24,7 +24,7 @@ struct StatusItem: View {
     var body: some View {
         ZStack (alignment: .bottom) {
             Image(systemName: imageName)
-                .foregroundColor(.gray)
+                .foregroundColor(.black)
             Image(systemName: imageName)
                 .foregroundColor(color)
                 .frame(height: value * frameConst, alignment: .bottom)
@@ -43,10 +43,10 @@ struct StatusBar: View {
                 NavigationUtil.popToRootView()
             } label: {
                 Image(systemName: "house.fill")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color(uiColor: .cyan))
                     .padding(4)
                     .padding(.horizontal, 8)
-                    .background(.blue.opacity(0.25))
+                    .background(.blue.opacity(0.75))
                     .cornerRadius(40)
                     .padding(.trailing, 12)
             }
@@ -58,7 +58,12 @@ struct StatusBar: View {
         }
         .foregroundColor(.white)
         .padding()
-        .background (.ultraThinMaterial)
+        .background {
+            Color.black
+                .opacity(0.65)
+                .blur(radius: 3)
+                .shadow(radius: 10)
+        }
         .cornerRadius(80)
         .shadow(radius: 10)
         .padding(16)
