@@ -81,13 +81,15 @@ class GameManager: ObservableObject {
     }
     
     func endDay() {
-        dayTransition = true
-        dayTick = 90
-        day += 1
-        
-        if self.day == 6 {
-            winGame()
-        }
+//        withAnimation(.easeInOut) {
+            dayTransition = true
+            dayTick = 90
+            day += 1
+            
+            if self.day == 6 {
+                winGame()
+            }
+//        }
     }
     
     func winGame() {
