@@ -52,6 +52,8 @@ class GameManager: ObservableObject {
         
         objectiveManager.fill_objectives(n: count)
         
+        self.statusManager.changeMoney(by: 50)
+        
         dayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {
                 _ in
             self.dayTick -= 1
@@ -83,7 +85,7 @@ class GameManager: ObservableObject {
         dayTick = 90
         day += 1
         
-        if self.day == 3 {
+        if self.day == 6 {
             winGame()
         }
     }

@@ -45,6 +45,12 @@
 		78ECC5F92AA0BD4E0091F875 /* RoomCleaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5F82AA0BD4E0091F875 /* RoomCleaning.swift */; };
 		78ECC5FB2AA0C0FF0091F875 /* RoomCleaningMinigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5FA2AA0C0FF0091F875 /* RoomCleaningMinigame.swift */; };
 		78ECC5FD2AA0D16A0091F875 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECC5FC2AA0D16A0091F875 /* House.swift */; };
+		CDCE5F152AAE7821006E448D /* BankTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F142AAE7821006E448D /* BankTutorial.swift */; };
+		CDCE5F172AAE803D006E448D /* BankTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F162AAE803D006E448D /* BankTerms.swift */; };
+		CDCE5F192AAEA05D006E448D /* BankCongratsLoan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */; };
+		CDCE5F1C2AAFE153006E448D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F1B2AAFE153006E448D /* SplashScreen.swift */; };
+		CDCE5F1E2AAFE272006E448D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F1D2AAFE272006E448D /* Onboarding.swift */; };
+		CDCE5F202AAFF829006E448D /* OnboardingFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE5F1F2AAFF829006E448D /* OnboardingFinal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +94,12 @@
 		78ECC5F82AA0BD4E0091F875 /* RoomCleaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCleaning.swift; sourceTree = "<group>"; };
 		78ECC5FA2AA0C0FF0091F875 /* RoomCleaningMinigame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCleaningMinigame.swift; sourceTree = "<group>"; };
 		78ECC5FC2AA0D16A0091F875 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		CDCE5F142AAE7821006E448D /* BankTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTutorial.swift; sourceTree = "<group>"; };
+		CDCE5F162AAE803D006E448D /* BankTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTerms.swift; sourceTree = "<group>"; };
+		CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCongratsLoan.swift; sourceTree = "<group>"; };
+		CDCE5F1B2AAFE153006E448D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		CDCE5F1D2AAFE272006E448D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		CDCE5F1F2AAFF829006E448D /* OnboardingFinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,9 @@
 				5210C9C32A9CD57900E9B5D6 /* BankPopUp.swift */,
 				78788AA02A9FF1DE003ED923 /* BankPaymentOption.swift */,
 				78D75D662AAF55910074B125 /* BankTyping.swift */,
+				CDCE5F142AAE7821006E448D /* BankTutorial.swift */,
+				CDCE5F162AAE803D006E448D /* BankTerms.swift */,
+				CDCE5F182AAEA05D006E448D /* BankCongratsLoan.swift */,
 			);
 			path = Bank;
 			sourceTree = "<group>";
@@ -237,22 +252,25 @@
 			isa = PBXGroup;
 			children = (
 				783BC91C2AA8A66D0028A6B3 /* Info.plist */,
-				783BC91B2AA8A61D0028A6B3 /* Fonts */,
+				783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */,
+				78B9E0602A98F5A700C93302 /* ContentView.swift */,
+				78788A992A9EA354003ED923 /* HapticsManager.swift */,
+				5210C9D62A9F7D5400E9B5D6 /* Home.swift */,
+				78B9E05E2A98F5A700C93302 /* MiniTwoApp.swift */,
+				78009B5B2AA74651006BA51D /* NavigationUtil.swift */,
+				CDCE5F1D2AAFE272006E448D /* Onboarding.swift */,
+				CDCE5F1F2AAFF829006E448D /* OnboardingFinal.swift */,
+				CDCE5F1B2AAFE153006E448D /* SplashScreen.swift */,
+				78B9E0622A98F5A700C93302 /* Assets.xcassets */,
 				78788A962A9E17A0003ED923 /* AR */,
+				783BC91B2AA8A61D0028A6B3 /* Fonts */,
+				5210C9C92A9E271000E9B5D6 /* Minigames */,
 				5210C9C52A9CD58100E9B5D6 /* Modifiers */,
 				7856E1F62A9BCF2D00F7639C /* Notification */,
-				78B9E05E2A98F5A700C93302 /* MiniTwoApp.swift */,
-				78B9E0602A98F5A700C93302 /* ContentView.swift */,
-				78B9E0622A98F5A700C93302 /* Assets.xcassets */,
-				78B9E0642A98F5A700C93302 /* Preview Content */,
-				5210C9C92A9E271000E9B5D6 /* Minigames */,
-				528F97382AA76C4F000469D1 /* StatusManager */,
 				5210C9D12A9F7AF400E9B5D6 /* ObjectiveManagement */,
+				78B9E0642A98F5A700C93302 /* Preview Content */,
+				528F97382AA76C4F000469D1 /* StatusManager */,
 				528F977E2AAFF549000469D1 /* TelasFinais */,
-				5210C9D62A9F7D5400E9B5D6 /* Home.swift */,
-				78009B5B2AA74651006BA51D /* NavigationUtil.swift */,
-				783BC91D2AA8AAB30028A6B3 /* BetweenDays.swift */,
-				78788A992A9EA354003ED923 /* HapticsManager.swift */,
 			);
 			path = MiniTwo;
 			sourceTree = "<group>";
@@ -348,6 +366,7 @@
 			files = (
 				5210C9C72A9CD59500E9B5D6 /* Pop.swift in Sources */,
 				5210C9C02A9CD22A00E9B5D6 /* Bank.swift in Sources */,
+				CDCE5F152AAE7821006E448D /* BankTutorial.swift in Sources */,
 				78ECC5FD2AA0D16A0091F875 /* House.swift in Sources */,
 				5210C9C42A9CD57900E9B5D6 /* BankPopUp.swift in Sources */,
 				78D75D652AA8B9510074B125 /* TextBackground.swift in Sources */,
@@ -359,6 +378,7 @@
 				783BC9202AA8AE820028A6B3 /* Font.swift in Sources */,
 				528F97352AA74E7D000469D1 /* Panela.swift in Sources */,
 				78788A9A2A9EA354003ED923 /* HapticsManager.swift in Sources */,
+				CDCE5F192AAEA05D006E448D /* BankCongratsLoan.swift in Sources */,
 				5210C9D72A9F7D5400E9B5D6 /* Home.swift in Sources */,
 				783BC91E2AA8AAB30028A6B3 /* BetweenDays.swift in Sources */,
 				78788A982A9E17AF003ED923 /* ARController.swift in Sources */,
@@ -369,14 +389,18 @@
 				5210C9D32A9F7B1200E9B5D6 /* ObjectiveStruct.swift in Sources */,
 				5210C9D02A9F684100E9B5D6 /* ObjectiveManager.swift in Sources */,
 				78ECC5FB2AA0C0FF0091F875 /* RoomCleaningMinigame.swift in Sources */,
+				CDCE5F202AAFF829006E448D /* OnboardingFinal.swift in Sources */,
 				78788A9D2A9F6BD1003ED923 /* MotionManager.swift in Sources */,
 				7856E1FC2A9CD09600F7639C /* NotificationPresenter.swift in Sources */,
 				78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */,
 				528F973C2AA8ADF9000469D1 /* StatusBar.swift in Sources */,
+				CDCE5F1C2AAFE153006E448D /* SplashScreen.swift in Sources */,
 				7856E1FA2A9BCF7100F7639C /* NotificationTypes.swift in Sources */,
 				78788A9F2A9F6F16003ED923 /* ToiletMinigame.swift in Sources */,
+				CDCE5F1E2AAFE272006E448D /* Onboarding.swift in Sources */,
 				5210C9CE2A9E277300E9B5D6 /* iFoodPopUp.swift in Sources */,
 				5210C9DB2AA20A2400E9B5D6 /* iFoodOrderScreen.swift in Sources */,
+				CDCE5F172AAE803D006E448D /* BankTerms.swift in Sources */,
 				528F97372AA74F27000469D1 /* Rotate.swift in Sources */,
 				5221EF892AB087300022C59C /* FinalBom.swift in Sources */,
 				78B9E05F2A98F5A700C93302 /* MiniTwoApp.swift in Sources */,
