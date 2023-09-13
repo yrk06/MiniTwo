@@ -15,13 +15,27 @@ struct RoomCleaningMinigame: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        SpriteView(scene: RoomCleaning(completeHandler: {
-            objMan.complete_mission(type: .limpar)
-            stsMan.changeHealth(by: 10)
-//            dismiss()
-            NavigationUtil.popToRootView()
-        }))
+        Group {
+            SpriteView(scene: RoomCleaning(completeHandler: {
+                objMan.complete_mission(type: .limpar)
+                stsMan.changeHealth(by: 10)
+                NavigationUtil.popToRootView()
+            }))
             .scaledToFit()
+            .cornerRadius(12)
+            .overlay {
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(lineWidth: 4)
+                    .foregroundColor(.white)
+            }
+            .padding()
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .TextBackground(palavra: "Aspirador", count: 3)
+        .background(Color("GrayBackItems"))
+        
+        
     }
 }
 
