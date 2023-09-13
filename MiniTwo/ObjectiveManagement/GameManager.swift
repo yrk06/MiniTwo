@@ -58,7 +58,7 @@ class GameManager: ObservableObject {
                 _ in
             self.dayTick -= 1
             if !self.dayTransition && !self.gameEnded {
-                self.statusManager.changeHunger(by: -0.5)
+                self.statusManager.changeHunger(by: -1)
             }
             if self.dayTick == 0 {
                 self.dayTimer?.invalidate()
@@ -73,9 +73,10 @@ class GameManager: ObservableObject {
                 self.loseGame()
             } else if self.statusManager.getMoney() <= 0 {
                 self.loseGame()
-            } else if self.statusManager.getHealth() <= 0 {
+            } else if self.statusManager.getHunger() <= 0 {
                 self.loseGame()
             }
+            print(self.statusManager.getHunger())
         })
     }
     
