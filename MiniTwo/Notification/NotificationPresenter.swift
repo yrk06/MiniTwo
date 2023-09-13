@@ -12,6 +12,7 @@ struct NotificationPresenter: ViewModifier {
     
     @ObservedObject var notificationQueue: NotificationQueue
     @ObservedObject var gameManager: GameManager
+    @State var isRoot : Bool = true
     
     
     func body(content: Content) -> some View {
@@ -36,11 +37,16 @@ struct NotificationPresenter: ViewModifier {
                     Text("\(gameManager.day + 1)/7")
                         .bold()
                 }
+                .foregroundColor(.white)
                 .frame(height: proxy.safeAreaInsets.top)
-                .padding(.horizontal,36)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 48)
+                .background(Color("GrayBackItems")
+                    .opacity(0.5))
+//                .padding(.horizontal,36)
                 .ignoresSafeArea()
                 .zIndex(1)
-                //.background(.ultraThinMaterial)
+                .transition(.opacity)
                     
                 content
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 struct NavigationUtil {
     static func popToRootView() {
@@ -19,6 +20,18 @@ struct NavigationUtil {
             
             findNavigationController(viewController:window?.rootViewController)?
                 .popToRootViewController(animated: true)
+        }
+    }
+    static func popView() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            
+            let scenes = UIApplication.shared.connectedScenes
+            let windowScene = scenes.first as? UIWindowScene
+            let window = windowScene?.windows.first
+            
+            findNavigationController(viewController:window?.rootViewController)?
+                .popViewController(animated: true)
         }
     }
 static func findNavigationController(viewController: UIViewController?)
