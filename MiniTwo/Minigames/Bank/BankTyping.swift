@@ -89,7 +89,7 @@ struct BankTyping: View {
             }.padding(.horizontal)
             
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                ForEach(buttons.indices.dropLast()) { idx in
+                ForEach(0..<9) { idx in
                     Button {
                         number += buttons[idx].main
                     } label: {

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Onboarding: View {
+    
+    @Binding var screen: Int
+    
     var body: some View {
         
         ZStack{
@@ -57,16 +60,15 @@ struct Onboarding: View {
                     .padding(.horizontal, 240)
                     .padding(.vertical)
                 
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .frame(width: 300, height: 50)
-                    
+                Button {
+                    screen += 1
+                } label: {
                     Text("Continuar")
                         .foregroundColor(Color("OrangeFood"))
                         .bold()
-    
+                        .frame(width: 300, height: 50)
+                        .background(.white)
+                        .cornerRadius(10)
                 }
                 .padding(20)
                 
@@ -77,6 +79,6 @@ struct Onboarding: View {
 
 struct Onboarding_Previews: PreviewProvider {
     static var previews: some View {
-        Onboarding()
+        Onboarding(screen: .constant(0))
     }
 }

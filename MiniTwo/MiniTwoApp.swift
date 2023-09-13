@@ -13,20 +13,36 @@ struct MiniTwoApp: App {
     var gameManager : GameManager = GameManager()
     var notificationQueue: NotificationQueue = NotificationQueue()
     
+    @State var scene = 0
+    
     var body: some Scene {
         WindowGroup {
-            Home()
-                .environmentObject(gameManager)
-                .environmentObject(gameManager.objectiveManager)
-                .environmentObject(gameManager.statusManager)
-                .environmentObject(notificationQueue)
-                .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
-                .onAppear {
-                    gameManager.startDay()
-                    notificationQueue.startNotificationTimer()
+            Group {
+                
+                
+                switch scene {
+                case 0:
+                    Onboarding(screen: $scene)
+                        .transition(.move(edge: .top))
+                case 1:
+                    OnboardingFinal(screen: $scene)
+                        .transition(.move(edge: .bottom))
+                default:
+                    Home()
+                        .environmentObject(gameManager)
+                        .environmentObject(gameManager.objectiveManager)
+                        .environmentObject(gameManager.statusManager)
+                        .environmentObject(notificationQueue)
+                        .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
+                        .onAppear {
+                            gameManager.startDay()
+                            notificationQueue.startNotificationTimer()
+                        }
+                        .statusBar(hidden: true)
+                        .preferredColorScheme(.light)
                 }
-                .statusBar(hidden: true)
-                .preferredColorScheme(.light)
+            }.animation(.easeInOut(duration: 1), value: scene)
+            
         }
     }
 }

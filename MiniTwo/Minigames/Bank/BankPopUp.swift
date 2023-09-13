@@ -24,7 +24,7 @@ struct BPopUp : View {
     
     @State var pop_up_done : Bool = false
     
-    var reversed : Int8 = Int8.random(in: 1...10)
+    @State var reversed : Int8 = Int8.random(in: 1...10)
     
     var body: some View {
         if (!pop_up_done)

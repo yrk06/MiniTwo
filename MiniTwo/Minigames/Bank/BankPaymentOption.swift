@@ -97,7 +97,8 @@ struct BankPaymentOption: View {
                     .padding(.bottom, 16)
                 }
             }
-            .frame(width: .infinity, height: 370)
+            .frame(height: 370)
+            .frame(maxWidth: .infinity)
             .background(Color("Blue"))
             
             Spacer()
