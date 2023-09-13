@@ -65,7 +65,7 @@ class RoomCleaning: SKScene {
         crop.addChild(tomb)
         self.size = CGSize(width: side, height: side)
         
-        aspirador.size = CGSize(width: side/2, height: side/2)
+        aspirador.size = CGSize(width: side/4, height: side/4)
         addChild(aspirador)
     }
     

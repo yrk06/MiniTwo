@@ -28,28 +28,27 @@ struct House: View {
                 }
                 
                 
-                
-                
-                Text("Boas Vindas")
+                Text("Boas vindas")
                     .font(.system(size: 40))
                     .bold()
                 Text("Tenha um  ótimo dia!")
                 
-                HStack {
-                    Text("31 AGO")
-                    Spacer()
-                    HStack {
-                        Image(systemName: "power")
-                        Text("ON")
-                            
-                    }
-                    .bold()
-                    .padding()
-                    .background(.white)
-                    .cornerRadius(12)
-                    
-                }.padding(.vertical)
+//                HStack {
+//                    Text("31 AGO")
+//                    Spacer()
+//                    HStack {
+//                        Image(systemName: "power")
+//                        Text("ON")
+//
+//                    }
+//                    .bold()
+//                    .padding()
+//                    .background(.white)
+//                    .cornerRadius(12)
+//
+//                }.padding(.vertical)
             }
+            .padding(.vertical)
             .frame(maxWidth: .infinity)
             .padding(.horizontal)
             .background(Color("OrangeFood"))
@@ -81,7 +80,7 @@ struct House: View {
                         .foregroundColor(.white)
                         .padding()
                         .TextBackground(palavra: "ON", count: 1)
-                        .background(Color("GrayBack"))
+                        .background(Color("GrayBackItems"))
                         .cornerRadius(16)
                         .padding()
                     }
