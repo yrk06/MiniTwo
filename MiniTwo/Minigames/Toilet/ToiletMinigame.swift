@@ -32,7 +32,8 @@ struct ToiletMinigame: View {
             alignment: .bottom
         )
         .offset(x: 0, y: 130)
-        
+        .TextBackground(palavra: "Desentupir")
+        .background(Color("GrayBackItems"))
         .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .local)
                             .onEnded({ value in
                                 if value.translation.height < 0 {
