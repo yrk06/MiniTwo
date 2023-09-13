@@ -10,22 +10,27 @@ import SwiftUI
 struct House: View {
     
     var body: some View {
-        NavigationLink {
-            RoomCleaningMinigame()
-        } label: {
-            Text("Limpar a casa")
-        }
-        
-        NavigationLink {
-            ToiletMinigame()
-        } label: {
-            Text("Desentupir a privada")
-        }
-        
-        NavigationLink {
-            Panela()
-        } label: {
-            Text("Cozinhar pepinada")
+        ScrollView(.horizontal, showsIndicators: false) {
+            VStack {
+                
+                NavigationLink {
+                    RoomCleaningMinigame()
+                } label: {
+                    Text("Limpar a casa")
+                }
+                
+                NavigationLink {
+                    ToiletMinigame()
+                } label: {
+                    Text("Desentupir a privada")
+                }
+                
+                NavigationLink {
+                    Panela()
+                } label: {
+                    Text("Cozinhar pepinada")
+                }
+            }
         }
     }
 }
