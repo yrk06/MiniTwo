@@ -16,7 +16,7 @@ class NotificationQueue: ObservableObject {
     var canPush: Bool = false
     
     init() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
+        timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) {
             _ in
             if self.canPush {
                 self.generateRandomNotification()

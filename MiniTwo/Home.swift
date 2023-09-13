@@ -23,26 +23,57 @@ struct Home: View {
                         })
                         .transition(.opacity)
                     } else {
-                        VStack {
-                            if game.dayTransition {
-                                Text("Você está dormindo")
+                        ZStack {
+                            VStack {
+                                Spacer()
+                                Image("BackgroundMain")
+                                    .foregroundColor(Color("GrayBack"))
+                                    
                             }
-                            Text("\(game.dayTick)")
-                            Text("Day: \(game.day)")
-                            ObjectiveView()
-                            
-                            if !game.dayTransition {
-                                NavigationLink("iFood") {
-                                    iFood()
+                            .ignoresSafeArea()
+                            VStack {
+                                Image("MainLogo")
+                                    .padding()
+                                
+                                ObjectiveView()
+                                
+                                if !game.dayTransition {
+                                    HStack (spacing: 20) {
+                                        NavigationLink {
+                                            iFood()
+                                        } label: {
+                                            VStack {
+                                                Image("iPepinoIcon")
+                                                Text("iPepino")
+                                                    .foregroundColor(.white)
+                                            }
+                                        }
+                                        
+                                        NavigationLink {
+                                            Bank()
+                                        } label: {
+                                            VStack {
+                                                Image("BankIcon")
+                                                Text("PepinoBank")
+                                                    .foregroundColor(.white)
+                                            }
+                                        }
+                                        
+                                        NavigationLink {
+                                            House()
+                                        } label: {
+                                            VStack {
+                                                Image("HomeIcon")
+                                                Text("PepinoHouse")
+                                                    .foregroundColor(.white)
+                                            }
+                                        }
+                                    }
                                 }
-                                NavigationLink("Bank") {
-                                    Bank()
-                                }
-                                NavigationLink("Home") {
-                                    House()
-                                }
+                                Spacer()
                             }
                         }
+                        .background(Color("GrayBackItems"))
                     }
                 }
                 .animation(.easeInOut, value: game.dayTransition)

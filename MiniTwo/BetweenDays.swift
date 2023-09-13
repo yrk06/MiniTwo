@@ -25,16 +25,26 @@ struct BetweenDays: View {
             Text("Parabéns, você venceu um dia como adulto!\n\nQue pena seria se amanhã você tivesse que fazer tudo de novo. E de novo. E de novo...")
                 .frame(width: 213)
                 .multilineTextAlignment(.center)
-            Button("Continuar") {
+//            Button("Continuar") {
+//                cont?()
+//                notification.startNotificationTimer()
+//            }
+//            .frame(maxWidth: .infinity)
+//            .padding()
+//            .background(.black)
+//            .cornerRadius(200)
+//            .padding()
+            Button {
                 cont?()
                 notification.startNotificationTimer()
+            } label: {
+                Text("Continuar")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.black)
+                    .cornerRadius(200)
+                    .padding()
             }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(.black)
-            
-            .cornerRadius(200)
-            .padding()
         }
         .foregroundColor(.white)
         .TextBackground(palavra: "Parabens")

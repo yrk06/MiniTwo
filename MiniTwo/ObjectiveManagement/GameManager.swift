@@ -64,10 +64,9 @@ class GameManager: ObservableObject {
                 self.dayTimer?.invalidate()
                 self.endDay()
             }
-            if self.objectiveManager.allObjectives.filter({$0.done}).count == self.getTaskCount()
+            if self.objectiveManager.allObjectives.count == 0
             {
                 self.dayTimer?.invalidate()
-                self.objectiveManager.eraseAllObjectives()
                 self.endDay()
             }
             if self.statusManager.getHealth() <= 0 {

@@ -53,7 +53,8 @@ struct ToiletMinigame: View {
             if value >= 10 {
                 objectiveManager.complete_mission(type: .privada)
                 motionManager.finish()
-                dismiss()
+//                dismiss()
+                NavigationUtil.popToRootView()
             }
         })
         .onDisappear {

@@ -19,11 +19,13 @@ struct ObjectiveStruct : Identifiable {
     
     var objective : Objective
     var done : Bool
+    var done2 : Bool
     
     init(objective: Objective) {
         self.objective = objective
         self.done = false
         self.id = UUID()
+        self.done2 = false
     }
 }
 
