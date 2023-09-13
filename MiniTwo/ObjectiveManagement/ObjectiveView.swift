@@ -25,9 +25,10 @@ struct ObjectiveView: View {
     
     var body: some View {
         HStack {
-            VStack {
+            VStack(spacing: 0) {
                 Text("\(objMan.allObjectives.count)")
-                    .font(.title2)
+                    .fontBob(size: 96)
+                    .foregroundColor(Color("OrangeFood"))
                 Image("pepinos")
             }
             .padding(.trailing, 26)
