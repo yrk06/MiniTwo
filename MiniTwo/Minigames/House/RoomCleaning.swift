@@ -13,10 +13,14 @@ class RoomCleaning: SKScene {
     var crop: SKCropNode!
     let cellSize: Int = 60
     
+    var aspirador: SKSpriteNode!
+    
     let completeTask: (()->Void)
     
     init(completeHandler: @escaping (()->Void)) {
         completeTask = completeHandler
+        aspirador = SKSpriteNode(imageNamed: "aspirador")
+        
         super.init(size: CGSize(width: 0, height: 0))
     }
     
@@ -52,14 +56,17 @@ class RoomCleaning: SKScene {
         
         print(side)
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        let herrmann = SKSpriteNode(color: .systemPink, size: CGSize(width: side, height: side))//SKSpriteNode(imageNamed: "PictureHerrmann")
+        let herrmann = SKSpriteNode(imageNamed: "NotClean")
         herrmann.size = CGSize(width: side, height: side)
         addChild(herrmann)
         addChild(crop)
-        let tomb = SKSpriteNode(color: .cyan, size: CGSize(width: side, height: side))//SKSpriteNode(imageNamed: "PictureTombstone")
+        let tomb = SKSpriteNode(imageNamed: "Clean")
         tomb.size = CGSize(width: side, height: side)
         crop.addChild(tomb)
         self.size = CGSize(width: side, height: side)
+        
+        aspirador.size = CGSize(width: side/2, height: side/2)
+        addChild(aspirador)
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -68,6 +75,8 @@ class RoomCleaning: SKScene {
         circle.fillColor = UIColor(white: 1, alpha: 0.8)
         circle.position = pos
         crop.maskNode!.addChild(circle)
+        
+        aspirador.position = pos
         
         
         let x = Int(floor((pos.x + side / 2) / CGFloat(cellSize)))
