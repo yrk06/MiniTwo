@@ -17,8 +17,7 @@ var phrasesFood : [String: String] = [
 
 struct FPopUp: View {
     
-    var textTitle : String = "Placeholder"
-    var text : String = "Placeholder"
+    var image : String
     
     @State var x : CGFloat = CGFloat.random(in: -90...90)
     @State var y : CGFloat = CGFloat.random(in: -200...100)
@@ -30,34 +29,18 @@ struct FPopUp: View {
         VStack(alignment: .leading) {
             if (active) {
                 ZStack {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(textTitle)
-                            .font(.footnote)
-                            .bold()
-                        Text(text)
-                            .font(.footnote)
-                            .frame(width: 200, height: 70)
-                        Spacer()
-
-                    }
-                    .foregroundColor(.black)
-                    .padding()
-
-                    Image(systemName: "xmark")
-                        .foregroundColor(.black)
+                    
+                    Image(image)
+                    Image(systemName: "x.circle.fill")
+                        .foregroundColor(.white)
                         .onTapGesture {
                             withAnimation {
                                 active = false
                             }
                         }
-                        .padding([.bottom], 90)
+                        .padding([.bottom], 260)
                         .padding([.leading], 180)
                 }
-                .frame(width: 240, height: 140)
-                .background {
-                    Color.white
-                }
-                .cornerRadius(12)
                 .shadow(radius: 10, x: 5, y: 5)
                 .offset(x: x, y: y)
                 .PopU()
