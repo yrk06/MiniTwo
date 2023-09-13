@@ -24,7 +24,7 @@ struct StatusItem: View {
     var body: some View {
         ZStack (alignment: .bottom) {
             Image(systemName: imageName)
-                .foregroundColor(.black)
+                .foregroundColor(Color(uiColor: .darkGray))
             Image(systemName: imageName)
                 .foregroundColor(color)
                 .frame(height: value * frameConst, alignment: .bottom)
@@ -38,35 +38,31 @@ struct StatusBar: View {
     @EnvironmentObject var stsMan : StatusManager
     
     var body: some View {
-        HStack (alignment: .center, spacing: 32) {
+        HStack (alignment: .center, spacing: 42) {
             Button {
                 NavigationUtil.popToRootView()
             } label: {
                 Image(systemName: "house.fill")
-                    .foregroundColor(Color(uiColor: .cyan))
+                    .foregroundColor(.white)
                     .padding(4)
                     .padding(.horizontal, 8)
-                    .background(.blue.opacity(0.75))
-                    .cornerRadius(40)
-                    .padding(.trailing, 12)
+                    .background(Color(uiColor: .darkGray))
+                    .cornerRadius(8)
+                    .padding(6)
             }
-            .padding(.trailing)
             
-            StatusItem(stsMan.getHealth(), "heart.fill", 0.34, .red)
-            StatusItem(stsMan.getHunger(), "fork.knife", 0.42, .orange)
-            StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .indigo)
+            StatusItem(stsMan.getHealth(), "heart.fill", 0.34, .white)
+            StatusItem(stsMan.getHunger(), "fork.knife", 0.42, .white)
+            StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .white)
         }
         .foregroundColor(.white)
         .padding()
         .background {
             Color.black
-                .opacity(0.65)
-                .blur(radius: 3)
-                .shadow(radius: 10)
         }
-        .cornerRadius(80)
+        .cornerRadius(16)
         .shadow(radius: 10)
-        .padding(16)
+        .padding(8)
     }
 }
 

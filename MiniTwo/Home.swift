@@ -21,7 +21,7 @@ struct Home: View {
                         BetweenDays(day: game.day, cont: {
                             game.startDay()
                         })
-                        .transition(.opacity)
+//                        .transition(.opacity)
                     } else {
                         ZStack {
                             VStack {
@@ -85,8 +85,10 @@ struct Home: View {
                 })
                 VStack {
                     Spacer()
-                    StatusBar()
-                        .font(.largeTitle)
+                    if !game.dayTransition {
+                        StatusBar()
+                            .font(.largeTitle)
+                    }
                 }
             }
         }
