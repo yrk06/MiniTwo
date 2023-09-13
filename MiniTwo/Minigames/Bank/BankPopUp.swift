@@ -39,12 +39,13 @@ struct BPopUp : View {
                         .cornerRadius(16)
                     
                     Button(action: {
-                        withAnimation(.spring()) {
+//                        withAnimation(.spring()) {
                             pop_up_done = true
-                        }
+//                        }
                     }) {
-                            Image(systemName: "x.circle.fill")
-                            .font(.title3)
+//                            Image(systemName: "x.circle.fill")
+//                            .font(.title3)
+                        Text("Exit")
                     }
                     .foregroundColor(.white)
                     .padding(.leading, 310)
@@ -68,14 +69,14 @@ struct BPopUp : View {
                 HStack {
                     
                     Button {
-                        withAnimation(.spring()) {
+//                        withAnimation(.spring()) {
                             if (reversed == 1) {
                                 op_1 = true
                             } else {
                                 op_2 = true
                             }
                             pop_up_done = true
-                        }
+//                        }
                     } label: {
                         if (reversed == 1) {
                             Text("Ler termos e condições")
@@ -102,14 +103,14 @@ struct BPopUp : View {
                     
                     
                     Button {
-                        withAnimation(.spring()) {
+//                        withAnimation(.spring()) {
                             if (reversed == 1) {
                                 op_2 = true
                             } else {
                                 op_1 = true
                             }
                             pop_up_done = true
-                        }
+//                        }
                     } label: {
                         if (reversed == 1) {
                             Text("Eu mereço")
@@ -145,9 +146,10 @@ struct BPopUp : View {
                 Color.black
             }
             .cornerRadius(16)
-            .PopU()
+            .padding(.horizontal, 4)
             .shadow(radius: 10, x: 5, y: 5)
-            .padding()
+            .PopU()
+//            .padding()
         }
     }
 }
