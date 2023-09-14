@@ -12,6 +12,7 @@ struct ToiletMinigame: View {
     @StateObject var motionManager: MotionManager = .init()
     
     @EnvironmentObject var objectiveManager: ObjectiveManager
+    @EnvironmentObject var stsMan: StatusManager
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -53,6 +54,8 @@ struct ToiletMinigame: View {
             value in
             if value >= 10 {
                 objectiveManager.complete_mission(type: .privada)
+                stsMan.changeHealth(by: -10)
+                print("Hello Im an Error")
                 motionManager.finish()
 //                dismiss()
                 NavigationUtil.popToRootView()

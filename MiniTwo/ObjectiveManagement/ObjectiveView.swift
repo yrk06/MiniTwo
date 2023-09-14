@@ -27,8 +27,9 @@ struct ObjectiveView: View {
         HStack {
             VStack(spacing: 0) {
                 Text("\(objMan.allObjectives.count)")
-                    .fontBob(size: 96)
+                    .fontBob(size: 64)
                     .foregroundColor(Color("OrangeFood"))
+                    .frame(width: 120)
                 Image("pepinos")
             }
             .padding(.trailing, 26)
@@ -38,19 +39,20 @@ struct ObjectiveView: View {
                     if i < objMan.allObjectives.count {
                         if i > 0 {
                             Line()
-                               .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
+                               .stroke(style: StrokeStyle(lineWidth: 1, dash: [2]))
                                .frame(height: 1)
                                .padding(.vertical, 4)
+                               .foregroundColor(.gray)
                         }
                         if !objMan.allObjectives[i].done2 {
                             HStack {
                                 
                                 if objMan.allObjectives[i].done {
-                                    Image(systemName: "checkmark.circle")
+                                    Image(systemName: "checkmark.circle.fill")
                                         .foregroundColor(.green)
                                 } else {
-                                    Image(systemName: "x.circle")
-                                        .foregroundColor(.red)
+                                    Image(systemName: "x.circle.fill")
+                                        .foregroundColor(Color("OrangeFood"))
                                 }
                                 
                                 Text("\(objMan.allObjectives[i].objective.rawValue)")
@@ -68,6 +70,7 @@ struct ObjectiveView: View {
 //                       .padding(.vertical, 6)
                     HStack {
                         Text("+\(objMan.allObjectives.count - 3) pepinos")
+                            .foregroundColor(.gray)
                             .font(.caption2)
                     }
                 }
@@ -77,7 +80,7 @@ struct ObjectiveView: View {
         .frame(height: 115)
         .padding()
         .background {
-            Color("Beige")
+            Color(.white)
         }
         .cornerRadius(22)
         .shadow(radius: 10, x: 0, y: 5)

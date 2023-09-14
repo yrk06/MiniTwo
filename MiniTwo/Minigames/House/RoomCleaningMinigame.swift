@@ -14,12 +14,18 @@ struct RoomCleaningMinigame: View {
     @EnvironmentObject var stsMan: StatusManager
     @Environment(\.dismiss) var dismiss
     
+    @State var canDispatch : Bool = true
+    
     var body: some View {
         Group {
             SpriteView(scene: RoomCleaning(completeHandler: {
-                objMan.complete_mission(type: .limpar)
-                stsMan.changeHealth(by: 10)
+                if canDispatch {
+                    objMan.complete_mission(type: .limpar)
+                    stsMan.changeHealth(by: -15)
+                    canDispatch = false
+                }
                 NavigationUtil.popToRootView()
+                print("Error")
             }))
             .scaledToFit()
             .cornerRadius(12)
@@ -34,8 +40,9 @@ struct RoomCleaningMinigame: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .TextBackground(palavra: "Aspirador", count: 3)
         .background(Color("GrayBackItems"))
-        
-        
+        .onAppear {
+            canDispatch = true
+        }
     }
 }
 

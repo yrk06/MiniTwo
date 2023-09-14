@@ -204,7 +204,7 @@ struct ARView: UIViewControllerRepresentable {
         // Return MyViewController instance
         return ARController(dismiss: {
             objMan.complete_mission(type: .boleto)
-            stsMan.changeMoney(by: -25)
+            stsMan.changeMoney(by: -5)
             stsMan.changeHealth(by: -10)
 //            dismiss()
             NavigationUtil.popToRootView()
