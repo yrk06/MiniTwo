@@ -48,30 +48,51 @@ struct StatusBar: View {
     @EnvironmentObject var stsMan : StatusManager
     
     var body: some View {
-        HStack (alignment: .center, spacing: 30) {
-            Button {
-                NavigationUtil.popToRootView()
-            } label: {
-                Image(systemName: "house.fill")
-                    .foregroundColor(.white)
-                    .padding(4)
-                    .padding(.horizontal, 8)
-                    .background(Color(uiColor: .darkGray))
-                    .cornerRadius(8)
+        VStack {
+            ForEach(0..<stsMan.getLog().count, id: \.self) { i in
+                if stsMan.getLog().count > 0 {
+                    Text(stsMan.getLog()[i])
+                        .foregroundColor(.white)
+                        .font(.title3)
+                        .padding()
+                        .background {
+                            Color("GrayBackItems")
+                                .opacity(0.75)
+                        }
+                        .cornerRadius(12)
+                        .transition(.scale)
+                }
             }
-            
-            StatusItem(stsMan.getHealth(), "heart.fill", /*0.34*/0.3, .white, "bem-estar")
-            StatusItem(stsMan.getHunger(), "fork.knife", 0.38, .white, "fome")
-            StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .white, "dinheiro")
+            HStack (alignment: .center, spacing: 30) {
+                Button {
+                    NavigationUtil.popToRootView()
+                } label: {
+                    Image(systemName: "house.fill")
+                        .foregroundColor(.white)
+                        .padding(4)
+                        .padding(.horizontal, 8)
+                        .background(Color(uiColor: .darkGray))
+                        .cornerRadius(8)
+                }
+                
+                StatusItem(stsMan.getHealth(), "heart.fill", /*0.34*/0.3, .white, "bem-estar")
+                StatusItem(stsMan.getHunger(), "fork.knife", 0.38, .white, "fome")
+                StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .white, "dinheiro")
+            }
+            .foregroundColor(.white)
+            .padding()
+            .background {
+                Color.black
+            }
+            .cornerRadius(16)
+            .shadow(radius: 10)
+            .padding(8)
         }
-        .foregroundColor(.white)
-        .padding()
-        .background {
-            Color.black
+        .onAppear {
+            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { i in
+                stsMan.removeFirst()
+            }
         }
-        .cornerRadius(16)
-        .shadow(radius: 10)
-        .padding(8)
     }
 }
 
