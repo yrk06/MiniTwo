@@ -95,11 +95,11 @@ struct Home: View {
         else {
             if game.gameWon {
                 FinalBom()
-            } else if stsMan.getHealth() <= 0 {
+            } else if stsMan.getHealth() <= 1 {
                 FinalRuim(imageName: "EndingHealth", text: "Você negligenciou sua saúde por tempo demais.\n\nFatos desconhecidos: você é um organismo frágil que precisa de cuidados! ")
-            } else if stsMan.getMoney() <= 0 {
+            } else if stsMan.getMoney() <= 1 {
                 FinalRuim(imageName: "EndingMoney", text: "Seu saldo bancário está parecendo o deserto do Saara, só que mais seco.\n\nFatos desconhecidos: você é uma pessoa que precisa de dinheiro para sobreviver! ")
-            } else if stsMan.getHunger() <= 0 {
+            } else if stsMan.getHunger() <= 1 {
                 FinalRuim(imageName: "EndingHunger")
             }
         }
