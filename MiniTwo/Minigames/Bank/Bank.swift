@@ -18,8 +18,12 @@ struct Bank : View {
     
     @State var type = Int8.random(in: 1...3)
     
-    var listaImagens = ["reaisDoodle", "barcodeDoodle", "creditDoodle", "transfDoodle", "cobrarDoodle"]
-    var nomesImagens = ["Área Pix", "Pagar", "Emprestar", "Transferir", "Cobrar"]
+    @State var cupom_alert = false
+    
+    var listaImagens = ["reaisDoodle", "creditDoodle", "transfDoodle", "cobrarDoodle"]
+    var nomesImagens = ["Área Pix", "Fatura", "Transferir", "Cobrar"]
+    var alertTitle = ["Olha o golpe do Pix!", "Sua fatura ainda está aberta", "Celular não autorizado", "Não há cobranças disponíveis"]
+    var alertDescription = ["Este celular não está autorizado a fazer transações.", "Mas já adiantamos que é maior do que você pensa...", "Para poder fazer transferências neste dispositivo, autorize-o.", "Você não emprestou dinheiro a ninguém para poder cobrar."]
     
     var body: some View {
         ZStack {
@@ -50,23 +54,24 @@ struct Bank : View {
                             }
                             
                             Spacer()
-                            Image(systemName: "eye.slash")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxHeight: 17)
-                                .foregroundColor(.white)
-                            Image(systemName: "questionmark.circle")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxHeight: 17)
-                                .foregroundColor(.white)
+//                            Image(systemName: "eye.slash")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(maxHeight: 17)
+//                                .foregroundColor(.white)
+//                            Image(systemName: "questionmark.circle")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(maxHeight: 17)
+//                                .foregroundColor(.white)
                             
                         }
                         .padding(.horizontal, 20)
                         
-                        Text("Olá, [nome do adulto]")
+                        Text("Boas vindas")
                             .foregroundColor(.white)
-                            .font(.title2)
+                            .font(.title)
+                            .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.vertical)
                             .padding(.horizontal, 20)
@@ -90,9 +95,11 @@ struct Bank : View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         
                         HStack {
-                            ForEach(0..<5) {
+                            ForEach(0..<4) {
                                 i in
-                                Button {} label: {
+                                Button(action: {
+                                    cupom_alert = true
+                                }, label: {
                                     VStack {
                                         Image(listaImagens[i])
                                             .frame(width: 79, height: 80)
@@ -105,6 +112,15 @@ struct Bank : View {
                                             .bold()
                                     }
                                     
+                                })
+                                .alert(isPresented: $cupom_alert) {
+                                    Alert(
+                                        title: Text(alertTitle[i]),
+                                        message: Text(alertDescription[i]),
+                                        dismissButton: .default(Text("OK")) {
+                                            cupom_alert = false
+                                        }
+                                    )
                                 }
                                 .padding(.horizontal, 12)
                                 .foregroundColor(.black)
@@ -138,8 +154,8 @@ struct Bank : View {
                                 Text("Pagar")
                                     .bold()
                                     .foregroundColor(.white)
-                                    .padding()
-                                    .padding(.horizontal)
+                                    .padding([.horizontal], 30)
+                                    .padding([.vertical], 10)
                                     .background(Color("OrangeFood"))
                                     .cornerRadius(40)
                             }
@@ -158,6 +174,7 @@ struct Bank : View {
                     VStack (alignment: .leading) {
                         Text("Cartão de crédito")
                             .bold()
+                            .padding(.top)
                         
                         Image("cartaoDoodle")
                         

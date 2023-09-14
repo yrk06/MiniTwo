@@ -90,7 +90,7 @@ struct BPopUp : View {
                                 .foregroundColor(.white)
                                 .padding(16)
                                 .bold()
-                                .frame(width: 121)
+                                .frame(width: 180)
                                 .background {
                                     Color("OrangeFood")
                                 }

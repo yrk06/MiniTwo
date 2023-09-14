@@ -193,9 +193,11 @@ struct VantagensPepino {
 }
 
 var vantagens_cards = [
-    VantagensPepino(titulo: "Clube do Pepino", descricao: "Assinatura com experiências únicas", imagem: "clubePepino", alertTitulo: "Que azar!", alertDescricao: "As vagas exclusivas do Clube do Pepino acabaram."),
-    VantagensPepino(titulo: "Pepino Card", descricao: "Para presentear alguém especial", imagem: "pepinoCard", alertTitulo: "Estoque esgotado!", alertDescricao: "Todos os Pepinos Cards foram resgatados."),
-    VantagensPepino(titulo: "Cupom do Pepino", descricao: "Aquele descontão maroto", imagem: "cupomPepino", alertTitulo: "Acabou tudo!", alertDescricao: "Volte mais tarde.")
+    VantagensPepino(titulo: "Clube do Pepino", descricao: "Assinatura com experiências únicas.", imagem: "clubePepino", alertTitulo: "Que azar!", alertDescricao: "As vagas exclusivas do Clube do Pepino acabaram."),
+    VantagensPepino(titulo: "Pepino Card", descricao: "Para presentear alguém especial.", imagem: "pepinoCard", alertTitulo: "Estoque esgotado!", alertDescricao: "Todos os Pepinos Cards foram resgatados."),
+    VantagensPepino(titulo: "Cupom do Pepino", descricao: "Aquele descontão maroto.", imagem: "cupomPepino", alertTitulo: "Acabou tudo!", alertDescricao: "Volte mais tarde."),
+    VantagensPepino(titulo: "Ah, que pena!", descricao: "Este cupom expirou 1 minuto atrás.", imagem: "cupomPepino", alertTitulo: "Ah, que pena!", alertDescricao: "Este cupom expirou 1 minuto atrás.")
+    
 
 ]
 
@@ -236,12 +238,7 @@ struct iFood : View {
                                 .cornerRadius(31)
                             Spacer()
                         }
-                        .onTapGesture {
-                         cupom_alert = true
-                        }
-                        .alert(isPresented: $cupom_alert) {
-                            Alert(title: Text("Que Pena :("), message: Text("Esse cupom expirou 1 minuto atrás"))
-                        }
+
                         Spacer()
                         Text("Você ganhou até $50 em cupons grátis")
                             .foregroundColor(.white)
@@ -249,6 +246,7 @@ struct iFood : View {
                             .bold()
                             .frame(width: 200)
                     }
+
                     .padding()
                     .background {
                         Color("OrangeFood")
@@ -257,6 +255,18 @@ struct iFood : View {
                     .cornerRadius(12)
                     .padding()
                     .frame(height: 185)
+                    .onTapGesture {
+                     cupom_alert = true
+                    }
+                    .alert(isPresented: $cupom_alert) {
+                        Alert(
+                            title: Text("Ah, que pena!"),
+                            message: Text("Este cupom expirou 1 minuto atrás."),
+                            dismissButton: .default(Text("OK")) {
+                                cupom_alert = false
+                            }
+                        )
+                    }
                     
                     Text("Tipos de cozinha")
                         .font(.body)
@@ -385,7 +395,7 @@ struct iFood : View {
                     }
 
                 }
-                .padding(.bottom, 96)
+                .padding(.bottom, 120)
             }
             
             ForEach(Range(1...4), id: \.self) { i in

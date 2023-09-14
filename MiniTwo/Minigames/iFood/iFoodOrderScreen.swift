@@ -171,7 +171,7 @@ struct iFoodOrderScreen: View {
                 }
                 //        .edgesIgnoringSafeArea(.bottom)
             }
-            .padding(.bottom, 96)
+            .padding(.bottom, 120)
         }
             .background(food.color)
         

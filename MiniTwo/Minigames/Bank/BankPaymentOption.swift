@@ -93,7 +93,7 @@ struct BankPaymentOption: View {
                             
                         }
                     }
-                    .padding(.horizontal,36)
+                    .padding(.horizontal,66)
                     .padding(.bottom, 16)
                 }
             }
@@ -103,35 +103,39 @@ struct BankPaymentOption: View {
             
             Spacer()
             
-            VStack {
+            VStack(alignment: .leading) {
             Text("Conheça nossas oportunidades")
-            .font(.callout)
+            .font(.body)
             .bold()
-            .foregroundColor(.gray)
+            .foregroundColor(.black)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 20)
+            .padding([.top], 20)
             
                 HStack {
                     
                     VStack (alignment: .leading) {
                         Image("cobrarDoodleAzul")
+                            .frame(width:42, height:42)
                     }
                     .padding(.horizontal, 10)
                    
                     
                     VStack (alignment: .leading) {
                         Text("Realize seu sonho agora mesmo")
+//                            .frame(width: 268)
                             .font(.subheadline)
                             .bold()
-                            .foregroundColor(.gray)
+                            .foregroundColor(.black)
                             .padding(.bottom, 2)
                         
                         Text("Quer viajar o mundo, ter uma mansão ou apenas ir para aquele show imperdível?")
+                            .frame(height: 32)
                             .font(.caption)
                             .foregroundColor(.gray)
-                        
                     }
                     .padding(.vertical, 20)
+                    Spacer()
                     
                     //Cada chevron é um botão. Cada um faz abrir um tipo de pop up sobre empréstimo.
                     Image(systemName: "chevron.right")
@@ -147,6 +151,7 @@ struct BankPaymentOption: View {
                     
                     VStack (alignment: .leading) {
                         Image("creditDoodleAzul")
+                            .frame(width:42, height:42)
                     }
                     .padding(.horizontal, 10)
                     
@@ -155,16 +160,18 @@ struct BankPaymentOption: View {
                         Text("Chega de pepinos")
                             .font(.subheadline)
                             .bold()
-                            .foregroundColor(.gray)
+                            .foregroundColor(.black)
                             .padding(.bottom, 2)
                         
                         Text("Estamos aqui para te oferecer uma mãozinha: um pepino cortado em rodelas bem fininhas.")
+                            .frame(height: 32)
                             .font(.caption)
                             .foregroundColor(.gray)
                     
                     }
                     .padding(.vertical, 20)
-                    
+                    Spacer()
+
                     Image(systemName: "chevron.right")
                         .foregroundColor(Color("Blue"))
                         .padding()
@@ -178,6 +185,7 @@ struct BankPaymentOption: View {
                     
                     VStack (alignment: .leading) {
                         Image("reaisDoodleAzul")
+                            .frame(width:42, height:42)
                     }
                     .padding(.horizontal, 10)
                     
@@ -186,15 +194,19 @@ struct BankPaymentOption: View {
                         Text("Você merece")
                             .font(.subheadline)
                             .bold()
-                            .foregroundColor(.gray)
+                            .foregroundColor(.black)
                             .padding(.bottom, 2)
                         
                         Text("Não sobra dinheiro para sair com os amigos no fim de semana? Seus problemas acabaram!")
                             .font(.caption)
                             .foregroundColor(.gray)
+                            .frame(height: 32)
+
       
                     }
                     .padding(.vertical, 20)
+                    Spacer()
+
                     
                     Image(systemName: "chevron.right")
                         .foregroundColor(Color("Blue"))
@@ -209,8 +221,7 @@ struct BankPaymentOption: View {
             Spacer()
 
             }
-        
-       
+
         }
     }
     
