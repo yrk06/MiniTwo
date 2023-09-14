@@ -17,19 +17,31 @@ struct Panela: View {
     @State var points : Int = 0
     
     var body: some View {
-        VStack {
-            Text("\(angle)")
-            ZStack {
-                Image(systemName: "square.fill")
-                    .foregroundColor(.green)
-                    .offset(x: 0, y: -45)
-                Image(systemName: "arrow.up")
-                    .font(.largeTitle)
-                    .offset(x: 0, y: -30)
-                    .Oscilate($angle)
+        ZStack {
+            VStack {
+//                Text("\(angle)")
+//                    .foregroundColor(angle >= -50 && angle <= 50 ? .green : .black)
+                
+                Image("panela")
+                    .offset(x: 0, y: 100)
+                    .zIndex(1)
+                Image("fogao")
             }
+            .offset(x: 0, y: -96)
+            
+            ZStack {
+                Text("\("🔥" * (3-points))")
+                    .font(.system(size: 64))
+                    .offset(x: 0, y: -100)
+                Image("gauge")
+                Image("pointer")
+                    .offset(x: 0, y: -15)
+                    .Oscilate($angle)
+                    .offset(x: 0, y: 30)
+            }
+            .offset(x: 0,y: 200 - 96)
             Button {
-                if (angle >= -20 && angle <= 20)
+                if (angle >= -50 && angle <= 50)
                 {
                     points += 1
                     if (points >= 3) {
@@ -44,10 +56,20 @@ struct Panela: View {
                 }
 
             } label: {
-                Text("Press me")
-            }
-            Text("\(points)")
+                Text("Tirar panela do fogo")
+                    .font(.callout)
+                    .bold()
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.green)
+                    .cornerRadius(14)
+            }.offset(x: 0, y: -96)
+            
+            
         }
+        .offset(x: 0, y: 20)
+        .TextBackground(palavra: "Panela", count: 10)
+        .background(Color("GrayBackItems"))
     }
 }
 
