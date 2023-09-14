@@ -110,7 +110,7 @@ struct House: View {
                         .foregroundColor(.white)
                         .padding()
                         .TextBackground(palavra: "ON", count: 1)
-                        .background(Color("GrayBack"))
+                        .background(Color("GrayBackItems"))
                         .cornerRadius(16)
                         .padding()
                     }
@@ -140,7 +140,7 @@ struct House: View {
                         .foregroundColor(.white)
                         .padding()
                         .TextBackground(palavra: "ON", count: 1)
-                        .background(Color("GrayBack"))
+                        .background(Color("GrayBackItems"))
                         .cornerRadius(16)
                         .padding()
                     }
