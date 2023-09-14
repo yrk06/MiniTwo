@@ -30,7 +30,10 @@ struct ObjectiveView: View {
                     .fontBob(size: 64)
                     .foregroundColor(Color("OrangeFood"))
                     .frame(width: 120)
-                Image("pepinos")
+                Text("pepinos")
+                    .fontBob(size: 14)
+                    .foregroundColor(.black)
+//                Image("pepinos")
             }
             .padding(.trailing, 26)
             

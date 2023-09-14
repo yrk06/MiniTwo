@@ -8,8 +8,8 @@
 import SwiftUI
 
 enum Objective : String {
-    case boleto = "Pagar boleto"
-    case privada = "A PRIVADA ENTUPIU!"
+    case boleto = "Pagar boletos"
+    case privada = "Desentupir privada"
     case comer = "Comer"
     case limpar = "Limpar a casa"
 }
