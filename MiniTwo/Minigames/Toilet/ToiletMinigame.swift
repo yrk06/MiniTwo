@@ -13,6 +13,7 @@ struct ToiletMinigame: View {
     
     @EnvironmentObject var objectiveManager: ObjectiveManager
     @EnvironmentObject var stsMan: StatusManager
+    @EnvironmentObject var gameManager: GameManager
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -64,6 +65,7 @@ struct ToiletMinigame: View {
         .onDisappear {
             motionManager.finish()
         }
+        .firstTimeAlert(idx: 2, title: "Sua privada entupiu!", message: "Arraste o desentupidor para cima e para baixo para consertar sua privada.", gameManager: gameManager)
         
     }
 }
@@ -71,5 +73,6 @@ struct ToiletMinigame: View {
 struct ToiletMinigame_Previews: PreviewProvider {
     static var previews: some View {
         ToiletMinigame()
+            .environmentObject(GameManager())
     }
 }

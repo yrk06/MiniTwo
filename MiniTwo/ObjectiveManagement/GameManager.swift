@@ -19,6 +19,15 @@ class GameManager: ObservableObject {
     @Published var dayTransition = false
     @Published var gameEnded : Bool = false
     @Published var gameWon : Bool = false
+    
+    @Published var isFirstTime: [Bool] = [true, true, true, true, true]
+    
+    func firstTime(_ idx: Int) -> Binding<Bool> {
+        return Binding(get: {self.isFirstTime[idx]}, set: { v in
+            self.isFirstTime[idx] = v
+        })
+    }
+    
     var dayTimer: Timer?
     
     var objectiveManager: ObjectiveManager = ObjectiveManager()
