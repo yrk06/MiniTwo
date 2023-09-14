@@ -64,6 +64,7 @@ struct BankPaymentOption: View {
                                     .padding(2)
                                     .background(Color(uiColor: .black))
                                     .cornerRadius(200)
+                                    .Boom()
                                 
                                 
                                 Text("Automático")
@@ -83,6 +84,7 @@ struct BankPaymentOption: View {
                                     .padding(2)
                                     .background(Color(uiColor: .black))
                                     .cornerRadius(200)
+                                    .Boom()
                                 
                                 Text("Manual")
                                     .foregroundColor(.white)
