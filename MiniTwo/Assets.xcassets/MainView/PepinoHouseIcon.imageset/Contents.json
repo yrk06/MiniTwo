@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "saladaPepino.png",
+      "filename" : "PepinoHouseIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "saladaPepino@2x.png",
+      "filename" : "PepinoHouseIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "saladaPepino@3x.png",
+      "filename" : "PepinoHouseIcon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

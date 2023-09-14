@@ -10,28 +10,53 @@ import SwiftUI
 struct House: View {
     
     var body: some View {
-        VStack {
+        VStack (spacing: 0) {
             VStack (alignment: .leading) {
                 HStack {
+                    
+                    ZStack {
+                        
+                        Circle()
+                            .fill(Color(uiColor: .white))
+                            .frame(maxWidth: 50)
+                        
+                        Image("perfilDoodlePreto")
+                        
+                       
+                    }
+                    
+                    Spacer()
+                    
                     HStack {
                         Image(systemName: "house.fill")
-                        Text("Pepino Home")
+                        Text("pepino home")
                             .font(.system(size: 17))
-                            .bold()
+                            .fontWidth(.expanded)
+                            .fontWeight(.bold)
+                            
                             
                     }
                     .foregroundColor(.white)
                     .padding(8)
-                    .background(.black)
+                    
+                    .background(Color(red: 0.10980392156862745, green: 0.10980392156862745, blue: 0.11764705882352941))
+                 
                     .cornerRadius(8)
-                    Spacer()
                 }
+                .padding(.bottom, 48)
                 
                 
                 Text("Boas vindas")
+                    .foregroundColor(.white)
                     .font(.system(size: 40))
-                    .bold()
-                Text("Tenha um  ótimo dia!")
+                    .fontWidth(.expanded)
+                    .fontWeight(.bold)
+                    .kerning(-0.4)
+        
+                Text("Cuide da sua casa e tenha um ótimo dia!")
+                    .foregroundColor(.white)
+                    .padding(.top, -22)
+                
                 
 //                HStack {
 //                    Text("31 AGO")
@@ -50,107 +75,159 @@ struct House: View {
             }
             .padding(.vertical)
             .frame(maxWidth: .infinity)
-            .padding(.horizontal)
-            .background(Color("OrangeFood"))
+            .padding(.horizontal, 20)
+            .background(Color(uiColor: .black))
+            
+
+            
             ScrollView(showsIndicators: false) {
                 VStack {
                     
                     NavigationLink {
                         RoomCleaningMinigame()
                     } label: {
-                        VStack (alignment: .leading) {
-                            Text("Online")
-                                .font(.system(size: 14))
-                            Text("Aspirador")
-                                .font(.system(size: 36))
-                                .bold()
-                            Text("O aspirador de pó está ativado")
-                                .font(.system(size: 14))
-                            HStack {
-                                Spacer()
+                        
+                        ZStack {
+                            VStack (alignment: .leading) {
+                                        Text("Online")
+                                            .font(.system(size: 14))
+                                        Text("Aspirador")
+                                            .font(.system(size: 36))
+                                            .fontWidth(.expanded)
+                                            .fontWeight(.bold)
+                                            .kerning(-0.8)
+                                            .padding(.bottom, 20)
+                                        
+                                        Text("Dispositivo pronto para limpar.")
+                                            .font(.system(size: 14))
+                                            .padding(.bottom, 20)
+                                        
+                                        HStack {
+                                            Spacer()
+                                        }
+                                        
+                                        Image(systemName: "arrow.right")
+                                            .padding(4)
+                                            .padding(.horizontal)
+                                            .background(Color("Blue"))
+                                            .cornerRadius(30)
+                                            .Boom()
+                                    }
+                                    .foregroundColor(.white)
+                                    .padding(24)
+                                    .background(
+                                        Color(red: 0.10980392156862745, green: 0.10980392156862745, blue: 0.11764705882352941)
+                                            .cornerRadius(16)
+                                    )
+                                    .padding()
+                                    .overlay(
+                                        Text("ON")
+                                            .fontBob(size: 209)
+                                            .foregroundColor(.white)
+                                            .opacity(0.06)
+    )
+                                }
+                        .padding(.bottom, -20)
+                        
                             }
-                            Image(systemName: "arrow.right")
-                                .padding(4)
-                                .padding(.horizontal)
-                                .background(Color("Blue"))
-                                .cornerRadius(30)
-                                .Boom()
-                            
-                            
-                        }
-                        .foregroundColor(.white)
-                        .padding()
-                        .TextBackground(palavra: "ON", count: 1)
-                        .background(Color("GrayBackItems"))
-                        .cornerRadius(16)
-                        .padding()
-                    }
                     
                     NavigationLink {
                         Panela()
                     } label: {
-                        VStack (alignment: .leading) {
-                            Text("Online")
-                                .font(.system(size: 14))
-                            Text("Panela")
-                                .font(.system(size: 36))
-                                .bold()
-                            Text("O forno está ativado")
-                                .font(.system(size: 14))
-                            HStack {
-                                Spacer()
+                        ZStack {
+                                    VStack (alignment: .leading) {
+                                        Text("Online")
+                                            .font(.system(size: 14))
+                                        Text("Panela")
+                                            .font(.system(size: 36))
+                                            .fontWidth(.expanded)
+                                            .fontWeight(.bold)
+                                            .kerning(-0.8)
+                                            .padding(.bottom, 20)
+                                        
+                                        Text("Dispositivo pronto para cozinhar.")
+                                            .font(.system(size: 14))
+                                            .padding(.bottom, 20)
+                                        
+                                        HStack {
+                                            Spacer()
+                                        }
+                                        
+                                        Image(systemName: "arrow.right")
+                                            .padding(4)
+                                            .padding(.horizontal)
+                                            .background(Color("Blue"))
+                                            .cornerRadius(30)
+                                            .Boom()
+                                    }
+                                    .foregroundColor(.white)
+                                    .padding(24)
+                                    .background(
+                                        Color(red: 0.10980392156862745, green: 0.10980392156862745, blue: 0.11764705882352941)
+                                            .cornerRadius(16)
+                                    )
+                                    .padding()
+                                    .overlay(
+                                        Text("ON")
+                                            .fontBob(size: 209)
+                                            .foregroundColor(.white)
+                                            .opacity(0.06)
+                                    )
+                                }
+                        .padding(.bottom, -20)
                             }
-                            Image(systemName: "arrow.right")
-                                .padding(4)
-                                .padding(.horizontal)
-                                .background(Color("Blue"))
-                                .cornerRadius(30)
-                                .Boom()
-                            
-                            
-                        }
-                        .foregroundColor(.white)
-                        .padding()
-                        .TextBackground(palavra: "ON", count: 1)
-                        .background(Color("GrayBackItems"))
-                        .cornerRadius(16)
-                        .padding()
-                    }
+                    
                     
                     NavigationLink {
                         ToiletMinigame()
                     } label: {
-                        VStack (alignment: .leading) {
-                            Text("Online")
-                                .font(.system(size: 14))
-                            Text("Vaso sanitário")
-                                .font(.system(size: 36))
-                                .bold()
-                            Text("O vaso sanitário está ativado")
-                                .font(.system(size: 14))
-                            HStack {
-                                Spacer()
-                            }
-                            Image(systemName: "arrow.right")
-                                .padding(4)
-                                .padding(.horizontal)
-                                .background(Color("Blue"))
-                                .cornerRadius(30)
-                                .Boom()
-                            
-                            
-                        }
-                        .foregroundColor(.white)
-                        .padding()
-                        .TextBackground(palavra: "ON", count: 1)
-                        .background(Color("GrayBackItems"))
-                        .cornerRadius(16)
-                        .padding()
+                        ZStack {
+                                    VStack (alignment: .leading) {
+                                        Text("Online")
+                                            .font(.system(size: 14))
+                                        Text("Vaso sanitário")
+                                            .font(.system(size: 36))
+                                            .fontWidth(.expanded)
+                                            .fontWeight(.bold)
+                                            .kerning(-0.8)
+                                            .padding(.bottom, 20)
+                                        
+                                        Text("Dispositivo pronto para desentupir.")
+                                            .font(.system(size: 14))
+                                            .padding(.bottom, 20)
+                                        
+                                        HStack {
+                                            Spacer()
+                                        }
+                                        
+                                        Image(systemName: "arrow.right")
+                                            .padding(4)
+                                            .padding(.horizontal)
+                                            .background(Color("Blue"))
+                                            .cornerRadius(30)
+                                            .Boom()
+                                    }
+                                    .foregroundColor(.white)
+                                    .padding(24)
+                                    .background(
+                                        Color(red: 0.10980392156862745, green: 0.10980392156862745, blue: 0.11764705882352941)
+                                            .cornerRadius(16)
+                                    )
+                                    .padding()
+                                    .overlay(
+                                        Text("ON")
+                                            .fontBob(size: 209)
+                                            .foregroundColor(.white)
+                                            .opacity(0.06)
+                                    )
+                                }
                     }
                 }
+                .background(Color(uiColor: .black))
                 .padding(.bottom, 96)
             }
         }
+        .background(Color(uiColor: .black))
         
     }
 }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pepinada.png",
+      "filename" : "iPepinoIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pepinada@2x.png",
+      "filename" : "iPepinoIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pepinada@3x.png",
+      "filename" : "iPepinoIcon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

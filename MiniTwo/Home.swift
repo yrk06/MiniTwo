@@ -32,7 +32,7 @@ struct Home: View {
                             }
                             .ignoresSafeArea()
                             VStack {
-                                Image("MainLogo")
+                                Image("PepinoLogo")
                                     .padding()
                                 
                                 ObjectiveView()
@@ -43,7 +43,7 @@ struct Home: View {
                                             iFood()
                                         } label: {
                                             VStack {
-                                                Image("iPepinoIcon")
+                                                Image("iPepinoIcon2")
                                                 Text("iPepino")
                                                     .foregroundColor(.white)
                                             }
@@ -53,7 +53,7 @@ struct Home: View {
                                             Bank()
                                         } label: {
                                             VStack {
-                                                Image("BankIcon")
+                                                Image("PepinoBankIcon")
                                                 Text("PepinoBank")
                                                     .foregroundColor(.white)
                                             }
@@ -63,7 +63,7 @@ struct Home: View {
                                             House()
                                         } label: {
                                             VStack {
-                                                Image("HomeIcon")
+                                                Image("PepinoHouseIcon")
                                                 Text("PepinoHouse")
                                                     .foregroundColor(.white)
                                             }
