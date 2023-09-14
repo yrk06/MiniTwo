@@ -10,6 +10,7 @@ import SwiftUI
 struct BankPaymentOption: View {
     
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var gameManager: GameManager
     
     var body: some View {
         
@@ -56,6 +57,7 @@ struct BankPaymentOption: View {
                     HStack {
                         NavigationLink {
                             ARView()
+                                .firstTimeAlert(idx: 3, title: "Você perdeu seus boletos!", message: "Chegue perto dos boletos e toque neles para pagar.", gameManager: gameManager)
                         } label: {
           
                             VStack {
@@ -77,6 +79,7 @@ struct BankPaymentOption: View {
                         
                         NavigationLink {
                             BankTyping()
+                                .firstTimeAlert(idx: 4, title: "Digite o código de barras", message: "Confira o boleto e digite os números corretamente.", gameManager: gameManager)
                         } label: {
                             VStack {
                                 Image("barcodeDoodle")
@@ -229,7 +232,10 @@ struct BankPaymentOption: View {
     
     struct BankPaymentOption_Previews: PreviewProvider {
         static var previews: some View {
-            BankPaymentOption()
+            NavigationStack {
+                BankPaymentOption()
+                    .environmentObject(GameManager())
+            }
         }
     }
 

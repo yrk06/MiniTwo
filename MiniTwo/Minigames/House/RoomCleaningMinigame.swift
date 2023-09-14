@@ -12,6 +12,7 @@ struct RoomCleaningMinigame: View {
     
     @EnvironmentObject var objMan: ObjectiveManager
     @EnvironmentObject var stsMan: StatusManager
+    @EnvironmentObject var gameManager: GameManager
     @Environment(\.dismiss) var dismiss
     
     @State var canDispatch : Bool = true
@@ -43,12 +44,13 @@ struct RoomCleaningMinigame: View {
         .onAppear {
             canDispatch = true
         }
+        .firstTimeAlert(idx: 1, title: "Sua casa está imunda!", message: "Arraste o dedo na tela para limpar e deixar sua casa habitável novamente.", gameManager: gameManager)
     }
 }
 
 struct RoomCleaningMinigame_Previews: PreviewProvider {
     static var previews: some View {
         RoomCleaningMinigame()
-            .environmentObject(ObjectiveManager())
+            .environmentObject(GameManager())
     }
 }
