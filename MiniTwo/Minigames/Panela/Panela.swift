@@ -63,6 +63,7 @@ struct Panela: View {
                     .padding()
                     .background(.green)
                     .cornerRadius(14)
+                    .Boom()
             }.offset(x: 0, y: -96)
             
             

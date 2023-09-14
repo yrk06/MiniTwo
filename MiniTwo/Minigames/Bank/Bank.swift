@@ -158,6 +158,7 @@ struct Bank : View {
                                     .padding([.vertical], 10)
                                     .background(Color("OrangeFood"))
                                     .cornerRadius(40)
+                                    .Boom()
                             }
                             
                         }

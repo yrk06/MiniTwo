@@ -74,6 +74,7 @@ struct House: View {
                                 .padding(.horizontal)
                                 .background(Color("Blue"))
                                 .cornerRadius(30)
+                                .Boom()
                             
                             
                         }
@@ -104,6 +105,7 @@ struct House: View {
                                 .padding(.horizontal)
                                 .background(Color("Blue"))
                                 .cornerRadius(30)
+                                .Boom()
                             
                             
                         }
@@ -134,6 +136,7 @@ struct House: View {
                                 .padding(.horizontal)
                                 .background(Color("Blue"))
                                 .cornerRadius(30)
+                                .Boom()
                             
                             
                         }
