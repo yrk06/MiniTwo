@@ -34,8 +34,8 @@ struct Panela: View {
                     points += 1
                     if (points >= 3) {
                         objMan.complete_mission(type: .comer)
-                        stsMan.changeHunger(by: 10)
-                        stsMan.changeHealth(by: -10)
+                        stsMan.changeHunger(by: 30)
+                        stsMan.changeHealth(by: 30)
 //                        dismiss()
                         NavigationUtil.popToRootView()
                     }

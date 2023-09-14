@@ -154,7 +154,8 @@ struct iFoodOrderScreen: View {
                 
                 Button {
                     objMan.complete_mission(type: .comer)
-                    stsMan.changeHunger(by: 10)
+                    stsMan.changeHunger(by: 30)
+                    stsMan.changeHealth(by: 30)
                     stsMan.changeMoney(by: -Double(food.price.nextUp))
 //                    dismiss()
                     NavigationUtil.popToRootView()

@@ -51,6 +51,8 @@ class GameManager: ObservableObject {
         let count = Int8(getTaskCount())
         
         objectiveManager.fill_objectives(n: count)
+//        objectiveManager.add_objective(.limpar)
+//        objectiveManager.add_objective(.limpar)
         
         self.statusManager.changeMoney(by: 50)
         
@@ -69,11 +71,11 @@ class GameManager: ObservableObject {
                 self.dayTimer?.invalidate()
                 self.endDay()
             }
-            if self.statusManager.getHealth() <= 0 {
+            if self.statusManager.getHealth() <= 1 {
                 self.loseGame()
-            } else if self.statusManager.getMoney() <= 0 {
+            } else if self.statusManager.getMoney() <= 1 {
                 self.loseGame()
-            } else if self.statusManager.getHunger() <= 0 {
+            } else if self.statusManager.getHunger() <= 1 {
                 self.loseGame()
             }
             print(self.statusManager.getHunger())

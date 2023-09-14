@@ -13,22 +13,32 @@ struct StatusItem: View {
     var imageName : String
     var frameConst : Double
     var color : Color
+    var name : String
     
-    init(_ value: Double, _ imageName: String, _ frameConst : Double, _ color : Color) {
+    init(_ value: Double, _ imageName: String, _ frameConst : Double, _ color : Color, _ name: String) {
         self.value = value
         self.imageName = imageName
         self.frameConst = frameConst
         self.color = color
+        self.name = name
     }
     
     var body: some View {
-        ZStack (alignment: .bottom) {
-            Image(systemName: imageName)
-                .foregroundColor(Color(uiColor: .darkGray))
-            Image(systemName: imageName)
-                .foregroundColor(color)
-                .frame(height: value * frameConst, alignment: .bottom)
-                .clipped()
+        VStack {
+            ZStack (alignment: .bottom) {
+                Image(systemName: imageName)
+                    .foregroundColor(Color(uiColor: .darkGray))
+                    .font(.title)
+                Image(systemName: imageName)
+                    .foregroundColor(color)
+                    .font(.title)
+                    .frame(height: value * frameConst, alignment: .bottom)
+                    .clipped()
+            }
+            Text(name)
+                .font(.caption2)
+                .foregroundColor(.gray)
+                .frame(width: 60)
         }
     }
 }
@@ -38,7 +48,7 @@ struct StatusBar: View {
     @EnvironmentObject var stsMan : StatusManager
     
     var body: some View {
-        HStack (alignment: .center, spacing: 42) {
+        HStack (alignment: .center, spacing: 30) {
             Button {
                 NavigationUtil.popToRootView()
             } label: {
@@ -48,12 +58,11 @@ struct StatusBar: View {
                     .padding(.horizontal, 8)
                     .background(Color(uiColor: .darkGray))
                     .cornerRadius(8)
-                    .padding(6)
             }
             
-            StatusItem(stsMan.getHealth(), "heart.fill", 0.34, .white)
-            StatusItem(stsMan.getHunger(), "fork.knife", 0.42, .white)
-            StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .white)
+            StatusItem(stsMan.getHealth(), "heart.fill", /*0.34*/0.3, .white, "bem-estar")
+            StatusItem(stsMan.getHunger(), "fork.knife", 0.38, .white, "fome")
+            StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .white, "dinheiro")
         }
         .foregroundColor(.white)
         .padding()

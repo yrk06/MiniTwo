@@ -26,6 +26,7 @@ struct BankTyping: View {
     
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var objMan: ObjectiveManager
+    @EnvironmentObject var stsMan: StatusManager
     
     @State var number: String = ""
     @State var target: String = ""
@@ -132,6 +133,8 @@ struct BankTyping: View {
             nv in
             if nv == target {
                 objMan.complete_mission(type: .boleto)
+                stsMan.changeMoney(by: -10)
+                stsMan.changeHealth(by: -10)
 //                dismiss()
                 NavigationUtil.popToRootView()
             }
