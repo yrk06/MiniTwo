@@ -15,11 +15,11 @@ struct Rotate: ViewModifier {
         content
             .onChange(of: angle_holder, perform: { newValue in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-                    if angle_holder <= -90
+                    if angle_holder <= -135
                     {
                         rotate_left = 1
                     }
-                    else if angle_holder >= 90
+                    else if angle_holder >= 135
                     {
                         rotate_left = -1
                     }
