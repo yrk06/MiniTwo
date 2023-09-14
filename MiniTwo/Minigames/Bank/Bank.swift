@@ -288,22 +288,32 @@ struct Bank : View {
                 
             }
             
+//            if !h && !w && !popup_dismissed {
+//                switch type {
+//                case 1:
+//                    BPopUp(headline: "Você merece!", images: "voceMerece", op_1: $h, op_2: $w)
+//                case 2:
+//                    BPopUp(headline: "Chega de pepinos!", images: "chegaPepinos", op_1: $h, op_2: $w)
+//                case 3:
+//                    BPopUp(headline: "Realize seu sonho agora mesmo!", images: "realizeSonho", op_1: $h, op_2: $w)
+//                default:
+//                    Text("No pop up :(")
+//                }
+//            }
             if !h && !w && !popup_dismissed {
                 switch type {
-                case 1:
-                    BPopUp(headline: "Você merece!", images: "voceMerece", op_1: $h, op_2: $w)
-                case 2:
-                    BPopUp(headline: "Chega de pepinos!", images: "chegaPepinos", op_1: $h, op_2: $w)
-                case 3:
-                    BPopUp(headline: "Realize seu sonho agora mesmo!", images: "realizeSonho", op_1: $h, op_2: $w)
-                default:
-                    Text("No pop up :(")
+                    case 1:
+                        BPopUp(headline: "Você merece!", images: "voceMerece", op_1: $h, op_2: $w)
+                    case 2:
+                        BPopUp(headline: "Chega de pepinos!", images: "chegaPepinos", op_1: $h, op_2: $w)
+                    case 3:
+                        BPopUp(headline: "Realize seu sonho agora mesmo!", images: "realizeSonho", op_1: $h, op_2: $w)
+                    default:
+                        Text("No pop up :(")
                 }
             }
             
-            
         }
-        
     }
 }
 
