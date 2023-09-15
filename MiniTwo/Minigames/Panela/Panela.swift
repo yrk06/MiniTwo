@@ -17,6 +17,7 @@ struct Panela: View {
     @State var angle : Double = 1
     @State var points : Int = 0
     
+    var sndMan : SoundManager = SoundManager()
     
     var body: some View {
         ZStack {
@@ -53,6 +54,7 @@ struct Panela: View {
 //                        dismiss()
                         NavigationUtil.popToRootView()
                     }
+                    sndMan.playSound("pop.wav", loops: 0)
                 } else {
                     stsMan.changeHealth(by: -5)
                 }

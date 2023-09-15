@@ -16,6 +16,8 @@ struct ToiletMinigame: View {
     @EnvironmentObject var gameManager: GameManager
     @Environment(\.dismiss) var dismiss
     
+    var sndMan : SoundManager = SoundManager()
+    
     var body: some View {
         ZStack (alignment: .center) {
             Image("ToiletFull")
@@ -58,10 +60,17 @@ struct ToiletMinigame: View {
                 stsMan.changeHealth(by: -10)
                 print("Hello Im an Error")
                 motionManager.finish()
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    sndMan.playSound("desentupir.wav", loops: 0)
+                }
 //                dismiss()
                 NavigationUtil.popToRootView()
             }
+            sndMan.playSound("desentupindo.wav", loops: 0)
         })
+        .onAppear() {
+            motionManager.configure(state: $toiletState)
+        }
         .onDisappear {
             motionManager.finish()
         }

@@ -10,6 +10,7 @@ import SpriteKit
 
 struct RoomCleaningMinigame: View {
     
+    @EnvironmentObject var sndMan: SoundManager
     @EnvironmentObject var objMan: ObjectiveManager
     @EnvironmentObject var stsMan: StatusManager
     @EnvironmentObject var gameManager: GameManager
@@ -43,6 +44,10 @@ struct RoomCleaningMinigame: View {
         .background(Color("GrayBackItems"))
         .onAppear {
             canDispatch = true
+            sndMan.playSound("limparCasa.wav", loops: 0)
+        }
+        .onDisappear {
+            sndMan.stopSound()
         }
         .firstTimeAlert(idx: 1, title: "Sua casa está imunda!", message: "Arraste o dedo na tela para limpar e deixar sua casa habitável novamente.", gameManager: gameManager)
     }

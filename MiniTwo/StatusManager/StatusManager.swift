@@ -13,6 +13,7 @@ class StatusManager : ObservableObject {
     @Published private var hunger : Double = 100
     @Published private var money : Double = 100
     @Published private var log : [String] = []
+    @Published private var sndManager : SoundManager = SoundManager()
     
     public func getHealth() -> Double { return self.health }
     public func getHunger() -> Double { return self.hunger }
@@ -44,6 +45,7 @@ class StatusManager : ObservableObject {
         }
         if value > 0 {
             addToLog("Food +\(Int(value))")
+            sndManager.playSound("nhac.wav", loops: 0)
         }
     }
     public func changeMoney(by value: Double) {
@@ -55,6 +57,7 @@ class StatusManager : ObservableObject {
             addToLog("Money +\(Int(value))")
         } else {
             addToLog("Money \(Int(value))")
+            sndManager.playSound("kaching.wav", loops: 0)
         }
     }
     

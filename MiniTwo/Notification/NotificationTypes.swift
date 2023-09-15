@@ -87,6 +87,7 @@ struct CallNotificationView: View {
     @State var rng = Int.random(in: 0...5)
     
     @State var player : CHHapticAdvancedPatternPlayer?
+    @StateObject var sndMan : SoundManager = SoundManager()
     
     var body: some View {
         Group {
@@ -190,6 +191,7 @@ struct CallNotificationView: View {
                         Spacer()
                         HStack {
                             Button {
+                                sndMan.stopSound()
                                 dismiss!()
                             } label: {
                                 Image(systemName: "phone.down.fill")
@@ -209,6 +211,11 @@ struct CallNotificationView: View {
                     .transition(.opacity)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(.ultraThinMaterial)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            sndMan.playSound("vozTelefone.wav", loops: 10)
+                        }
+                    }
             }
         }
         .onAppear {

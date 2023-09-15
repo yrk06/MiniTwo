@@ -11,6 +11,7 @@ import SwiftUI
 struct MiniTwoApp: App {
     
     var gameManager : GameManager = GameManager()
+    var soundManager : SoundManager = SoundManager()
     var notificationQueue: NotificationQueue = NotificationQueue()
     
     @State var scene = 0
@@ -28,18 +29,21 @@ struct MiniTwoApp: App {
                     OnboardingFinal(screen: $scene)
                         .transition(.move(edge: .bottom))
                 default:
-                    Home()
-                        .environmentObject(gameManager)
-                        .environmentObject(gameManager.objectiveManager)
-                        .environmentObject(gameManager.statusManager)
-                        .environmentObject(notificationQueue)
-                        .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
-                        .onAppear {
-                            gameManager.startDay()
-                            notificationQueue.startNotificationTimer()
-                        }
-                        .statusBar(hidden: true)
-                        .preferredColorScheme(.light)
+                    ZStack {
+                        Home()
+                            .environmentObject(gameManager)
+                            .environmentObject(gameManager.objectiveManager)
+                            .environmentObject(gameManager.statusManager)
+                            .environmentObject(notificationQueue)
+                            .environmentObject(soundManager)
+                            .notificationPresenter(notificationQueue: notificationQueue, gameManager: gameManager)
+                            .onAppear {
+                                gameManager.startDay()
+                                notificationQueue.startNotificationTimer()
+                            }
+                            .statusBar(hidden: true)
+                            .preferredColorScheme(.light)
+                    }
                 }
             }.animation(.easeInOut(duration: 1), value: scene)
             
