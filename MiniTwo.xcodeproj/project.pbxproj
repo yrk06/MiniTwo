@@ -40,7 +40,6 @@
 		52E2758B2AB33BA500F3BB36 /* panela.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2757C2AB33BA500F3BB36 /* panela.wav */; };
 		52E2758C2AB33BA500F3BB36 /* derrota2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2757D2AB33BA500F3BB36 /* derrota2.wav */; };
 		52E2758E2AB33BEC00F3BB36 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2758D2AB33BEC00F3BB36 /* SoundManager.swift */; };
-		52E275902AB33EDF00F3BB36 /* limparCasamp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52E2758F2AB33EDF00F3BB36 /* limparCasamp3.mp3 */; };
 		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
 		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
 		783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */; };
@@ -89,23 +88,22 @@
 		528F973B2AA8ADF9000469D1 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		528F977F2AAFF561000469D1 /* FinalRuim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRuim.swift; sourceTree = "<group>"; };
 		52E2756C2AB32F7300F3BB36 /* Boom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boom.swift; sourceTree = "<group>"; };
-		52E2756F2AB33BA500F3BB36 /* vitória.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "vitória.wav"; path = "../../../../../../Downloads/SFX/vitória.wav"; sourceTree = "<group>"; };
-		52E275702AB33BA500F3BB36 /* vozTelefone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = vozTelefone.wav; path = ../../../../../../Downloads/SFX/vozTelefone.wav; sourceTree = "<group>"; };
-		52E275712AB33BA500F3BB36 /* nhac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = nhac.wav; path = ../../../../../../Downloads/SFX/nhac.wav; sourceTree = "<group>"; };
-		52E275722AB33BA500F3BB36 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pop.wav; path = ../../../../../../Downloads/SFX/pop.wav; sourceTree = "<group>"; };
-		52E275732AB33BA500F3BB36 /* desentupir.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = desentupir.wav; path = ../../../../../../Downloads/SFX/desentupir.wav; sourceTree = "<group>"; };
-		52E275742AB33BA500F3BB36 /* clock02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clock02.wav; path = ../../../../../../Downloads/SFX/clock02.wav; sourceTree = "<group>"; };
-		52E275752AB33BA500F3BB36 /* limparCasa.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = limparCasa.wav; path = ../../../../../../Downloads/SFX/limparCasa.wav; sourceTree = "<group>"; };
-		52E275762AB33BA500F3BB36 /* morrendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = morrendo.wav; path = ../../../../../../Downloads/SFX/morrendo.wav; sourceTree = "<group>"; };
-		52E275772AB33BA500F3BB36 /* tarefa1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tarefa1.wav; path = ../../../../../../Downloads/SFX/tarefa1.wav; sourceTree = "<group>"; };
-		52E275782AB33BA500F3BB36 /* desentupindo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = desentupindo.wav; path = ../../../../../../Downloads/SFX/desentupindo.wav; sourceTree = "<group>"; };
-		52E275792AB33BA500F3BB36 /* kaching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = kaching.wav; path = ../../../../../../Downloads/SFX/kaching.wav; sourceTree = "<group>"; };
-		52E2757A2AB33BA500F3BB36 /* derrota1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = derrota1.wav; path = ../../../../../../Downloads/SFX/derrota1.wav; sourceTree = "<group>"; };
-		52E2757B2AB33BA500F3BB36 /* clock01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clock01.wav; path = ../../../../../../Downloads/SFX/clock01.wav; sourceTree = "<group>"; };
-		52E2757C2AB33BA500F3BB36 /* panela.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = panela.wav; path = ../../../../../../Downloads/SFX/panela.wav; sourceTree = "<group>"; };
-		52E2757D2AB33BA500F3BB36 /* derrota2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = derrota2.wav; path = ../../../../../../Downloads/SFX/derrota2.wav; sourceTree = "<group>"; };
+		52E2756F2AB33BA500F3BB36 /* vitória.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vitória.wav"; sourceTree = "<group>"; };
+		52E275702AB33BA500F3BB36 /* vozTelefone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = vozTelefone.wav; sourceTree = "<group>"; };
+		52E275712AB33BA500F3BB36 /* nhac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nhac.wav; sourceTree = "<group>"; };
+		52E275722AB33BA500F3BB36 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
+		52E275732AB33BA500F3BB36 /* desentupir.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = desentupir.wav; sourceTree = "<group>"; };
+		52E275742AB33BA500F3BB36 /* clock02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock02.wav; sourceTree = "<group>"; };
+		52E275752AB33BA500F3BB36 /* limparCasa.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = limparCasa.wav; sourceTree = "<group>"; };
+		52E275762AB33BA500F3BB36 /* morrendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = morrendo.wav; sourceTree = "<group>"; };
+		52E275772AB33BA500F3BB36 /* tarefa1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tarefa1.wav; sourceTree = "<group>"; };
+		52E275782AB33BA500F3BB36 /* desentupindo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = desentupindo.wav; sourceTree = "<group>"; };
+		52E275792AB33BA500F3BB36 /* kaching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kaching.wav; sourceTree = "<group>"; };
+		52E2757A2AB33BA500F3BB36 /* derrota1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = derrota1.wav; sourceTree = "<group>"; };
+		52E2757B2AB33BA500F3BB36 /* clock01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock01.wav; sourceTree = "<group>"; };
+		52E2757C2AB33BA500F3BB36 /* panela.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = panela.wav; sourceTree = "<group>"; };
+		52E2757D2AB33BA500F3BB36 /* derrota2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = derrota2.wav; sourceTree = "<group>"; };
 		52E2758D2AB33BEC00F3BB36 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
-		52E2758F2AB33EDF00F3BB36 /* limparCasamp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = limparCasamp3.mp3; path = ../../../../../../Downloads/limparCasamp3.mp3; sourceTree = "<group>"; };
 		78009B5B2AA74651006BA51D /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		783A4BEC2AA602A30049F054 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoB_comAcento2.otf; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 		52E2756E2AB33B5400F3BB36 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				52E2758F2AB33EDF00F3BB36 /* limparCasamp3.mp3 */,
 				52E2757B2AB33BA500F3BB36 /* clock01.wav */,
 				52E275742AB33BA500F3BB36 /* clock02.wav */,
 				52E2757A2AB33BA500F3BB36 /* derrota1.wav */,
@@ -422,7 +419,6 @@
 				52E2758B2AB33BA500F3BB36 /* panela.wav in Resources */,
 				52E275852AB33BA500F3BB36 /* morrendo.wav in Resources */,
 				783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */,
-				52E275902AB33EDF00F3BB36 /* limparCasamp3.mp3 in Resources */,
 				52E275822AB33BA500F3BB36 /* desentupir.wav in Resources */,
 				52E275872AB33BA500F3BB36 /* desentupindo.wav in Resources */,
 				52E2758C2AB33BA500F3BB36 /* derrota2.wav in Resources */,
