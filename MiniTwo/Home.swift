@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     
+    @EnvironmentObject var sndMan : SoundManager
     @EnvironmentObject var game : GameManager
     @EnvironmentObject var stsMan : StatusManager
     @EnvironmentObject var notification : NotificationQueue

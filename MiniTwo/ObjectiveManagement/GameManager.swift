@@ -34,6 +34,8 @@ class GameManager: ObservableObject {
 
     var statusManager: StatusManager = StatusManager()
     
+    var sndMan : SoundManager = SoundManager()
+    
     func getTaskCount() -> Int {
         switch day {
         case 0:
@@ -87,7 +89,15 @@ class GameManager: ObservableObject {
             } else if self.statusManager.getHunger() <= 1 {
                 self.loseGame()
             }
-            print(self.statusManager.getHunger())
+//            print(self.statusManager.getHunger())
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                if self.dayTick % 2 == 0 {
+                    self.sndMan.playSound("clock01.wav", loops: 0)
+                } else {
+                    self.sndMan.playSound("clock02.wav", loops: 0)
+                }
+            }
         })
     }
     
@@ -97,7 +107,7 @@ class GameManager: ObservableObject {
             dayTick = 90
             day += 1
             
-            if self.day == 6 {
+            if self.day == 2 {
                 winGame()
             }
 //        }
@@ -129,5 +139,6 @@ class GameManager: ObservableObject {
         objectiveManager.eraseAllObjectives()
         objectiveManager.level_1()
         statusManager.resetAll()
+        startDay()
     }
 }

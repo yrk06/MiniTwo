@@ -30,7 +30,7 @@ struct StatusItem: View {
                     .foregroundColor(Color(uiColor: .darkGray))
                     .font(.title)
                 Image(systemName: imageName)
-                    .foregroundColor(color)
+                    .foregroundColor(value > 40 ? (color) : (.red))
                     .font(.title)
                     .frame(height: value * frameConst, alignment: .bottom)
                     .clipped()
@@ -87,10 +87,14 @@ struct StatusBar: View {
             .cornerRadius(16)
             .shadow(radius: 10)
             .padding(8)
-        }
-        .onAppear {
-            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { i in
-                stsMan.removeFirst()
+            .onAppear {
+                _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { i in
+                    if stsMan.getLog().count > 0 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            stsMan.removeFirst()
+                        }
+                    }
+                }
             }
         }
     }

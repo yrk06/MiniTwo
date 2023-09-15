@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinalRuim: View {
     
+    @EnvironmentObject var sndMan : SoundManager
     @EnvironmentObject var game : GameManager
     @EnvironmentObject var notification : NotificationQueue
     
@@ -52,6 +53,7 @@ struct FinalRuim: View {
         .transition(.scale)
         .onAppear {
             notification.stopNotificationTimer()
+            sndMan.playSound("derrota1.wav", loops: 0)
         }
     }
 }

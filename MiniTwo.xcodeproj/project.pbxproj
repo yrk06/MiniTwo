@@ -24,6 +24,23 @@
 		528F973C2AA8ADF9000469D1 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F973B2AA8ADF9000469D1 /* StatusBar.swift */; };
 		528F97802AAFF561000469D1 /* FinalRuim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F977F2AAFF561000469D1 /* FinalRuim.swift */; };
 		52E2756D2AB32F7300F3BB36 /* Boom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2756C2AB32F7300F3BB36 /* Boom.swift */; };
+		52E2757E2AB33BA500F3BB36 /* vitória.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2756F2AB33BA500F3BB36 /* vitória.wav */; };
+		52E2757F2AB33BA500F3BB36 /* vozTelefone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275702AB33BA500F3BB36 /* vozTelefone.wav */; };
+		52E275802AB33BA500F3BB36 /* nhac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275712AB33BA500F3BB36 /* nhac.wav */; };
+		52E275812AB33BA500F3BB36 /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275722AB33BA500F3BB36 /* pop.wav */; };
+		52E275822AB33BA500F3BB36 /* desentupir.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275732AB33BA500F3BB36 /* desentupir.wav */; };
+		52E275832AB33BA500F3BB36 /* clock02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275742AB33BA500F3BB36 /* clock02.wav */; };
+		52E275842AB33BA500F3BB36 /* limparCasa.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275752AB33BA500F3BB36 /* limparCasa.wav */; };
+		52E275852AB33BA500F3BB36 /* morrendo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275762AB33BA500F3BB36 /* morrendo.wav */; };
+		52E275862AB33BA500F3BB36 /* tarefa1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275772AB33BA500F3BB36 /* tarefa1.wav */; };
+		52E275872AB33BA500F3BB36 /* desentupindo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275782AB33BA500F3BB36 /* desentupindo.wav */; };
+		52E275882AB33BA500F3BB36 /* kaching.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E275792AB33BA500F3BB36 /* kaching.wav */; };
+		52E275892AB33BA500F3BB36 /* derrota1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2757A2AB33BA500F3BB36 /* derrota1.wav */; };
+		52E2758A2AB33BA500F3BB36 /* clock01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2757B2AB33BA500F3BB36 /* clock01.wav */; };
+		52E2758B2AB33BA500F3BB36 /* panela.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2757C2AB33BA500F3BB36 /* panela.wav */; };
+		52E2758C2AB33BA500F3BB36 /* derrota2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52E2757D2AB33BA500F3BB36 /* derrota2.wav */; };
+		52E2758E2AB33BEC00F3BB36 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2758D2AB33BEC00F3BB36 /* SoundManager.swift */; };
+		52E275902AB33EDF00F3BB36 /* limparCasamp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52E2758F2AB33EDF00F3BB36 /* limparCasamp3.mp3 */; };
 		78009B5C2AA74651006BA51D /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78009B5B2AA74651006BA51D /* NavigationUtil.swift */; };
 		783A4BED2AA602A30049F054 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A4BEC2AA602A30049F054 /* GameManager.swift */; };
 		783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */; };
@@ -72,6 +89,23 @@
 		528F973B2AA8ADF9000469D1 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		528F977F2AAFF561000469D1 /* FinalRuim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRuim.swift; sourceTree = "<group>"; };
 		52E2756C2AB32F7300F3BB36 /* Boom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boom.swift; sourceTree = "<group>"; };
+		52E2756F2AB33BA500F3BB36 /* vitória.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "vitória.wav"; path = "../../../../../../Downloads/SFX/vitória.wav"; sourceTree = "<group>"; };
+		52E275702AB33BA500F3BB36 /* vozTelefone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = vozTelefone.wav; path = ../../../../../../Downloads/SFX/vozTelefone.wav; sourceTree = "<group>"; };
+		52E275712AB33BA500F3BB36 /* nhac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = nhac.wav; path = ../../../../../../Downloads/SFX/nhac.wav; sourceTree = "<group>"; };
+		52E275722AB33BA500F3BB36 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pop.wav; path = ../../../../../../Downloads/SFX/pop.wav; sourceTree = "<group>"; };
+		52E275732AB33BA500F3BB36 /* desentupir.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = desentupir.wav; path = ../../../../../../Downloads/SFX/desentupir.wav; sourceTree = "<group>"; };
+		52E275742AB33BA500F3BB36 /* clock02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clock02.wav; path = ../../../../../../Downloads/SFX/clock02.wav; sourceTree = "<group>"; };
+		52E275752AB33BA500F3BB36 /* limparCasa.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = limparCasa.wav; path = ../../../../../../Downloads/SFX/limparCasa.wav; sourceTree = "<group>"; };
+		52E275762AB33BA500F3BB36 /* morrendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = morrendo.wav; path = ../../../../../../Downloads/SFX/morrendo.wav; sourceTree = "<group>"; };
+		52E275772AB33BA500F3BB36 /* tarefa1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tarefa1.wav; path = ../../../../../../Downloads/SFX/tarefa1.wav; sourceTree = "<group>"; };
+		52E275782AB33BA500F3BB36 /* desentupindo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = desentupindo.wav; path = ../../../../../../Downloads/SFX/desentupindo.wav; sourceTree = "<group>"; };
+		52E275792AB33BA500F3BB36 /* kaching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = kaching.wav; path = ../../../../../../Downloads/SFX/kaching.wav; sourceTree = "<group>"; };
+		52E2757A2AB33BA500F3BB36 /* derrota1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = derrota1.wav; path = ../../../../../../Downloads/SFX/derrota1.wav; sourceTree = "<group>"; };
+		52E2757B2AB33BA500F3BB36 /* clock01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clock01.wav; path = ../../../../../../Downloads/SFX/clock01.wav; sourceTree = "<group>"; };
+		52E2757C2AB33BA500F3BB36 /* panela.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = panela.wav; path = ../../../../../../Downloads/SFX/panela.wav; sourceTree = "<group>"; };
+		52E2757D2AB33BA500F3BB36 /* derrota2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = derrota2.wav; path = ../../../../../../Downloads/SFX/derrota2.wav; sourceTree = "<group>"; };
+		52E2758D2AB33BEC00F3BB36 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		52E2758F2AB33EDF00F3BB36 /* limparCasamp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = limparCasamp3.mp3; path = ../../../../../../Downloads/limparCasamp3.mp3; sourceTree = "<group>"; };
 		78009B5B2AA74651006BA51D /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		783A4BEC2AA602A30049F054 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		783BC9192AA8A61A0028A6B3 /* BoB_comAcento2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoB_comAcento2.otf; sourceTree = "<group>"; };
@@ -200,6 +234,29 @@
 			path = TelasFinais;
 			sourceTree = "<group>";
 		};
+		52E2756E2AB33B5400F3BB36 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				52E2758F2AB33EDF00F3BB36 /* limparCasamp3.mp3 */,
+				52E2757B2AB33BA500F3BB36 /* clock01.wav */,
+				52E275742AB33BA500F3BB36 /* clock02.wav */,
+				52E2757A2AB33BA500F3BB36 /* derrota1.wav */,
+				52E2757D2AB33BA500F3BB36 /* derrota2.wav */,
+				52E275782AB33BA500F3BB36 /* desentupindo.wav */,
+				52E275732AB33BA500F3BB36 /* desentupir.wav */,
+				52E275792AB33BA500F3BB36 /* kaching.wav */,
+				52E275752AB33BA500F3BB36 /* limparCasa.wav */,
+				52E275762AB33BA500F3BB36 /* morrendo.wav */,
+				52E275712AB33BA500F3BB36 /* nhac.wav */,
+				52E2757C2AB33BA500F3BB36 /* panela.wav */,
+				52E275722AB33BA500F3BB36 /* pop.wav */,
+				52E275772AB33BA500F3BB36 /* tarefa1.wav */,
+				52E2756F2AB33BA500F3BB36 /* vitória.wav */,
+				52E275702AB33BA500F3BB36 /* vozTelefone.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		783BC91B2AA8A61D0028A6B3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,7 +330,9 @@
 				5210C9D12A9F7AF400E9B5D6 /* ObjectiveManagement */,
 				78B9E0642A98F5A700C93302 /* Preview Content */,
 				528F97382AA76C4F000469D1 /* StatusManager */,
+				52E2756E2AB33B5400F3BB36 /* Sounds */,
 				528F977E2AAFF549000469D1 /* TelasFinais */,
+				52E2758D2AB33BEC00F3BB36 /* SoundManager.swift */,
 			);
 			path = MiniTwo;
 			sourceTree = "<group>";
@@ -354,9 +413,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E275802AB33BA500F3BB36 /* nhac.wav in Resources */,
+				52E275832AB33BA500F3BB36 /* clock02.wav in Resources */,
 				78B9E0662A98F5A700C93302 /* Preview Assets.xcassets in Resources */,
+				52E2757E2AB33BA500F3BB36 /* vitória.wav in Resources */,
+				52E2758A2AB33BA500F3BB36 /* clock01.wav in Resources */,
+				52E275812AB33BA500F3BB36 /* pop.wav in Resources */,
+				52E2758B2AB33BA500F3BB36 /* panela.wav in Resources */,
+				52E275852AB33BA500F3BB36 /* morrendo.wav in Resources */,
 				783BC91A2AA8A61A0028A6B3 /* BoB_comAcento2.otf in Resources */,
+				52E275902AB33EDF00F3BB36 /* limparCasamp3.mp3 in Resources */,
+				52E275822AB33BA500F3BB36 /* desentupir.wav in Resources */,
+				52E275872AB33BA500F3BB36 /* desentupindo.wav in Resources */,
+				52E2758C2AB33BA500F3BB36 /* derrota2.wav in Resources */,
 				78B9E0632A98F5A700C93302 /* Assets.xcassets in Resources */,
+				52E275882AB33BA500F3BB36 /* kaching.wav in Resources */,
+				52E275892AB33BA500F3BB36 /* derrota1.wav in Resources */,
+				52E2757F2AB33BA500F3BB36 /* vozTelefone.wav in Resources */,
+				52E275842AB33BA500F3BB36 /* limparCasa.wav in Resources */,
+				52E275862AB33BA500F3BB36 /* tarefa1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +452,7 @@
 				78B9E0612A98F5A700C93302 /* ContentView.swift in Sources */,
 				78D75D672AAF55910074B125 /* BankTyping.swift in Sources */,
 				5210C9D52A9F7B3D00E9B5D6 /* ObjectiveView.swift in Sources */,
+				52E2758E2AB33BEC00F3BB36 /* SoundManager.swift in Sources */,
 				5210C9CC2A9E275E00E9B5D6 /* iFood.swift in Sources */,
 				783BC9202AA8AE820028A6B3 /* Font.swift in Sources */,
 				528F97352AA74E7D000469D1 /* Panela.swift in Sources */,
@@ -465,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -519,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -537,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniTwo/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SA5RM672D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiniTwo/Info.plist;
@@ -573,7 +649,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniTwo/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SA5RM672D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiniTwo/Info.plist;

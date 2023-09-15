@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinalBom: View {
     
+    @EnvironmentObject var sndMan : SoundManager
     @EnvironmentObject var game : GameManager
     @EnvironmentObject var notification : NotificationQueue
     
@@ -49,6 +50,7 @@ struct FinalBom: View {
         .transition(.scale)
         .onAppear {
             notification.stopNotificationTimer()
+            sndMan.playSound("vitória.wav", loops: 0)
         }
     }
 }

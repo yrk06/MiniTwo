@@ -25,6 +25,7 @@ struct BPopUp : View {
     @State var pop_up_done : Bool = false
     
     @State var reversed : Int8 = Int8.random(in: 1...10)
+    @StateObject var sndMan : SoundManager = SoundManager()
     
     var body: some View {
         if (!pop_up_done)
@@ -149,6 +150,11 @@ struct BPopUp : View {
             .padding(.horizontal, 4)
             .shadow(radius: 10, x: 5, y: 5)
             .PopU()
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    sndMan.playSound("pop.wav", loops: 0)
+                }
+            }
 //            .padding()
         }
     }
