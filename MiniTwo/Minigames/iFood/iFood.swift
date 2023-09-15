@@ -299,55 +299,55 @@ struct iFood : View {
                         .padding(.horizontal)
                     }
                     
-                    Text("Refeições mais pedidas")
-                        .font(.body)
-                        .bold()
-                        .padding()
-                    
-                    HStack {
-                        NavigationLink {
-                            iFoodOrderScreen(food: last_ordered[0])
-                        } label: {
-                            VStack {
-                                CardV(food: food_cards[0])
-                                    .padding([.leading], 8)
-                                    .padding([.top], 10)
-                                Spacer()
-                            }
-                            .background {
-                                Image("pepinada")
-                            }
-                            .frame(width: 170, height: 196)
-                            .cornerRadius(8)
-                        }
-                        Spacer()
-                        VStack(spacing: 12) {
-                            NavigationLink {
-                                iFoodOrderScreen(food: last_ordered[1])
-                            } label: {
-                                CardV(food: food_cards[1])
-                                    .padding([.leading], -26)
-                                    .background {
-                                        Image("pizzaPepino")
-                                    }
-                                    .frame(width: 170, height: 92)
-                                    .cornerRadius(8)
-                            }
-                            NavigationLink {
-                                iFoodOrderScreen(food: last_ordered[2])
-                            } label: {
-                                CardV(food: food_cards[2])
-                                    .padding([.leading], -20)
-                                    .background {
-                                        Image("saladaPepino")
-      
-                                    }
-                                    .frame(width: 170, height: 92)
-                                    .cornerRadius(8)
-                            }
-                        }
-                    }
-                    .padding(.horizontal)
+//                    Text("Refeições mais pedidas")
+//                        .font(.body)
+//                        .bold()
+//                        .padding()
+//
+//                    HStack {
+//                        NavigationLink {
+//                            iFoodOrderScreen(food: last_ordered[0])
+//                        } label: {
+//                            VStack {
+//                                CardV(food: food_cards[0])
+//                                    .padding([.leading], 8)
+//                                    .padding([.top], 10)
+//                                Spacer()
+//                            }
+//                            .background {
+//                                Image("pepinada")
+//                            }
+//                            .frame(width: 170, height: 196)
+//                            .cornerRadius(8)
+//                        }
+//                        Spacer()
+//                        VStack(spacing: 12) {
+//                            NavigationLink {
+//                                iFoodOrderScreen(food: last_ordered[1])
+//                            } label: {
+//                                CardV(food: food_cards[1])
+//                                    .padding([.leading], -26)
+//                                    .background {
+//                                        Image("pizzaPepino")
+//                                    }
+//                                    .frame(width: 170, height: 92)
+//                                    .cornerRadius(8)
+//                            }
+//                            NavigationLink {
+//                                iFoodOrderScreen(food: last_ordered[2])
+//                            } label: {
+//                                CardV(food: food_cards[2])
+//                                    .padding([.leading], -20)
+//                                    .background {
+//                                        Image("saladaPepino")
+//
+//                                    }
+//                                    .frame(width: 170, height: 92)
+//                                    .cornerRadius(8)
+//                            }
+//                        }
+//                    }
+//                    .padding(.horizontal)
                     
                     Text("Lojas")
                         .font(.body)
