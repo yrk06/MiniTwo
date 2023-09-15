@@ -71,7 +71,7 @@ class GameManager: ObservableObject {
                 _ in
             self.dayTick -= 1
             if !self.dayTransition && !self.gameEnded {
-                self.statusManager.changeHunger(by: -1)
+                self.statusManager.changeHunger(by: -1.5)
             }
             if self.dayTick == 0 {
                 self.dayTimer?.invalidate()
@@ -107,7 +107,7 @@ class GameManager: ObservableObject {
             dayTick = 90
             day += 1
             
-            if self.day == 2 {
+            if self.day == 7 {
                 winGame()
             }
 //        }

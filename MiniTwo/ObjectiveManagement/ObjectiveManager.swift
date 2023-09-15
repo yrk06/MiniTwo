@@ -22,7 +22,7 @@ class ObjectiveManager : ObservableObject {
     
     public func fill_objectives(n : Int8) {
         for _ in 0..<n {
-            add_objective(random_objective())
+            add_objective(new_random_objective())
         }
     }
     
@@ -70,6 +70,31 @@ class ObjectiveManager : ObservableObject {
         }
         
         return .boleto
+    }
+    
+    private func new_random_objective() -> Objective
+    {
+        var all_types : [Objective] = [.boleto, .comer, .privada, .limpar]
+        var last = allObjectives.endIndex - 1
+        var prelast = allObjectives.endIndex - 2
+        
+        if allObjectives.count > 0 {
+            all_types.removeAll { ob in
+                if ob == allObjectives[last].objective {
+                    return true
+                }
+                return false
+            }
+        }
+        if allObjectives.count > 1 {
+            all_types.removeAll { ob in
+                if ob == allObjectives[prelast].objective {
+                    return true
+                }
+                return false
+            }
+        }
+        return all_types.randomElement()!
     }
     
 }

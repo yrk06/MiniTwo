@@ -33,9 +33,9 @@ class StatusManager : ObservableObject {
             setHealth(100)
         }
         if value > 0 {
-            addToLog("Health +\(Int(value))")
+            addToLog("Saúde +\(Int(value))")
         } else {
-            addToLog("Health \(Int(value))")
+            addToLog("Saúde \(Int(value))")
         }
     }
     public func changeHunger(by value: Double) {
@@ -44,7 +44,7 @@ class StatusManager : ObservableObject {
             setHunger(100)
         }
         if value > 0 {
-            addToLog("Food +\(Int(value))")
+            addToLog("Comida +\(Int(value))")
             sndManager.playSound("nhac.wav", loops: 0)
         }
     }
@@ -54,9 +54,9 @@ class StatusManager : ObservableObject {
             setMoney(100)
         }
         if value > 0 {
-            addToLog("Money +\(Int(value))")
+            addToLog("Dinheiro +\(Int(value))")
         } else {
-            addToLog("Money \(Int(value))")
+            addToLog("Dinheiro \(Int(value))")
             sndManager.playSound("kaching.wav", loops: 0)
         }
     }

@@ -77,7 +77,7 @@ struct StatusBar: View {
                 
                 StatusItem(stsMan.getHealth(), "heart.fill", /*0.34*/0.3, .white, "bem-estar")
                 StatusItem(stsMan.getHunger(), "fork.knife", 0.38, .white, "fome")
-                StatusItem(stsMan.getMoney(), "dollarsign", 0.42, .white, "dinheiro")
+                StatusItem(stsMan.getMoney(), "dollarsign", 0.32, .white, "dinheiro")
             }
             .foregroundColor(.white)
             .padding()

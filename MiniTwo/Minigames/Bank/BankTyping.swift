@@ -133,7 +133,7 @@ struct BankTyping: View {
             nv in
             if nv == target {
                 objMan.complete_mission(type: .boleto)
-                stsMan.changeMoney(by: -10)
+                stsMan.changeMoney(by: -25)
                 stsMan.changeHealth(by: -10)
 //                dismiss()
                 NavigationUtil.popToRootView()

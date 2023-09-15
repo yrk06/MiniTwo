@@ -44,9 +44,9 @@ struct BPopUp : View {
                             pop_up_done = true
 //                        }
                     }) {
-//                            Image(systemName: "x.circle.fill")
-//                            .font(.title3)
-                        Text("Exit")
+                            Image(systemName: "x.circle.fill")
+                            .foregroundColor(.blue)
+                            .font(.title3)
                     }
                     .foregroundColor(.white)
                     .padding(.leading, 310)
